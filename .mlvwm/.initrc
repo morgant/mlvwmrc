@@ -1,0 +1,6 @@
+Read initrc
+InitFunction
+Desk 0
+Exec "xterm" xterm -ls -geometry 80x25 &
+Wait xterm
+END

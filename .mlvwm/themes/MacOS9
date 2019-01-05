@@ -1,0 +1,23 @@
+## Enable MacOS 8 decoration feature
+System8
+
+## Enable Opaque Move
+OpaqueMove
+
+## Enable Opaque Resize
+OpaqueResize
+
+## Enable one click menu
+OneClickMenu
+
+################################################################################
+# Apple Menu
+################################################################################
+
+Menu Apple, Icon label1.xpm, Stick
+"About This Computer..." NonSelect, Gray, Action About
+"" NonSelect
+"Terminal"	Icon mini-display.xpm, Action Exec "xterm" exec xterm
+"Editor"  Action Exec "mule" exec mule, Icon mini-edit.xpm
+"calculator" Action Exec "xcal" exec xcalc, Icon mini-calc.xpm
+END

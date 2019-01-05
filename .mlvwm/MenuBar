@@ -1,0 +1,88 @@
+Menu def-File, Label "File", Left
+"New Folder" NonSelect, Gray, Action Nop
+"Open" NonSelect, Gray, Action Nop
+"Print" NonSelect, Gray, Action Nop
+"Close Window" NonSelect, Gray, Action Nop
+"" NonSelect
+"Get Info"  NonSelect, Gray,Action Nop
+"Duplicate" NonSelect, Gray, Action Nop
+"" NonSelect
+"Find..." NonSelect, Gray, Action Nop
+"Find Again" NonSelect, Gray, Action Nop
+"" NonSelect
+"Page Setup..." NonSelect, Gray, Action Nop
+"Print Desktop..." NonSelect, Gray, Action Nop
+END
+
+Menu def-Edit, Label "Edit"
+"Undo" NonSelect, Gray, Action Nop
+"" NonSelect
+"Cut" NonSelect, Gray
+"Copy" NonSelect, Gray
+"Paste" NonSelect, Gray
+"Clear" NonSelect, Gray
+"Select All" NonSelect, Gray
+"" NonSelect
+"Show Clipboard" NonSelect, Gray
+END
+
+Menu def-View, Label "View"
+"by Small Icon" NonSelect, Gray
+"by Icon" NonSelect, Gray
+"by Name" NonSelect, Gray
+"by Size" NonSelect, Gray
+"by Kind" NonSelect, Gray
+"by Date" NonSelect, Gray
+"by Version" NonSelect, Gray
+END
+
+Menu def-Label, Label "Label"
+"None" NonSelect, Gray
+"" NonSelect
+"Essential" NonSelect, Gray
+"Hot" NonSelect, Gray
+"In Progress" NonSelect, Gray
+"Cool" NonSelect, Gray
+"Personal" NonSelect, Gray
+"Project 1" NonSelect, Gray
+"Project 2" NonSelect, Gray
+END
+
+Menu restart-sub
+"Start twm"  Action Restart twm
+"Start fvwm" Action Restart fvwm
+END
+
+Menu def-Special, Label "Special"
+"Clean Up Desktop" Action Refresh
+"Empty Trash" NonSelect, Gray
+"" NonSelect
+"Eject Disk" NonSelect, Gray
+"Erase Disk..." NonSelect, Gray
+"" NonSelect
+"Start" SubMenu restart-sub
+"Restart" Action Restart mlvwm
+"Shut down" Action Exit
+END
+
+Menu def-Window
+"Move" Action MoveWindow
+"Resize" Action ResizeWindow
+"Toggle Scroll" Action ToggleScroll
+"" NonSelect
+"Quit" Action KillWindow
+END
+
+# Swallow the application at menu
+#Swallow "XEyes"	Action Exec "xeyes" exec xeyes -geometry 25
+Swallow "XClock" Action Exec "xclock" exec xclock -geometry 180x25 -digital -padding 5 -update 1
+
+# Definition MenuBar
+MenuBar default
+def-File
+def-Edit
+def-View
+def-Label
+def-Special
+def-Window
+END

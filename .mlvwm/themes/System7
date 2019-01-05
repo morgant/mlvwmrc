@@ -1,0 +1,14 @@
+## Draw move/resize line with dotted line
+Compatible
+
+################################################################################
+# Apple Menu
+################################################################################
+
+Menu Apple, Icon label1.xpm, Stick
+"About This Computer..." NonSelect, Gray, Action About
+"" NonSelect
+"Terminal"	Icon mini-display.xpm, Action Exec "xterm" exec xterm
+"Editor"  Action Exec "mule" exec mule, Icon mini-edit.xpm
+"calculator" Action Exec "xcal" exec xcalc, Icon mini-calc.xpm
+END
