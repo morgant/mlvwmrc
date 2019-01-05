@@ -62,18 +62,18 @@ Escape  SM      Exit
 END
 
 # Load Theme from themes/ ('System7', 'MacOS8', or 'MacOS9')
-Read themes/System7
+Read .mlvwm/themes/System7
 
 # Load the default menu bar
 # (IMPORTANT: The Apple menu is defined in the theme, so _must_ be loaded before
 # the default menu bar)
-Read MenuBar
+Read .mlvwm/MenuBar
 
 # Define the initial function
-Read .initrc
+Read .mlvwm/.initrc
 
 # Define the restart function
-Read .restartrc
+Read .mlvwm/.restartrc
 
 # Define the default window decoration
 Style
