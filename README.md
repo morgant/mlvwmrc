@@ -11,9 +11,16 @@ This a set of configuration files for Takashi HASEGAWA's [Macintosh-like Virtual
 
 MLVWM includes a very rudimentary set of rc ([run command](https://en.wikipedia.org/wiki/Run_commands)) files and requires a fair amount of customization to better emulate Macintosh operating systems' UI. Additionally, since it is generally no more than a hobbyist window manager, no appropriate structure for the rc files (esp. for individual applications), icons (i.e. pixmaps), etc. Last, but not least, I wanted to reduce the amount of configuration needed every time I configure MLVWM on a new workstation.
 
+## PREREQUISITES
+
+* `mlvwm`
+* `xpm`
+* `locale`
+* `make`
+
 ## USAGE
 
-_TBD_
+Run `make && make install && make clean` to install `.mlvwmrc` and `.mlvwm/` in your home directory, including downloading appropriate icons.
 
 ## LICENSE
 
