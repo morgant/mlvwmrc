@@ -10,7 +10,7 @@ Menu Apple, Icon apple.xpm, Stick
 "" NonSelect
 "Terminal"	Icon mini-display.xpm, Action Exec "xterm" exec xterm
 "Editor"  Action Exec "mule" exec mule, Icon mini-edit.xpm
-"Calculator" Action Exec "xcal" exec xcalc, Icon mini-calc.xpm`
+"Calculator" Action Exec "xcal" exec xcalc, Icon mini-calc.xpm
 END
 
 ################################################################################
