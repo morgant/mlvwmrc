@@ -25,4 +25,5 @@ END
 ################################################################################
 # Clock
 ################################################################################
-Swallow "XClock" Action Exec "xclock" exec xclock -geometry -bg '#dddddd' 122x24 -digital -strftime '%Y-%m-%d %H:%M' -padding 6 -update 1
+
+Swallow "XClock" Action Exec "xclock" exec xclock -geometry 122x24 -bg '#dddddd' -digital -strftime '%Y-%m-%d %H:%M' -padding 6 -update 1
