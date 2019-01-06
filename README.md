@@ -20,7 +20,52 @@ MLVWM includes a very rudimentary set of rc ([run command](https://en.wikipedia.
 
 ## USAGE
 
-Run `make && make install && make clean` to install `.mlvwmrc` and `.mlvwm/` in your home directory, including downloading appropriate icons.
+Run `make && make install` to install `.mlvwmrc` and `.mlvwm/` in your home directory, including downloading appropriate icons.
+
+## DATA STRUCTURE
+
+MLVWM loads its configuration from `~/.mlvwmrc`, but to break configuration up into more logical and manageable chunks within a `~/.mlvwm/` directory. That directory contains its own `.mlvwmrc` file which `~/.mlvwmrc` gets symlinked to, and it takes advantage of the `Read` command (see [mlvwm/CONFIGURATION](https://github.com/morgant/mlvwm/blob/master/CONFIGURATION)) to import the remaining configuration files.
+
+The current structure is:
+
+    ~/
+      .mlvwmrc -> .mlvwm/.mlvwmrc
+      .mlvwm/
+        .mlvwmrc
+        .initrc
+        .restartrc
+        MenuBar
+        theme/
+          System7
+          MacOS8
+          MacOS9
+        apps/
+          .AppManifest
+          Xterm
+          Xcalc
+          …
+        pixmap/
+          *.xpm
+
+### .mlvwmrc
+
+The main `rc` file. It contains some important configuration settings & commands, esp. `IconPath`, but primarily loads other `rc` & configuration files. The active theme can be changed by editing the `Read .mlvwm/theme/System7` line to one of the other theme files.
+
+### .initrc
+
+Contains an `InitFunction` block which can be modified to run commands upon initialization of MLVWM.
+
+### .restartrc
+
+Contains a `RestartFunction` block which can be modified to run commands upon init or reload of MLVWM.
+
+### MenuBar
+
+Contains the default menu bar configuration. Note: the Apple menu is actually defined in the theme files as some theme-specific settings need to be applied during creation, incl. icons. For this reason, the theme files _must_ be loaded prior to the default menu bar in `.mlvwmrc`.
+
+### .AppManifest
+
+Includes a `Read` command for each application-specific file in the `apps` directory. This is primarily to limit the complexity of the main `.mlvwmrc` file.
 
 ## LICENSE
 
