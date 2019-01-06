@@ -14,7 +14,7 @@ OneClickMenu
 # Apple Menu
 ################################################################################
 
-Menu Apple, Icon label1.xpm, Stick
+Menu Apple, Icon apple.xpm, Stick
 "About This Computer..." NonSelect, Gray, Action About
 "" NonSelect
 "Terminal"	Icon mini-display.xpm, Action Exec "xterm" exec xterm
