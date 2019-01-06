@@ -16,3 +16,4 @@ install:
 
 clean:
 	rm -r $(TEMP)
+	rm -r $(PIXMAP)/mini*.xpm
