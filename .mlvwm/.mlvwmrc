@@ -95,4 +95,4 @@ Style
 END
 
 # Read other configuration
-Read .mlvwm/apps/*
+Read .mlvwm/apps/.AppsManifest
