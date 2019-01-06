@@ -14,8 +14,8 @@ pixmap:
 	curl -# -L http://sb.fluomedia.org/macintosh/img/balloon.xpm -o $(PIXMAP)/balloon.xpm
 
 install:
-	cp -R $(CONF) $HOME/
-	ln -s $HOME/$(CONF)/.mlvwmrc $HOME/.mlvwmrc
+	cp -R $(CONF) $(HOME)/
+	ln -s $(HOME)/$(CONF)/.mlvwmrc $(HOME)/.mlvwmrc
 
 clean:
 	rm -r $(PIXMAP)/*.xpm
