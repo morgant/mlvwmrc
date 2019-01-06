@@ -15,7 +15,8 @@ pixmap:
 
 install:
 	cp -R $(CONF) $(HOME)/
-	ln -s $(HOME)/$(CONF)/.mlvwmrc $(HOME)/.mlvwmrc
+	ln -fs $(HOME)/$(CONF)/.mlvwmrc $(HOME)/.mlvwmrc
+	sed -i 's@/home2/tak/bin/pixmap@$(HOME)@g' $(HOME)/.mlvwmrc
 
 clean:
 	rm -r $(PIXMAP)
