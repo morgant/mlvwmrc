@@ -18,5 +18,5 @@ install:
 	ln -s $(HOME)/$(CONF)/.mlvwmrc $(HOME)/.mlvwmrc
 
 clean:
-	rm -r $(PIXMAP)/*.xpm
+	rm -r $(PIXMAP)
 	rm -r $(TEMP)
