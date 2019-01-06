@@ -38,10 +38,10 @@ EdgeResistance 50 50
 
 # Set icon search path. It needs before "Style".
 IconPath /usr/local/include/X11/pixmaps:/home2/tak/bin/pixmap
-IconMenuIcon label2.xpm
+IconMenuIcon finder.xpm
 
 # Balloon help Settings
-UseBalloon "Show Balloon Help" "Hide Balloon Help", Icon label3.xpm
+UseBalloon "Show Balloon Help" "Hide Balloon Help", Icon balloon.xpm
 
 # Font Settings(without LOCALE)
 #MenuBarFont -*-*-medium-i-normal-*-16-*-*-*-*-*-iso8859-*
