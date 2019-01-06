@@ -1,14 +1,13 @@
-Menu xcalc-file, Label "File", Left
-"Quit" Action SendMessage "exit" Return
+Menu Xcalc-File, Label "File", Left
 END
 
-MenuBar xcalc
-xcalc-file
+MenuBar Xcalc
+Xcalc-File
 def-Edit
 END
 
 Style
-"Xcalc" NoSBarH, NoSBarV, NoResizeR, NoMinMaxR
-"Xcalc" MiniIcon mini-term.xpm, MenuBar xterm
+"Calculator" NoSBarH, NoSBarV, NoResizeR, NoMinMaxR
+"Calculator" MiniIcon mini-calc.xpm, MenuBar Xcalc
 END
 

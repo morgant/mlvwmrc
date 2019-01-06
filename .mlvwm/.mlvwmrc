@@ -83,7 +83,6 @@ END
 Style
 "Emacs" MiniIcon mini-edit.xpm
 "xv" MiniIcon mini-xv.xpm, EnableScroll
-"XCalc" MiniIcon mini-calc.xpm
 "Xarchie" MiniIcon mini.xarchie.xpm
 "Xmag" MiniIcon mini.xmag.xpm
 "XMeter" NoSBarH, NoSBarV, NoResizeR, NoMinMaxR, NoTitle, NoCloseR
@@ -94,5 +93,5 @@ Style
 "XConsole"  NoSBarH, NoSBarV, NoResizeR, NoTitle, NoWinList, SkipSelect
 END
 
-# Read other configuration
+## Application-specific menus & styles
 Read .mlvwm/apps/.AppsManifest
