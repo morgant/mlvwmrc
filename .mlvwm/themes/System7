@@ -12,3 +12,8 @@ Menu Apple, Icon apple.xpm, Stick
 "Editor"  Action Exec "mule" exec mule, Icon mini-edit.xpm
 "calculator" Action Exec "xcal" exec xcalc, Icon mini-calc.xpm
 END
+
+################################################################################
+# Clock
+################################################################################
+Swallow "XClock" Action Exec "xclock" exec xclock -geometry 122x24 -digital -strftime '%Y-%m-%d %H:%M' -padding 6 -update 1
