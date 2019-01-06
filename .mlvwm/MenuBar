@@ -73,10 +73,6 @@ Menu def-Window
 "Quit" Action KillWindow
 END
 
-# Swallow the application at menu
-#Swallow "XEyes"	Action Exec "xeyes" exec xeyes -geometry 25
-Swallow "XClock" Action Exec "xclock" exec xclock -geometry 180x25 -digital -padding 5 -update 1
-
 # Definition MenuBar
 MenuBar default
 def-File
