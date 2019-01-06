@@ -67,6 +67,10 @@ Contains the default menu bar configuration. Note: the Apple menu is actually de
 
 Includes a `Read` command for each application-specific file in the `apps` directory. This is primarily to limit the complexity of the main `.mlvwmrc` file.
 
+## SPECIAL THANKS
+
+Many thanks to Takashi Hasegawa for creating [MLVWM](http://www2u.biglobe.ne.jp/~y-miyata/mlvwm.html) and Steffen Beyer for providing [Apple/Mac icons in .xpm format](http://sb.fluomedia.org/macintosh/img/apple.xpm).
+
 ## LICENSE
 
 _TBD_
