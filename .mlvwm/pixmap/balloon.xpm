@@ -2,7 +2,7 @@
 static char *xpmdata[] =
 {
 /* width height ncolors chars_per_pixel */
-"18 18 16 1",
+"18 18 17 1",
 /* colors */
 "A c #FFFFFFFFFFFF",
 "B c #FFFFFFFFFFFF",
