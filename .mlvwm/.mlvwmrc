@@ -95,5 +95,4 @@ Style
 END
 
 # Read other configuration
-#Read Mlvwmrc-Xterm
-#Read Mlvwmrc-Netscape
+Read .mlvwm/apps/*
