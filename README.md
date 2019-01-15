@@ -69,7 +69,7 @@ Includes a `Read` command for each application-specific file in the `apps` direc
 
 ## SPECIAL THANKS
 
-Many thanks to Takashi Hasegawa for creating [MLVWM](http://www2u.biglobe.ne.jp/~y-miyata/mlvwm.html) and Steffen Beyer for providing [Apple/Mac icons in .xpm format](http://sb.fluomedia.org/macintosh/img/apple.xpm).
+Many thanks to Takashi Hasegawa for creating [MLVWM](http://www2u.biglobe.ne.jp/~y-miyata/mlvwm.html) and Steffen Beyer for providing [Apple/Mac icons in .xpm format](http://sb.fluomedia.org/macintosh/).
 
 ## LICENSE
 
