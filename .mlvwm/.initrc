@@ -1,4 +1,8 @@
 InitFunction
+# Set the root window (i.e. desktop) background color (or image)
+Exec "xsetroot" xsetroot -grey &
+
+# Launch Xterm on the first desktop (i.e. screen)
 Desk 0
 Exec "xterm" xterm -ls -geometry 80x25 &
 Wait xterm
