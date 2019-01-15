@@ -1,6 +1,3 @@
-## Number of Desktop
-Desktopnum	3
-
 ## Follow mouse activation of window
 #FollowToMouse
 
@@ -30,12 +27,6 @@ IconifyShade
 # Double click time
 DoubleClickTime 300
 
-# Edge resistance force
-EdgeResistance 50 50
-
-## Show window name with desktop number on window list
-#DisplayDeskNumber
-
 # Set icon search path. It needs before "Style".
 IconPath /usr/local/include/X11/pixmaps:/home2/tak/bin/pixmap
 IconMenuIcon finder.xpm
@@ -63,6 +54,9 @@ END
 
 # Load Theme from themes/ ('System7', 'MacOS8', or 'MacOS9')
 Read .mlvwm/themes/System7
+
+# Load the Desktops (i.e. screens) settings
+Read .mlvwm/Desktops
 
 # Load the default menu bar
 # (IMPORTANT: The Apple menu is defined in the theme, so _must_ be loaded before
