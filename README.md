@@ -35,6 +35,7 @@ The current structure is:
         .initrc
         .restartrc
         MenuBar
+        VirtualDesktops
         theme/
           System7
           MacOS8
@@ -58,6 +59,10 @@ Contains an `InitFunction` block which can be modified to run commands upon init
 ### .restartrc
 
 Contains a `RestartFunction` block which can be modified to run commands upon init or reload of MLVWM.
+
+### VirtualDesktops
+
+Contains configuration settings for virtual desktops, incl. the number of virtual desktops (default is 1.)
 
 ### MenuBar
 
