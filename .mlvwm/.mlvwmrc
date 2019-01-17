@@ -71,7 +71,7 @@ Read .mlvwm/.restartrc
 
 # Define the default window decoration
 Style
-"*" MiniIcon mini-cross.xpm, MaxmizeScale 90, MenuBar default
+"*" MiniIcon mini-x.xpm, MaxmizeScale 90, MenuBar default
 END
 
 Style
