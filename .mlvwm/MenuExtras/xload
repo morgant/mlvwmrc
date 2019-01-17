@@ -1,0 +1,6 @@
+################################################################################
+# XLoad Menu Extra
+################################################################################
+
+# 60s Load Average Graph (30px, 2s update, smooth scrolling)
+Swallow "XLoad" Action Exec "xload" exec xload -geometry 30x24 -bg white -fg red -update 2 -jumpscroll 1 -nolabel

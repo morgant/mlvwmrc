@@ -40,6 +40,9 @@ The current structure is:
           System7
           MacOS8
           MacOS9
+        MenuExtras/
+          xload
+          …
         apps/
           .AppManifest
           Xterm

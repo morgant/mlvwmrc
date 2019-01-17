@@ -82,3 +82,6 @@ def-Label
 def-Special
 def-Window
 END
+
+# Menu Extras
+#Read .mlvwm/MenuExtras/xload
