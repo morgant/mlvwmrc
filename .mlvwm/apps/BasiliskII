@@ -1,0 +1,13 @@
+Menu BasiliskII-File, Label "File", Left
+END
+
+MenuBar BasiliskII
+BasiliskII-File
+def-Edit
+END
+
+Style
+"Basilisk*" NoSBarH, NoSBarV, NoResizeR, NoMinMaxR
+"Basilisk*" MiniIcon finder.xpm, MenuBar BasiliskII
+END
+
