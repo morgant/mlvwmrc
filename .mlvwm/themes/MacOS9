@@ -17,9 +17,9 @@ OneClickMenu
 Menu Apple, Icon apple.xpm, Stick
 "About This Computer..." NonSelect, Gray, Action About
 "" NonSelect
-"Terminal"	Icon mini-display.xpm, Action Exec "xterm" exec xterm
-"Editor"  Action Exec "mule" exec mule, Icon mini-edit.xpm
 "Calculator" Action Exec "xcal" exec xcalc, Icon mini-calc.xpm
+"Clock" Action Exec "xclock" exec xclock, Icon mini-clock.xpm
+"XTerm" Action Exec "xterm" exec xterm, Icon mini-term.xpm
 END
 
 ################################################################################
