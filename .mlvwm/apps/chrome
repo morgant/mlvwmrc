@@ -8,10 +8,13 @@ Menu Chrome-File, Label "File", Left
 "" NonSelect
 "Close Window" Action SendMessage SC+W
 "Close Tab" Action SendMessage C+W
+"" NonSelect
 "Quit" Action SendMessage SC+Q
 END
 
 Menu Chrome-View, Label "View", Left
+"Reload This Page" Action SendMessage C+R
+"" NonSelect
 "Developer Tools" Action SendMessage SC+I
 END
 
