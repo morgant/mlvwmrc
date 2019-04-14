@@ -3,7 +3,11 @@ Menu Chrome-File, Label "File", Left
 "New Window" Action SendMessage C+N
 "New Incognito Window" Action SendMessage SC+N
 "Reopen Closed Tab" Action SendMessage SC+T
+"Open File..." Action SendMessage C+O
+"Open Location..." Action SendMessage C+L
 "" NonSelect
+"Close Window" Action SendMessage SC+W
+"Close Tab" Action SendMessage C+W
 "Quit" Action SendMessage SC+Q
 END
 
