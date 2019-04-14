@@ -1,9 +1,19 @@
 Menu Chrome-File, Label "File", Left
+"New Tab" Action SendMessage C+T
+"New Window" Action SendMessage C+N
+"New Incognito Window" Action SendMessage SC+N
+"" NonSelect
+"Quit" Action SendMessage SC+Q
+END
+
+Menu Chrome-View, Label "View", Left
+"Developer Tools" Action SendMessage SC+I
 END
 
 MenuBar Chrome
 Chrome-File
 def-Edit
+Chrome-View
 END
 
 Style
