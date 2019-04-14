@@ -1,0 +1,13 @@
+Menu Chrome-File, Label "File", Left
+END
+
+MenuBar Chrome
+Chrome-File
+def-Edit
+END
+
+Style
+"Chromium*" NoSBarH, NoSBarV
+"Chromium*" MiniIcon mini-x.xpm, MenuBar Chrome
+END
+
