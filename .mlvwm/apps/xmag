@@ -1,0 +1,13 @@
+Menu xmag-file, Label "File", Left
+"New" Action Exec "xmag" exec xmag
+END
+
+MenuBar xmag
+xmag-file
+def-Edit
+END
+
+Style
+"xmag" NoSBarH, NoSBarV
+"xmag" MiniIcon mini-xmag.xpm
+END
