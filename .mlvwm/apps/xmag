@@ -9,5 +9,5 @@ END
 
 Style
 "xmag" NoSBarH, NoSBarV
-"xmag" MiniIcon mini-xmag.xpm
+"xmag" MiniIcon mini.xmag.xpm
 END
