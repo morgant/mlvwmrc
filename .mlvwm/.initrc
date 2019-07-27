@@ -2,6 +2,8 @@ InitFunction
 # Set the root window (i.e. desktop) background color (or image)
 Exec "xsetroot" xsetroot -grey &
 # Exec "xsetroot" xsetroot -solid darkgrey &
+# Exec "xsetbg" xsetbg -fullscreen ~/.mlvwm/patterns/mac-os-background.jpg
+# Exec "xsetbg" xsetbg ~/.mlvwm/patterns/mac-os-default.png
 
 # Launch Xterm on the first desktop (i.e. screen)
 Desk 0
