@@ -1,0 +1,37 @@
+Menu VLC-File, Label "File", Left
+"Open File..." Action SendMessage C+O
+"Open Multiple Files..." Action SendMessage SC+O
+"Open Directory..." Action SendMessage C+F
+"Open Disc..." Action SendMessage C+D
+"Open Network Stream..." Action SendMessage C+N
+"Open Capture Device..." Action SendMessage C+C
+"Open Location from Clipboard" Action SendMessage C+V
+"" NonSelect
+"Save Playlist to File..." Action SendMessage C+Y
+"Convert / Save..." Action SendMessage C+R
+"Stream..." Action SendMessage C+S
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu VLC-Tools, Label "Tools", Left
+"Effects and Filters" Action SendMessage C+E
+"Media Information" Action SendMessage C+I
+"Codec Information" Action SendMessage C+J
+"VLM Configuration" Action SendMessage SC+W
+"Messages" Action SendMessage C+M
+"" NonSelect
+"Preferences" Action SendMessage C+P
+END
+
+MenuBar VLC
+VLC-File
+def-Edit
+VLC-Tools
+END
+
+Style
+"*VLC*" NoSBarH, NoSBarV
+"*VLC*" MiniIcon vlc.xpm, MenuBar VLC
+END
+
