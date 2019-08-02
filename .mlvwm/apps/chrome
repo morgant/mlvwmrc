@@ -26,6 +26,6 @@ END
 
 Style
 "Chromium*" NoSBarH, NoSBarV
-"Chromium*" MiniIcon mini-x.xpm, MenuBar Chrome
+"Chromium*" MiniIcon chromium.xpm, MenuBar Chrome
 END
 
