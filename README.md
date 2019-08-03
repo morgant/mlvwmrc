@@ -82,3 +82,5 @@ Many thanks to Takashi Hasegawa for creating [MLVWM](http://www2u.biglobe.ne.jp/
 ## LICENSE
 
 _TBD_
+
+[Xosview icon](https://www.iconfinder.com/icons/9548/xosview_icon) by Oxygen Team.
