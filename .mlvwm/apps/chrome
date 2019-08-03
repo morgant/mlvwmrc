@@ -13,15 +13,48 @@ Menu Chrome-File, Label "File", Left
 END
 
 Menu Chrome-View, Label "View", Left
+"Show/Hide Bookmarks Bar" Action SendMessage SC+B
+"" NonSelect
+"Stop" Action SendMessage Escape
 "Reload This Page" Action SendMessage C+R
 "" NonSelect
+"Actual Size" Action SendMessage C+0
+"Zoom In" Action SendMessage C+plus
+"Zoom Out" Action SendMessage C+minus
+"" NonSelect
 "Developer Tools" Action SendMessage SC+I
+END
+
+Menu Chrome-History, Label "History", Left
+"Home" NonSelect, Gray
+"Back" NonSelect, Gray
+"Forward" NonSelect, Gray
+"" NonSelect
+"Show Full History" Action SendMessage C+H
+END
+
+Menu Chrome-Bookmarks, Label "Bookmarks", Left
+"Bookmark Manager" Action SendMessage SC+O
+"Bookmark This Page..." Action SendMessage C+D
+"Bookmark All Tabs..." Action SendMessage SC+D
+END
+
+Menu Chrome-Window, Label "Window", Left
+"Select Next Tab" Action SendMessage C+Tab
+"Select Previous Tab" Action SendMessage SC+Tab
+"" NonSelect
+"Downloads" Action SendMessage C+J
+"Extensions" NonSelect, Gray
+"Task Manager" Action SendMessage S+Escape
 END
 
 MenuBar Chrome
 Chrome-File
 def-Edit
 Chrome-View
+Chrome-History
+Chrome-Bookmarks
+Chrome-Window
 END
 
 Style
