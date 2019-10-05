@@ -1,0 +1,97 @@
+Menu Firefox-File, Label "File", Left
+"New Tab" Action SendMessage C+T
+"New Window" Action SendMessage C+N
+"New Private Window" Action SendMessage SC+P
+"Open File..." Action SendMessage C+O
+"Close Window" Action SendMessage SC+W
+"Close Tab" Action SendMessage C+W
+"" NonSelect
+"Save Page As..." Action SendMessage C+S
+"" NonSelect
+"Quit" Action SendMessage SC+Q
+END
+
+Menu Firefox-Edit, Label "Edit", Left
+"Undo" Action SendMessage C+Z
+"Redo" Action SendMessage C+Y
+"" NonSelect
+"Cut" Action SendMessage C+X
+"Copy" Action SendMessage C+C
+"Paste" Action SendMessage C+V
+"Delete" Action SendMessage Delete
+"" NonSelect
+"Select All" Action SendMessage C+A
+"Find in This Page..." Action SendMessage C+F
+"Find Again" Action SendMessage C+G
+END
+
+Menu Firefox-View-Sidebar
+"Bookmarks" Action SendMessage C+B
+"History" Action SendMessage C+H
+END
+
+Menu Firefox-View-Zoom
+"Zoom In" Action SendMessage C+plus
+"Zoom Out" Action SendMessage C+minus
+"" NonSelect
+"Reset" Action SendMessage C+0
+END
+
+Menu Firefox-View, Label "View", Left
+"Toolbars" NonSelect, Gray
+"Sidebar" SubMenu Firefox-View-Sidebar
+"" NonSelect
+"Zoom" SubMenu Firefox-View-Zoom
+"Page Style" NonSelect, Gray
+""
+"Toggle Full Screen" NonSelect, Gray
+END
+
+Menu Firefox-Bookmarks, Label "Bookmarks", Left
+"Show All Bookmarks" Action SendMessage SC+B
+"" NonSelect
+"Bookmark This Page" Action SendMessage C+D
+"Bookmark All Tabs..." Action SendMesage SC+D
+END
+
+Menu Firefox-Tools-Developer, Label "Web Developer"
+"Toggle Tools" Action SendMessage SC+I
+"Inspector" Action SendMessage SC+C
+"Web Console" Action SendMessage SC+K
+"Debugger" Action SendMessage SC+S
+"Style Editor" Action SendMessage S+F7
+"Performance" Action SendMessage S+F5
+"Network" Action SendMessage SC+E
+"Storage Inspector" NonSelect, Gray
+"Accessibility" NonSelect, Gray
+"" NonSelect
+"WebIDE" NonSelect, Gray
+"Browser Console" Action SendMessage SC+J
+"Responsive Design Mode" Action SendMessage SC+M
+"Eyedropper" NonSelect, Gray
+"Scratchpad" Action SendMessage S+F4
+"Service Workers" NonSelect, Gray
+"Page Source" Action SendMessage C+U
+END
+
+Menu Firefox-Tools, Label "Tools", Left
+"Downloads" Action SendMessage C+J
+"Add-ons" Action SendMessage SC+A
+"" NonSelect
+"Web Developer" SubMenu Firefox-Tools-Developer
+"Page Info" NonSelect, Gray
+END
+
+MenuBar Firefox
+Firefox-File
+Firefox-Edit
+Firefox-View
+Firefox-Bookmarks
+Firefox-Tools
+END
+
+Style
+"Firefox*" NoSBarH, NoSBarV
+"Firefox*" MiniIcon firefox.xpm, MenuBar Firefox
+END
+
