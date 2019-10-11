@@ -1,0 +1,129 @@
+Menu PCManFM-File-New, Label "Create New..."
+"Folder" Action SendMessage SC+N
+"Empty File" Action SendMessage MC+N
+END
+
+Menu PCManFM-File, Label "File", Left
+"New Window" Action SendMessage C+N
+"New Tab" Action SendMessage C+T
+"" NonSelect
+"Create New..." SubMenu PCManFM-File-New
+"Folder Properties" NonSelect, Gray
+"Close Tab" Action SendMessage C+W
+"Close Window" Action SendMessage C+Q
+END
+
+Menu PCManFM-Edit, Label "Edit", Left
+"Open" NonSelect, Gray
+"" NonSelect
+"Cut" Action SendMessage C+X
+"Copy" Action SendMessage C+C
+"Paste" Action SendMessage C+V
+"Move to Trash" NonSelect, Gray
+"Remove" NonSelect, Gray
+"Copy Path(s)" NonSelect, Gray
+"" NonSelect
+"Properties" Action SendMessage M+Return
+"" NonSelect
+"Rename..." Action SendMessage N+F2
+"Create Link..." NonSelect, Gray
+"Move To..." NonSelect, Gray
+"Copy To..." NonSelect, Gray
+"" NonSelect
+"Select All" Action SendMessage C+A
+"Invert Selection" Action SendMessage C+I
+"" NonSelect
+"Preferences" NonSelect, Gray
+END
+
+Menu PCManFM-View-Sort, Label "Sort Files"
+"Ascending" NonSelect, Gray
+"Descending" NonSelect, Gray
+"" NonSelect
+"By Name" Action SendMessage MC+1
+"By Modification Time" Action SendMessage MC+2
+"By Size" Action SendMessage MC+3
+"By File Type" Action SendMessage MC+4
+"By Extension" Action SendMessage MC+5
+"" NonSelect
+"Mingle Files and Folders" NonSelect, Gray
+"Ignore Name Case" NonSelect, Gray
+END
+
+Menu PCManFM-View-Folder, Label "Folder View Mode"
+"Icon View" Action SendMessage C+1
+"Compact View" Action SendMessage C+2
+"Thumbnail View" Action SendMessage C+3
+"Detailed List View" Action SendMessage C+4
+END
+
+Menu PCManFM-View-Side, Label "Side Pane"
+"Show/Hide Side Pane" Action SendMessage N+F9
+"" NonSelect
+"Places" Action SendMessage C+6
+"Directory Tree" Action SendMessage C+7
+END
+
+Menu PCManFM-View, Label "View", Left
+"Reload Folder" Action SendMessage N+F5
+"" NonSelect
+"Show/Hide Hidden" Action SendMessage C+H
+"Sort Files" SubMenu PCManFM-View-Sort
+"Folder View Mode" SubMenu PCManFM-View-Folder
+"Preserve This Folder's Settings" NonSelect, Gray
+"" NonSelect
+"Toolbar" NonSelect, Gray
+"Path Bar" NonSelect, Gray
+"Side Pane" SubMenu PCManFM-View-Side
+"Show/Hide Status Bar" Action SendMessage C+B
+"" NonSelect
+"Dual Pane Mode" Action SendMessage N+F3
+"Fullscreen Mode" Action SendMessage N+F11
+"" NonSelect
+"Zoom In" Action SendMessage C+plus
+"Zoom Out" Action SendMessage C+minus
+"Normal Size" Action SendMessage C+0
+"" NonSelect
+"Filter" Action SendMessage C+E
+END
+
+Menu PCManFM-Bookmarks, Label "Bookmarks", Left
+"Add to Bookmarks..." Action SendMessage C+D
+END
+
+Menu PCManFM-Go, Label "Go", Left
+"Previous Folder" Action SendMessage M+Left
+"Next Folder" Action SendMessage M+Right
+"Parent Folder" Action SendMessage M+Up
+"" NonSelect
+"Home Folder" Action SendMessage M+Home
+"Desktop" NonSelect, Gray
+"Trash Can" NonSelect, Gray
+"Applications" NonSelect, Gray
+"Devices" NonSelect, Gray
+"Network" NonSelect, Gray
+"" NonSelect
+"Go to Location..." Action SendMessage C+L
+"Connect to Server..." NonSelect, Gray
+END
+
+Menu PCManFM-Tools, Label "Tools", Left
+"Open Current Folder in Terminal" Action SendMessage N+F4
+"Find Files..." Action SendMessage SC+F
+"Run a Command in Current Folder..." NonSelect, Gray
+END
+
+MenuBar PCManFM
+PCManFM-File
+PCManFM-Edit
+PCManFM-View
+PCManFM-Bookmarks
+PCManFM-Go
+PCManFM-Tools
+END
+
+Style
+"*Pcmanfm*" MaxmizeScale 80x80, NoSBarH, NoSBarV
+"*Pcmanfm*" MiniIcon mini-filemgr.xpm, MenuBar PCManFM
+END
+
