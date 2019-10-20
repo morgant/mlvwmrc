@@ -11,6 +11,5 @@ END
 
 Style
 "*Term" MaxmizeScale 80x80, NoSBarH, NoSBarV
-"*Term" MiniIcon mini-term.xpm, MenuBar xterm
+"*Term" MiniIcon mini-sh.xpm, MenuBar xterm
 END
-

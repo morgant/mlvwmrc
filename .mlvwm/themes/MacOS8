@@ -22,7 +22,7 @@ Menu Apple, Icon apple.xpm, Stick
 "" NonSelect
 "Calculator" Action Exec "xcal" exec xcalc, Icon mini-calc.xpm
 "Clock" Action Exec "xclock" exec xclock, Icon mini-clock.xpm
-"XTerm" Action Exec "xterm" exec xterm, Icon mini-term.xpm
+"XTerm" Action Exec "xterm" exec xterm, Icon mini-sh.xpm
 END
 
 ################################################################################
