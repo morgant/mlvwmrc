@@ -15,7 +15,7 @@ END
 Menu Chrome-View, Label "View", Left
 "Show/Hide Bookmarks Bar" Action SendMessage SC+B
 "" NonSelect
-"Stop" Action SendMessage Escape
+"Stop" Action SendMessage N+Escape
 "Reload This Page" Action SendMessage C+R
 "" NonSelect
 "Actual Size" Action SendMessage C+0
