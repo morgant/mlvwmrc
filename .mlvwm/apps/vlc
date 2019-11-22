@@ -14,6 +14,13 @@ Menu VLC-File, Label "File", Left
 "Quit" Action SendMessage C+Q
 END
 
+Menu VLC-Playback, Label "Playback", Left
+"Play/Pause" Action SendMessage N+space
+"Stop" Action SendMessage N+S
+"Previous" Action SendMessage N+P
+"Next" Action SendMessage N+N
+END
+
 Menu VLC-Tools, Label "Tools", Left
 "Effects and Filters" Action SendMessage C+E
 "Media Information" Action SendMessage C+I
@@ -27,6 +34,7 @@ END
 MenuBar VLC
 VLC-File
 def-Edit
+VLC-Playback
 VLC-Tools
 END
 
