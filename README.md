@@ -22,6 +22,15 @@ MLVWM includes a very rudimentary set of rc ([run command](https://en.wikipedia.
 
 Run `make && make install` to install `.mlvwmrc` and `.mlvwm/` in your home directory, including downloading appropriate icons.
 
+## TESTING
+
+It's a good idea to test your `mlvwm` configuration prior to attempting to use it as your default window manager for the first time or after making any changes. The easiest way to do this is using `Xephyr`. I do the following:
+
+    Xephyr :32 -screen 1024x768 &
+    DISPLAY=:32 mlvwm -debug
+
+The above will run `mlvwm` in a window, so you can test within your existing environment and easily troubleshoot or kill it if something goes wrong.
+
 ## DATA STRUCTURE
 
 MLVWM loads its configuration from `~/.mlvwmrc`, but to break configuration up into more logical and manageable chunks within a `~/.mlvwm/` directory. That directory contains its own `.mlvwmrc` file which `~/.mlvwmrc` gets symlinked to, and it takes advantage of the `Read` command (see [mlvwm/CONFIGURATION](https://github.com/morgant/mlvwm/blob/master/CONFIGURATION)) to import the remaining configuration files.
