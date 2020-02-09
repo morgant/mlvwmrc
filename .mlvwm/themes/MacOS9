@@ -14,7 +14,7 @@ OneClickMenu
 # Apple Menu
 ################################################################################
 
-Menu Apple, Icon apple.xpm, Stick
+Menu Apple, Icon apple8.xpm, Stick
 "About This Computer..." NonSelect, Gray, Action About
 "" NonSelect
 "Calculator" Action Exec "xcal" exec xcalc, Icon mini-calc.xpm
