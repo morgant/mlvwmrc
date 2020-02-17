@@ -1,0 +1,31 @@
+Menu Meld-File, Label "File", Left
+"New Comparison..." Action SendMessage C+N
+"Save" Action SendMessage C+S
+"Save As..." Action SendMessage SC+S
+"" NonSelect
+"Close" Action SendMessage C+W
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu Meld-Changes, Label "Changes", Left
+"Previous Change" Action SendMessage M+Up
+"Next Change" Action SendMessage M+Down
+END
+
+Menu Meld-View, Label "View", Left
+"Stop" Action SendMessage N+Escape
+"Refresh" Action SendMessage C+R
+END
+
+MenuBar Meld
+Meld-File
+def-Edit
+Meld-Changes
+Meld-View
+END
+
+Style
+"*Meld*" NoSBarH, NoSBarV
+"*Meld*" MiniIcon meld.xpm, MenuBar Meld
+END
