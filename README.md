@@ -31,6 +31,26 @@ It's a good idea to test your `mlvwm` configuration prior to attempting to use i
 
 The above will run `mlvwm` in a window, so you can test within your existing environment and easily troubleshoot or kill it if something goes wrong.
 
+## APPLICATIONS
+
+Configurations for the following X11 applications are included:
+
+* [Basilisk II](http://basilisk.cebix.net/)
+* [Chromium](https://www.chromium.org/)
+* [Firefox](https://www.getfirefox.com/)
+* [HandBrake](https://handbrake.fr/)
+* [Meld](http://meldmerge.org/)
+* [PCManFM](https://en.wikipedia.org/wiki/PCMan_File_Manager)
+* [VLC](https://www.videolan.org/vlc/)
+* Xcalc
+* Xclock
+* [Xephyr](https://www.freedesktop.org/wiki/Software/Xephyr/)
+* Xload
+* Xmag
+* Xmessage
+* [Xosview2](http://xosview.sourceforge.net/)
+* [Xterm]
+
 ## DATA STRUCTURE
 
 MLVWM loads its configuration from `~/.mlvwmrc`, but to break configuration up into more logical and manageable chunks within a `~/.mlvwm/` directory. That directory contains its own `.mlvwmrc` file which `~/.mlvwmrc` gets symlinked to, and it takes advantage of the `Read` command (see [mlvwm/CONFIGURATION](https://github.com/morgant/mlvwm/blob/master/CONFIGURATION)) to import the remaining configuration files.
