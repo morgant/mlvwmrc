@@ -1,0 +1,133 @@
+Menu Krita-File, Label "File", Left
+"New" Action SendMessage C+N
+"Open..." Action SendMessage C+O
+"Save" Action SendMessage C+S
+"Save As..." Action SendMessage SC+S
+"" NonSelect
+"Save Incremental Version" Action SendMessage CM+S
+"Save Incremental Backup" Action SendMessage N+F4
+"" NonSelect
+"Close" Action SendMessage C+W
+"Close All" Action SendMessage SC+W
+"Quit" Action SendMessage C+Q
+END
+
+Menu Krita-Edit-FillSpecial, Label "Fill Special", Left
+"Fill with Foreground Color (Opacity)" Action SendMessage SC+BackSpace
+"Fill with Background Color (Opacity)" Action SendMessage C+BackSpace
+END
+
+Menu Krita-Edit, Label "Edit", Left
+"Undo" Action SendMessage C+Z
+"Redo" Action SendMessage SC+Z
+"" NonSelect
+"Cut" Action SendMessage C+X
+"Copy" Action SendMessage C+C
+"Copy merged" Action SendMessage SC+C
+"Paste" Action SendMessage C+V
+"Paste at Cursor" Action SendMessage CM+V
+"Paste into New Image" Action SendMessage SC+N
+"Paste as Reference Image" Action SendMessage SC+R
+"Clear" Action SendMessage N+Delete
+"Fill with Foreground Color" Action SendMessage N+BackSpace
+"Fill with Background Color" Action SendMessage S+BackSpace
+"Fill Special" SubMenu Krita-Edit-FillSpecial
+END
+
+Menu Krita-View-Canvas, Label "Canvas"
+"Mirror View" Action SendMessage N+M
+"" NonSelect
+"Reset Zoom" Action SendMessage C+0
+"Rotate Canvas Right" Action SendMessage C+bracketright
+"Rotate Canvas Left" Action SendMessage C+bracketleft
+"Zoom In" Action SendMessage C+plus
+"Zoom Out" Action SendMessage C+minus
+END
+
+Menu Krita-View, Label "View", Left
+"Show Canvas Only" Action SendMessage N+Tab
+"Instant Preview Mode" Action SendMessage S+L
+"Soft Proofing" Action SendMessage C+Y
+"Out of Gamut Warnings" Action SendMesasge SC+Y
+"" NonSelect
+"Canvas" SubMenu Krita-View-Canvas
+"" NonSelect
+"Show Grid" Action SendMessage SC+apostrophe
+"" NonSelect
+"Snap To Grid" Action SendMessage SC+semicolon
+END
+
+Menu Krita-Image, Label "Image", Left
+"Scale Image To New Size..." Action SendMessage MC+I
+"Resize Canvas..." Action SendMessage MC+C
+END
+
+Menu Krita-Layer-New, Label "New"
+"Paint Layer" Action SendMessage N+insert
+"Duplicate Layer or Mask" Action SendMessage C+J
+"" NonSelect
+"Cut Selection to New Layer" Action SendMessage SC+J
+"Copy Selection to New Layer" Action SendMessage MC+J
+END
+
+Menu Krita-Layer-Group, Label "Group"
+"Quick Group" Action SendMessage C+G
+"Quick Clipping Group" Action SendMessage SC+G
+"Quick Ungroup" Action SendMessage MC+G
+END
+
+Menu Krita-Layer, Label "Layer", Left
+"New" SubMenu Krita-Layer-New
+"" NonSelect
+"Group" SubMenu Krita-Layer-Group
+"" NonSelect
+"Merge with Layer Below" Action SendMessage C+E
+"Flatten Image" Action SendMessage SC+E
+END
+
+Menu Krita-Select, Label "Select", Left
+"Select All" Action SendMessage C+A
+"Deselect" Action SendMessage SC+A
+"Reselect" Action SendMessage SC+D
+"Invert Selection" Action SendMessage SC+I
+"" NonSelect
+"Display Selection" Action SendMessage C+H
+"" NonSelect
+"Feather Selection" Action SendMessage S+F6
+END
+
+Menu Krita-Filter-Adjust, Label "Adjust"
+"Color Balance..." Action SendMessage C+B
+"Desaturate..." Action SendMessage SC+U
+"HSV Adjustment..." Action SendMessage C+U
+"Invert" Action SendMessage C+I
+"Levels..." Action SendMessage C+L
+"Color Adjustment Curves..." Action SendMessage C+M
+END
+
+Menu Krita-Filter, Label "Filter", Left
+"Apply Filter Again" Action SendMessage C+F
+"" NonSelect
+"Adjust" SubMenu Krita-Filter-Adjust
+END
+
+Menu Krita-Help, Label "Help", Left
+"Krita Handbook" Action SendMessage N+F1
+END
+
+MenuBar Krita
+Krita-File
+Krita-Edit
+Krita-View
+Krita-Image
+Krita-Layer
+Krita-Select
+Krita-Filter
+Krita-Help
+END
+
+Style
+"*krita*" NoSBarH, NoSBarV
+"*krita*" MiniIcon krita.xpm, MenuBar Krita
+END
+

@@ -39,6 +39,7 @@ Configurations for the following X11 applications are included:
 * [Chromium](https://www.chromium.org/)
 * [Firefox](https://www.getfirefox.com/)
 * [HandBrake](https://handbrake.fr/)
+* [Krita](https://krita.org/)
 * [Meld](http://meldmerge.org/)
 * [PCManFM](https://en.wikipedia.org/wiki/PCMan_File_Manager)
 * [VLC](https://www.videolan.org/vlc/)
