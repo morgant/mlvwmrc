@@ -1,0 +1,17 @@
+################################################################################
+# mlclock Menu Extra
+################################################################################
+
+# Edit ~/.mlclockrc for styling. Suggested configuration:
+# 
+# FORM1 = "%H:%M:%S"
+# FORM2 = "%Y-%m-%d"
+# EVENT = FOCUS
+# NEAR = 10
+# LOCALE = "C"
+# FONTSET = "-*-*-medium-r-normal--14-*"
+# FONTCOLOR = "black"
+# BACKCOLOR = "white"
+# BOLD = TRUE
+# 
+Swallow "mlclock" Action Exec "mlclock" exec mlclock
