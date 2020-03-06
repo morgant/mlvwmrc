@@ -52,6 +52,14 @@ Configurations for the following X11 applications are included:
 * [Xosview2](http://xosview.sourceforge.net/)
 * [Xterm]
 
+## MENU EXTRAS
+
+Configurations for the following X11 applications are included for use in the menu bar:
+
+* [mlclock](https://github.com/morgant/mlclock)
+* Xclock
+* Xload
+
 ## DATA STRUCTURE
 
 MLVWM loads its configuration from `~/.mlvwmrc`, but to break configuration up into more logical and manageable chunks within a `~/.mlvwm/` directory. That directory contains its own `.mlvwmrc` file which `~/.mlvwmrc` gets symlinked to, and it takes advantage of the `Read` command (see [mlvwm/CONFIGURATION](https://github.com/morgant/mlvwm/blob/master/CONFIGURATION)) to import the remaining configuration files.
