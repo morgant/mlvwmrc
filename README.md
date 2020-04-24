@@ -60,6 +60,11 @@ Configurations for the following X11 applications are included for use in the me
 * Xclock
 * Xload
 
+Configurations for additional applications and utilities are also available from the following separate projects:
+
+* [OpenBSD APM (Advanced Power Management)](https://github.com/morgant/mlvwmrc-openbsd-apm)
+* [Xosview2 mini graphs](https://github.com/morgant/mlvwmrc-xosview2)
+
 ## DATA STRUCTURE
 
 MLVWM loads its configuration from `~/.mlvwmrc`, but to break configuration up into more logical and manageable chunks within a `~/.mlvwm/` directory. That directory contains its own `.mlvwmrc` file which `~/.mlvwmrc` gets symlinked to, and it takes advantage of the `Read` command (see [mlvwm/CONFIGURATION](https://github.com/morgant/mlvwm/blob/master/CONFIGURATION)) to import the remaining configuration files.
