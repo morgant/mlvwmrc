@@ -35,6 +35,7 @@ The above will run `mlvwm` in a window, so you can test within your existing env
 
 Configurations for the following X11 applications are included:
 
+* [ARandR](https://christian.amsuess.com/tools/arandr/)
 * [Basilisk II](http://basilisk.cebix.net/)
 * [Chromium](https://www.chromium.org/)
 * [Firefox](https://www.getfirefox.com/)

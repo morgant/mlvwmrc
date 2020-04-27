@@ -1,0 +1,18 @@
+Menu ARandR-Layout, Label "Layout", Left
+"New" Action SendMessage C+N
+"Open" Action SendMessage C+O
+"" NonSelect
+"Apply" Action SendMessage C+Return
+"Properties" Action SendMessage M+R
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+MenuBar ARandR
+ARandR-Layout
+END
+
+Style
+"*arandr*" NoSBarH, NoSBarV
+"*arandr*" MiniIcon mini-display.xpm, MenuBar ARandR
+END
