@@ -5,6 +5,9 @@
 ## active window is not changed
 #SloppyFocus
 
+# Edge resistance force
+EdgeResistance 50 50
+
 ## Shaded window is all desktop
 StickyShade
 
