@@ -1,0 +1,59 @@
+Menu Xwf-File, Label "File", Left
+"Open in New Window" Action SendMessage M+O
+"New Folder..." Action SendMessage M+N
+"New File..." Action SendMessage M+K
+"Open With..." Action SendMessage M+O
+"Close Window" Action SendMessage M+W
+"" NonSelect
+"Properties..." Action SendMessage M+I
+"Register..." Action SendMessage M+J
+"Rename..." Action SendMessage M+R
+"Delete..." Action SendMessage C+X
+"" NonSelect
+"Duplicate" Action SendMessage M+D
+"Make Alias..." Action SendMessage M+M
+"" NonSelect
+"Delete" Action SendMessage C+X
+"" NonSelect
+"Find..." Action SendMessage M+F
+"" NonSelect
+"Quit" Action SendMessage M+Q
+END
+
+Menu Xwf-Edit, Label "Edit", Left
+"Undo" NonSelect, Gray, Action Nop
+"" NonSelect
+"Cut" NonSelect, Gray
+"Copy" NonSelect, Gray
+"Paste" NonSelect, Gray
+"Select All" NonSelect, Gray
+"Deselect" Action SendMessage SM+A
+END
+
+Menu Xwf-View, Label "View", Left
+"Show/Hide Dotfiles" Action SendMessage SM+D
+END
+
+Menu Xwf-Go, Label "Go", Left
+"Enclosing Folder" Action SendMessage M+U
+"" NonSelect
+"Go to Folder..." Action SendMessage M+G
+END
+
+MenuBar Xwf
+Xwf-File
+Xwf-Edit
+Xwf-View
+Xwf-Go
+END
+
+Style
+"*Xat" MaxmizeScale 640x480, NoSBarH, NoSBarV
+"*Xat" MiniIcon finder.xpm
+"*Xcp" MaxmizeScale 640x480, NoSBarH, NoSBarV
+"*Xcp" MiniIcon finder.xpm
+"*Xfi" MaxmizeScale 640x480, NoSBarH, NoSBarV
+"*Xfi" MiniIcon finder.xpm
+"*Xwf" MaxmizeScale 640x480, NoSBarH, NoSBarV
+"*Xwf" MiniIcon finder.xpm, MenuBar Xwf
+END

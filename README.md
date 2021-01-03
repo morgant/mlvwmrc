@@ -52,6 +52,7 @@ Configurations for the following X11 applications are included:
 * Xmessage
 * [Xosview2](http://xosview.sourceforge.net/)
 * [Xterm]
+* [Xwf](https://github.com/morgant/xwf)
 
 ## MENU EXTRAS
 
