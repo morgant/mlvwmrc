@@ -1,0 +1,69 @@
+Menu Clementine-Music, Label "Music", Left
+"Open File..." NonSelect, Gray
+"Open audio CD..." NonSelect, Gray
+"Add podcast..." NonSelect, Gray
+"" NonSelect
+"Previous track" Action SendMessage N+F5
+"Pause" Action SendMessage N+F6
+"Stop" Action SendMessage N+F7
+"Next track" Action SendMessage N+F8
+"" NonSelect
+"Mute" Action SendMessage C+M
+"" NonSelect
+"Love" Action SendMessage C+L
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu Clementine-Playlist, Label "Playlist", Left
+"Add file..." Action SendMessage SC+A
+"Add folder..." NonSelect, Gray
+"Add Stream..." Action SendMessage C+O
+"" NonSelect
+"Shuffle Mode" NonSelect, Gray
+"Repeat Mode" NonSelect, Gray
+"" NonSelect
+"New playlist" Action SendMessage C+N
+"Save playlist..." Action SendMessage C+S
+"Load playlist..." Action SendMessage SC+O
+"" NonSelect
+"Jump to the currently playing track" Action SendMessage C+J
+"Clear playlist" Action SendMessage C+K
+"Shuffle playlist" Action SendMessage C+H
+"Remove duplicates from playlist" NonSelect, Gray
+"Remove unavailable tracks from playlist" NonSelect, Gray
+END
+
+Menu Clementine-Tools, Label "Tools", Left
+"Cover Manager" NonSelect, Gray
+"Queue Manager" NonSelect, Gray
+"Equalizer" NonSelect, Gray
+"Visualizations" NonSelect, Gray
+"Transcode Music" NonSelect, Gray
+"Rip audio CD" NonSelect, Gray
+"" NonSelect
+"Update changed library folders" NonSelect, Gray
+"Do a full library rescan" NonSelect, Gray
+"" NonSelect
+"Preferences..." Action SendMessage C+P
+"" NonSelect
+"Show sidebar" NonSelect, Gray
+END
+
+Menu Clementine-Help, Label "Help", Left
+"About Clementine" Action SendMessage N+F1
+"About Qt..." NonSelect, Gray
+END
+
+MenuBar Clementine
+Clementine-Music
+Clementine-Playlist
+Clementine-Tools
+Clementine-Help
+END
+
+Style
+"*Clementine*" MaxmizeScale 80x80, NoSBarH, NoSBarV
+"*Clementine*" MiniIcon clementine.xpm, MenuBar Clementine
+END
+

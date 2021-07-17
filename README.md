@@ -38,6 +38,7 @@ Configurations for the following X11 applications are included:
 * [ARandR](https://christian.amsuess.com/tools/arandr/)
 * [Basilisk II](http://basilisk.cebix.net/)
 * [Chromium](https://www.chromium.org/)
+* [Clementine](https://www.clementine-player.org/)
 * [Firefox](https://www.getfirefox.com/)
 * [HandBrake](https://handbrake.fr/)
 * [Krita](https://krita.org/)
