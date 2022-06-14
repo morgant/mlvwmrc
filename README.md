@@ -31,6 +31,17 @@ It's a good idea to test your `mlvwm` configuration prior to attempting to use i
 
 The above will run `mlvwm` in a window, so you can test within your existing environment and easily troubleshoot or kill it if something goes wrong.
 
+## SUGGESTED ADDITIONAL CONFIGURATION
+
+### GTK+ 3
+
+Some of the included configurations are for GTK+ 3 applications which use [client-side decorations (CSD)](https://en.wikipedia.org/wiki/Client-side_decoration), resulting in window controls being included in the "header bar". These window controls already exist in the `mlvwm` window title bars, so are redundant and look out of place. They can be disabled by editing `~/.config/gtk-3.0/settings.ini` to set `gtk-decoration-layout` to a blank string (or [customize](https://docs.gtk.org/gtk3/property.Settings.gtk-decoration-layout.html) as you see fit), for example:
+
+```
+\[Settings\]
+gtk-decoration-layout=""
+```
+
 ## APPLICATIONS
 
 Configurations for the following X11 applications are included:
