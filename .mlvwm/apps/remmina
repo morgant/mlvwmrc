@@ -1,0 +1,14 @@
+Menu Remmina-File, Label "File", Left
+"Preferences" Action SendMessage C+P
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+MenuBar Remmina
+Remmina-File
+END
+
+Style
+"*Remmina*" NoSBarH, NoSBarV
+"*Remmina*" MiniIcon remmina.xpm, MenuBar Remmina
+END
