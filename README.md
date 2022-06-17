@@ -3,7 +3,7 @@ by Morgan Aldridge <morgant@makkintosshu.com>
 
 ## OVERVIEW
 
-This a set of configuration files for Takashi HASEGAWA's [Macintosh-like Virtual Window Manager (MLVWM)](http://www2u.biglobe.ne.jp/~y-miyata/mlvwm.html) with the following goals:
+This a set of configuration files for Takashi HASEGAWA's [Macintosh-like Virtual Window Manager (MLVWM)](https://github.com/morgant/mlvwm) with the following goals:
 
 - More accurate emulation of [System 7](https://en.wikipedia.org/wiki/System_7) and [MacOS 8](https://en.wikipedia.org/wiki/Mac_OS_8) User Interfaces
 - A complete configuration out-of-the-box
@@ -16,6 +16,7 @@ MLVWM includes a very rudimentary set of rc ([run command](https://en.wikipedia.
 * `mlvwm`
 * `xpm`
 * `locale`
+* `curl`
 * `make`
 
 ## USAGE
@@ -41,6 +42,10 @@ Some of the included configurations are for GTK+ 3 applications which use [clien
 \[Settings\]
 gtk-decoration-layout=""
 ```
+
+### iDesk
+
+Companion [iDesk](https://idesk.sourceforge.net/) configuration files are available via the [mlvwmrc-ideskrc](https://github.com/morgant/mlvwmrc-ideskrc) project.
 
 ## APPLICATIONS
 
