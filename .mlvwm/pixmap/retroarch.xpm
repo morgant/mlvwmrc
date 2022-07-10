@@ -1,0 +1,25 @@
+/* XPM */
+static const char *retroarch[] = {
+/* columns rows colors chars-per-pixel */
+"16 16 3 1 ",
+"  c gray20",
+". c gray95",
+"X c None",
+/* pixels */
+"XXXXXXXXXXXXXXXX",
+"XX           XXX",
+"X             XX",
+"X             XX",
+"X   .     .   XX",
+"X .  .   .  . XX",
+"X . ....... . XX",
+"X ... ... ... XX",
+"X ........... XX",
+"X  .........  XX",
+"X   .     .   XX",
+"X  .       .  XX",
+"X             XX",
+"X             XX",
+"XX           XXX",
+"XXXXXXXXXXXXXXXX"
+};

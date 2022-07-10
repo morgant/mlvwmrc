@@ -60,6 +60,7 @@ Configurations for the following X11 applications are included:
 * [Krita](https://krita.org/)
 * [Meld](http://meldmerge.org/)
 * [PCManFM](https://en.wikipedia.org/wiki/PCMan_File_Manager)
+* [RetroArch](https://www.retroarch.com/)
 * [Remmina](https://remmina.org/)
 * [VLC](https://www.videolan.org/vlc/)
 * Xcalc

@@ -1,0 +1,14 @@
+Menu RetroArch-File, Label "File", Left
+"Quit" Action SendMessage N+Escape
+END
+
+MenuBar RetroArch
+RetroArch-File
+def-Edit
+END
+
+Style
+"*RetroArch*" NoSBarH, NoSBarV
+"*RetroArch*" MiniIcon retroarch.xpm, MenuBar RetroArch
+END
+
