@@ -63,6 +63,7 @@ Configurations for the following X11 applications are included:
 * [RetroArch](https://www.retroarch.com/)
 * [Remmina](https://remmina.org/)
 * [VLC](https://www.videolan.org/vlc/)
+* [Xarchiver](https://github.com/ib/xarchiver)
 * Xcalc
 * Xclock
 * [Xephyr](https://www.freedesktop.org/wiki/Software/Xephyr/)

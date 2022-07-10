@@ -1,0 +1,48 @@
+Menu Xarchiver-Archive, Label "Archive", Left
+"New" Action SendMessage C+N
+"Open" Action SendMessage C+O
+"Save As" NonSelect, Gray, Action Nop
+"" NonSelect
+"Test" Action SendMessage C+T
+"Properties" Action SendMessage C+P
+"Close" Action SendMessage C+W
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu Xarchiver-Action, Label "Action", Left
+"Add" Action SendMessage C+D
+"Extract" Action SendMessage C+E
+"Delete" Action SendMessage N+Delete
+"Rename" NonSelect, Gray, Action Nop
+"Unsort" NonSelect, Gray, Action Nop
+"" NonSelect
+"Make SFX" Action SendMessage C+X
+"Multi-Extract" Action SendMessage C+M
+"Archive comment" Action SendMessage C+S
+"" NonSelect 
+"Select all" Action SendMessage C+A
+"Deselect all" Action SendMessage C+L
+"Select by pattern" Action SendMessage C+B
+"" NonSelect
+"Cmd-line output" Action SendMessage C+U
+"Enter password" Action SendMessage C+R
+"" NonSelect
+"Preferences" Action SendMessage C+F
+END
+
+Menu Xarchiver-Help, Label "Help", Left
+"Contents" Action SendMessage N+F1
+"About" NonSelect, Gray, Action Nop
+END
+
+MenuBar Xarchiver
+Xarchiver-Archive
+Xarchiver-Action
+Xarchiver-Help
+END
+
+Style
+"*xarchiver*" NoSBarH, NoSBarV
+"*xarchiver*" MiniIcon xarchiver.xpm, MenuBar Xarchiver
+END
