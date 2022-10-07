@@ -71,8 +71,9 @@ Configurations for the following X11 applications are included:
 * Xmag
 * Xmessage
 * [Xosview2](http://xosview.sourceforge.net/)
-* [Xterm]
+* Xterm
 * [Xwf](https://github.com/morgant/xwf)
+* [Zutty](https://github.com/tomszilagyi/zutty)
 
 ## MENU EXTRAS
 

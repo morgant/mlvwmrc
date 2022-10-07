@@ -1,0 +1,25 @@
+Menu Zutty-File, Label "File", Left
+"New Window" Action Exec "zutty" exec zutty
+"Close Window" Action SendMessage "exit" N+Return
+"" NonSelect
+"Quit" NonSelect, Gray
+END
+
+Menu Zutty-Edit, Label "Edit", Left
+"Undo" NonSelect, Gray
+"" NonSelect
+"Cut" NonSelect, Gray
+"Copy" Action SendMessage SC+C
+"Paste" Action SendMessage SC+V
+"Paste Selection" Action SendMessage S+Insert
+END
+
+MenuBar Zutty
+Zutty-File
+Zutty-Edit
+END
+
+Style
+"Zutty" MaxmizeScale 80x80, NoSBarH, NoSBarV
+"Zutty" MiniIcon mini-sh.xpm, MenuBar Zutty
+END
