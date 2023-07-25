@@ -18,10 +18,11 @@ MLVWM includes a very rudimentary set of rc ([run command](https://en.wikipedia.
 * `locale`
 * `curl`
 * `make`
+* ImageMagick
 
 ## USAGE
 
-Run `make && make install` to install `.mlvwmrc` and `.mlvwm/` in your home directory, including downloading appropriate icons.
+Run `make && make install` to install `.mlvwmrc` and `.mlvwm/` in your home directory, including downloading and/or converting appropriate icons.
 
 ## TESTING
 

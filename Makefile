@@ -10,6 +10,11 @@ pixmap:
 	curl -# -L http://www2u.biglobe.ne.jp/~y-miyata/mlvwm/mini-icons.tar.gz -o $(TEMP)/mini-icons.tar.gz
 	tar -C $(PIXMAP) -xzf $(TEMP)/mini-icons.tar.gz
 	curl -# -L https://raw.githubusercontent.com/videolan/vlc/master/share/icons/16x16/vlc.xpm -o $(PIXMAP)/vlc.xpm
+	convert https://www.chromium.org/favicon.ico $(PIXMAP)/chromium.xpm
+	curl -# -L https://claws-mail.org/favicon.ico -o $(TEMP)/claws-mail-favicon.ico
+	curl -# -L https://iridiumbrowser.de/favicon.ico -o $(TEMP)/iridium-favicon.ico
+	convert $(TEMP)/claws-mail-favicon.ico $(PIXMAP)/claws-mail.xpm
+	convert $(TEMP)/iridium-favicon.ico[2] $(PIXMAP)/iridium.xpm
 
 patterns:
 	test ! -d $(PATTERNS) && mkdir $(PATTERNS)
@@ -21,8 +26,14 @@ install:
 	ln -fs $(HOME)/$(CONF)/.mlvwmrc $(HOME)/.mlvwmrc
 	sed -i 's@/home2/tak/bin/pixmap@$(HOME)/$(PIXMAP)@g' $(HOME)/$(CONF)/.mlvwmrc
 
-clean:
+clean: clean-pixmap
 	rm -r $(TEMP)
-	rm -r $(PIXMAP)/mini*.xpm
-	rm $(PIXMAP)/vlc.xpm
 	rm -rf $(PATTERNS)
+
+clean-pixmap:
+	rm $(PIXMAP)/mini*.xpm
+	rm $(PIXMAP)/chromium.xpm
+	rm $(PIXMAP)/claws-mail.xpm
+	rm $(PIXMAP)/iridium.xpm
+	rm $(PIXMAP)/vlc.xpm
+
