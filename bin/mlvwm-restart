@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+# mlvwm-restart - Restart MLVWM by sending it a restart key code
+#
+# Assumes that your ~/.mlvwmrc contains the following:
+#
+# ShortCut
+# Escape  M  Restart mlvwm
+# END
+
+xdotool key --window root --clearmodifiers alt+Escape
