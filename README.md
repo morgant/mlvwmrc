@@ -16,8 +16,9 @@ MLVWM includes a very rudimentary set of rc ([run command](https://en.wikipedia.
 * `mlvwm`
 * `xpm`
 * `locale`
-* `curl`
 * `make`
+* `unzip`
+* `curl`
 * `xdotool`
 * ImageMagick
 

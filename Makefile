@@ -19,7 +19,10 @@ pixmap:
 patterns:
 	test ! -d $(PATTERNS) && mkdir $(PATTERNS)
 	curl -# -L https://forums.macrumors.com/attachments/mac-os-background-jpg.61609 -o $(PATTERNS)/mac-os-background.jpg
+	curl -# -L https://wallpaperbat.com/img/250263-classic-mac-os-wallpaper.png -o $(PATTERNS)/mac-os-background-hi-res.png
 	curl -# -L https://forums.macrumors.com/attachments/mac-os-default-png.61610 -o $(PATTERNS)/mac-os-default.png
+	curl -# -L https://imgur.com/a/9jYy0/zip -o $(TEMP)/Mac\ OS\ Solid\ Color\ Backgrounds.zip
+	unzip -d $(PATTERNS) $(TEMP)/Mac\ OS\ Solid\ Color\ Backgrounds.zip
 
 install:
 	cp -R $(CONF) $(HOME)/
