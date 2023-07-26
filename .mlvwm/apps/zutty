@@ -1,5 +1,10 @@
+Menu Zutty-File-NewWindow
+"Light" Action Exec "zutty" exec zutty -rv
+"Dark" Action Exec "zutty" exec zutty
+END
+
 Menu Zutty-File, Label "File", Left
-"New Window" Action Exec "zutty" exec zutty
+"New Window" SubMenu Zutty-File-NewWindow
 "Close Window" Action SendMessage "exit" N+Return
 "" NonSelect
 "Quit" NonSelect, Gray
