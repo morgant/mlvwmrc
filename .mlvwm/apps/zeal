@@ -1,0 +1,35 @@
+Menu Zeal-File, Label "File", Left
+"New Tab" Action SendMessage C+T
+"Close Tab" Action SendMessage C+W
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu Zeal-Edit, Label "Edit", Left
+"Find" Action SendMessage C+F
+"" NonSelect
+"Preferences" Action SendMessage C+Comma
+END
+
+Menu Zeal-Tools, Label "Tools", Left
+"Docsets..." NonSelect, Gray
+END
+
+Menu Zeal-Help, Label "Help", Left
+"Submit Feedback..." NonSelect, Gray
+"Check for Updates..." NonSelect, Gray
+"" NonSelect
+"About Zeal" NonSelect, Gray
+END
+
+MenuBar Zeal
+Zeal-File
+Zeal-Edit
+Zeal-Tools
+Zeal-Help
+END
+
+Style
+"*Zeal*" NoSBarH, NoSBarV
+"*Zeal*" MiniIcon zeal.xpm, MenuBar Zeal
+END

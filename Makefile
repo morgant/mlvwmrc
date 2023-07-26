@@ -10,6 +10,8 @@ pixmap:
 	curl -# -L http://www2u.biglobe.ne.jp/~y-miyata/mlvwm/mini-icons.tar.gz -o $(TEMP)/mini-icons.tar.gz
 	tar -C $(PIXMAP) -xzf $(TEMP)/mini-icons.tar.gz
 	curl -# -L https://raw.githubusercontent.com/videolan/vlc/master/share/icons/16x16/vlc.xpm -o $(PIXMAP)/vlc.xpm
+	curl -# -L https://raw.githubusercontent.com/zealdocs/zeal/main/assets/freedesktop/16-apps-zeal.png -o $(TEMP)/zeal.png
+	convert $(TEMP)/zeal.png $(PIXMAP)/zeal.xpm
 	convert https://www.chromium.org/favicon.ico $(PIXMAP)/chromium.xpm
 	curl -# -L https://claws-mail.org/favicon.ico -o $(TEMP)/claws-mail-favicon.ico
 	curl -# -L https://iridiumbrowser.de/favicon.ico -o $(TEMP)/iridium-favicon.ico
@@ -39,4 +41,5 @@ clean-pixmap:
 	rm $(PIXMAP)/claws-mail.xpm
 	rm $(PIXMAP)/iridium.xpm
 	rm $(PIXMAP)/vlc.xpm
+	rm $(PIXMAP)/zeal.xpm
 

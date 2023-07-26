@@ -76,6 +76,7 @@ Configurations for the following X11 applications are included:
 * [Xosview2](http://xosview.sourceforge.net/)
 * Xterm
 * [Xwf](https://github.com/morgant/xwf)
+* [Zeal](https://zealdocs.org/)
 * [Zutty](https://github.com/tomszilagyi/zutty)
 
 ## MENU EXTRAS
