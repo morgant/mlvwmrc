@@ -3,7 +3,7 @@ Menu ARandR-Layout, Label "Layout", Left
 "Open" Action SendMessage C+O
 "" NonSelect
 "Apply" Action SendMessage C+Return
-"Properties" Action SendMessage M+R
+"Properties" Action SendMessage M+Return
 "" NonSelect
 "Quit" Action SendMessage C+Q
 END
