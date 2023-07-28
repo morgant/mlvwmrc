@@ -62,6 +62,7 @@ Configurations for the following X11 applications are included:
 * [HandBrake](https://handbrake.fr/)
 * [Krita](https://krita.org/)
 * [Meld](http://meldmerge.org/)
+* [mpv](https://mpv.io/)
 * [PCManFM](https://en.wikipedia.org/wiki/PCMan_File_Manager)
 * [RetroArch](https://www.retroarch.com/)
 * [Remmina](https://remmina.org/)

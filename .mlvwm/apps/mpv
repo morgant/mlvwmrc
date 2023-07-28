@@ -1,0 +1,12 @@
+Menu MPV-File, Label "File", Left
+"Quit" Action SendMessage N+q
+END
+
+MenuBar MPV
+MPV-File
+END
+
+Style
+"mpv" NoSBarH, NoSBarV
+"mpv" MiniIcon mpv.xpm, MenuBar MPV
+END
