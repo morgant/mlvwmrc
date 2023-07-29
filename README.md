@@ -87,6 +87,7 @@ Configurations for the following X11 applications are included for use in the me
 * [mlclock](https://github.com/morgant/mlclock)
 * Xclock
 * Xload
+* [Xmem](https://git.sdf.org/bch/xmem)
 
 Configurations for additional applications and utilities are also available from the following separate projects:
 

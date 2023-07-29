@@ -1,0 +1,6 @@
+################################################################################
+# Xmem Menu Extra
+################################################################################
+
+# 60s Memory Usage Graph (30px, 2s update, smooth scrolling)
+Swallow "xmem" Action Exec "xmem" exec xmem -geometry 30x19 -update 2 -jumpscroll 1 -nolabel
