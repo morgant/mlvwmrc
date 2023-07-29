@@ -58,6 +58,7 @@ Configurations for the following X11 applications are included:
 * [Basilisk II](http://basilisk.cebix.net/)
 * [Chromium](https://www.chromium.org/)
 * [Clementine](https://www.clementine-player.org/)
+* [cool-retro-term](https://github.com/Swordfish90/cool-retro-term)
 * [Firefox](https://www.getfirefox.com/)
 * [HandBrake](https://handbrake.fr/)
 * [Krita](https://krita.org/)

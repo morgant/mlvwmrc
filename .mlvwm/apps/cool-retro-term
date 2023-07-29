@@ -1,0 +1,7 @@
+MenuBar CoolRetroTerm
+END
+
+Style
+"cool-retro-term" MaxmizeScale 80x24, NoSBarH, NoSBarV
+"cool-retro-term" MiniIcon cool-retro-term.xpm, MenuBar CoolRetroTerm
+END
