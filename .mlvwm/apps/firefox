@@ -91,7 +91,6 @@ Firefox-Tools
 END
 
 Style
-"Firefox*" NoSBarH, NoSBarV
-"Firefox*" MiniIcon firefox.xpm, MenuBar Firefox
+"firefox*" NoSBarH, NoSBarV
+"firefox*" MiniIcon firefox.xpm, MenuBar Firefox
 END
-

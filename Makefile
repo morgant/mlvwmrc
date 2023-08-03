@@ -13,9 +13,11 @@ pixmap:
 	tar -C $(PIXMAP) -xzf $(TEMP)/mini-icons.tar.gz
 	# download XPM icons from source code repositories
 	curl -# -L https://raw.githubusercontent.com/videolan/vlc/master/share/icons/16x16/vlc.xpm -o $(PIXMAP)/vlc.xpm
-	# donwload & convert icons from source code repositories
+	# download & convert icons from source code repositories
 	curl -# -L https://raw.githubusercontent.com/Swordfish90/cool-retro-term/master/app/icons/32x32/cool-retro-term.png -o $(TEMP)/cool-retro-term.png
 	convert $(TEMP)/cool-retro-term.png -resize 16x16\> $(PIXMAP)/cool-retro-term.xpm
+	curl -# -L https://hg.mozilla.org/releases/mozilla-release/raw-file/tip/browser/branding/official/default16.png -o $(TEMP)/firefox.png
+	convert $(TEMP)/firefox.png $(PIXMAP)/firefox.xpm
 	curl -# -L https://raw.githubusercontent.com/mpv-player/mpv.io/master/source/images/favicon.png -o $(TEMP)/mpv.png
 	convert $(TEMP)/mpv.png -resize 16x16\> $(PIXMAP)/mpv.xpm
 	curl -# -L https://raw.githubusercontent.com/zealdocs/zeal/main/assets/freedesktop/16-apps-zeal.png -o $(TEMP)/zeal.png
@@ -49,6 +51,7 @@ clean-pixmap:
 	rm $(PIXMAP)/chromium.xpm
 	rm $(PIXMAP)/claws-mail.xpm
 	rm $(PIXMAP)/cool-retro-term.xpm
+	rm $(PIXMAP)/firefox.xpm
 	rm $(PIXMAP)/iridium.xpm
 	rm $(PIXMAP)/mpv.xpm
 	rm $(PIXMAP)/vlc.xpm
