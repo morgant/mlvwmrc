@@ -1,0 +1,40 @@
+Menu QEMU-Machine, Label "Machine", Left
+"Pause/Resume" Gray, NonSelect
+"" NonSelect
+"Reset" Gray, NonSelect
+"Power Down" Gray, NonSelect
+"" NonSelect
+"Quit" Action SendMessage CM+Q
+END
+
+Menu QEMU-Edit, Label "Edit", Left
+"Copy" Gray, NonSelect
+"Fullscreen" Action SendMessage CM+F
+"" NonSelect
+"Zoom In" Action SendMessage CM+Plus
+"Zoom Out" Action SendMesssage CM+Minus
+"Best Fit" Action SendMessage CM+0
+"Zoom to Fit" Gray, NonSelect
+"" NonSelect
+"Grab on Hover" Gray, NonSelect
+"Grab Input" Action SendMessage CM+G
+"" NonSelect
+"VGA" Action SendMessage CM+1
+"compatmonitor0" Action SendMessage CM+2
+"serial0" Action SendMessage CM+3
+"parallel0" Action SendMessage CM+4
+"" NonSelect
+"Show Tabs" Gray, NonSelect
+"Detatch Tab" Gray, NonSelect
+"Show Menubar" Action SendMessage CM+M
+END
+
+MenuBar QEMU
+QEMU-Machine
+QEMU-Edit
+END
+
+Style
+"qemu" NoSBarH, NoSBarV
+"qemu" MiniIcon qemu.xpm, MenuBar QEMU
+END

@@ -65,6 +65,7 @@ Configurations for the following X11 applications are included:
 * [Meld](http://meldmerge.org/)
 * [mpv](https://mpv.io/)
 * [PCManFM](https://en.wikipedia.org/wiki/PCMan_File_Manager)
+* [QEMU](https://www.qemu.org/)
 * [RetroArch](https://www.retroarch.com/)
 * [Remmina](https://remmina.org/)
 * [VLC](https://www.videolan.org/vlc/)
