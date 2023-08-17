@@ -10,4 +10,4 @@
 
 SCREENSHOT_DIR=${SCREENSHOT_DIR:-$HOME/Pictures}
 
-maim "$@""${SCREENSHOT_DIR}/screenshot-$(date +%Y%m%d-%H%M%S).png"
+maim "$@" "${SCREENSHOT_DIR}/screenshot-$(date +%Y%m%d-%H%M%S).png"
