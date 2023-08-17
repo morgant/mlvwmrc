@@ -19,8 +19,9 @@ MLVWM includes a very rudimentary set of rc ([run command](https://en.wikipedia.
 * `make`
 * `unzip`
 * `curl`
-* `xdotool`
 * ImageMagick
+* `xdotool` (for `mlvwm-restart`)
+* [`maim`](https://github.com/naelstrof/maim) & [`slop`](https://github.com/naelstrof/slop) (for `mlvwm-screenshot`)
 
 ## USAGE
 

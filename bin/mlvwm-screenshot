@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# mlvwm-screenshot - Take a screenshot using maim and save it as a date-stamped PNG
+#
+# Assumes that your ~/.mlvwmrc contains the following:
+#
+# ShortCut
+# 3 SC  Exec "mlvwm-screenshot" exec ./bin/mlvwm-screenshot
+# 4 SC  Exec "mlvwm-screenshot" exec ./bin/mlvwm-screenshot -s
+
+SCREENSHOT_DIR=${SCREENSHOT_DIR:-$HOME/Pictures}
+
+maim "$@""${SCREENSHOT_DIR}/screenshot-$(date +%Y%m%d-%H%M%S).png"

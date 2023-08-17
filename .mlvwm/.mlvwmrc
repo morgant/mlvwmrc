@@ -53,6 +53,8 @@ Left    M       PreviousSameDeskWindow
 Right   M       NextSameDeskWindow
 Escape  M       Restart mlvwm
 Escape  SM      Exit 
+3       SC      Exec "mlvwm-screenshot" exec .bin/mlvwm-screenshot
+4       SC      Exec "mlvwm-screenshot" exec .bin/mlvwm-screenshot -s
 END
 
 # Load Theme from themes/ ('System7', 'MacOS8', or 'MacOS9')
