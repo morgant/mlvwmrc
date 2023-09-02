@@ -1,0 +1,32 @@
+Menu ScummVM-File, Label "File", Left
+"Open Global Menu" Action SendMessage C+F5
+"" NonSelect
+"Save Screenshot" Action SendMessage M+S
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu ScummVM-View, Label "View", Left
+"Capture/Uncapture Mouse" Action SendMessage C-M
+"Virtual Keyboard..." Action SendMessage C-F7
+"" NonSelect
+"Full Screen/Windowed" Action SendMessage M-Enter
+"" NonSelect
+"Debugger..." Action SendMessage CM-D
+END
+
+Menu ScummVM-Audio, Label "Audio", Left
+"Mute/Unmute" Action SendMessage C-U
+END
+
+MenuBar ScummVM
+ScummVM-File
+def-Edit
+ScummVM-View
+ScummVM-Audio
+END
+
+Style
+"ScummVM*" NoSBarH, NoSBarV
+"ScummVM*" MiniIcon scummvm.xpm, MenuBar ScummVM
+END

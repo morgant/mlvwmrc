@@ -30,6 +30,8 @@ pixmap:
 	convert $(TEMP)/mpv.png -resize 16x16\> $(PIXMAP)/mpv.xpm
 	curl -# -L "https://gitlab.com/qemu-project/qemu/-/raw/master/ui/icons/qemu_16x16.png?ref_type=heads&inline=false" -o $(TEMP)/qemu.png
 	convert $(TEMP)/qemu.png $(PIXMAP)/qemu.xpm
+	curl -# -L https://raw.githubusercontent.com/scummvm/scummvm/master/icons/scummvm.ico -o $(TEMP)/scummvm.ico
+	convert $(TEMP)/scummvm.ico[8] -resize 16x16\> $(PIXMAP)/scummvm.xpm
 	curl -# -L https://raw.githubusercontent.com/zealdocs/zeal/main/assets/freedesktop/16-apps-zeal.png -o $(TEMP)/zeal.png
 	convert $(TEMP)/zeal.png $(PIXMAP)/zeal.xpm
 	#
@@ -67,6 +69,7 @@ clean-pixmap:
 	rm $(PIXMAP)/iridium.xpm
 	rm $(PIXMAP)/mpv.xpm
 	rm $(PIXMAP)/qemu.xpm
+	rm $(PIXMAP)/scummvm.xpm
 	rm $(PIXMAP)/vlc.xpm
 	rm $(PIXMAP)/zeal.xpm
 
