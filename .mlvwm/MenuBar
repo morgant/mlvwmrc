@@ -48,7 +48,7 @@ Menu Default-Label, Label "Label"
 "Project 2" NonSelect, Gray
 END
 
-Menu restart-sub
+Menu Default-Restart
 "Start twm"  Action Restart twm
 "Start fvwm" Action Restart fvwm
 END
@@ -60,7 +60,7 @@ Menu Default-Special, Label "Special"
 "Eject Disk" NonSelect, Gray
 "Erase Disk..." NonSelect, Gray
 "" NonSelect
-"Start" SubMenu restart-sub
+"Start" SubMenu Default-Restart
 "Restart" Action Restart mlvwm
 "Shut down" Action Exit
 END
