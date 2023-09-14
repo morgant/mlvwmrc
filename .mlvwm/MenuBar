@@ -61,6 +61,7 @@ Menu Default-Special, Label "Special"
 "Erase Disk..." NonSelect, Gray
 "" NonSelect
 "Start" SubMenu Default-Restart
+"Log Out" Action Exit
 "Restart" Action Restart mlvwm
 "Shut down" Action Exit
 END
