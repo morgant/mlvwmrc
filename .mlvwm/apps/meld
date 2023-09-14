@@ -20,7 +20,7 @@ END
 
 MenuBar Meld
 Meld-File
-def-Edit
+Default-Edit
 Meld-Changes
 Meld-View
 END

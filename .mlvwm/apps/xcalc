@@ -3,7 +3,7 @@ END
 
 MenuBar Xcalc
 Xcalc-File
-def-Edit
+Default-Edit
 END
 
 Style

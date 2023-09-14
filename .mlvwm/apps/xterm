@@ -6,7 +6,7 @@ END
 
 MenuBar xterm
 xterm-file
-def-Edit
+Default-Edit
 END
 
 Style

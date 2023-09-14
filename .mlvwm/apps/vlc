@@ -33,7 +33,7 @@ END
 
 MenuBar VLC
 VLC-File
-def-Edit
+Default-Edit
 VLC-Playback
 VLC-Tools
 END

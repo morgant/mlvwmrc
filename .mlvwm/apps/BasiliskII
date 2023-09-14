@@ -3,7 +3,7 @@ END
 
 MenuBar BasiliskII
 BasiliskII-File
-def-Edit
+Default-Edit
 END
 
 Style

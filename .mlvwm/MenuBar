@@ -1,4 +1,4 @@
-Menu def-File, Label "File", Left
+Menu Default-File, Label "File", Left
 "New Folder" NonSelect, Gray, Action Nop
 "Open" NonSelect, Gray, Action Nop
 "Print" NonSelect, Gray, Action Nop
@@ -14,7 +14,7 @@ Menu def-File, Label "File", Left
 "Print Desktop..." NonSelect, Gray, Action Nop
 END
 
-Menu def-Edit, Label "Edit"
+Menu Default-Edit, Label "Edit"
 "Undo" NonSelect, Gray, Action Nop
 "" NonSelect
 "Cut" NonSelect, Gray
@@ -26,7 +26,7 @@ Menu def-Edit, Label "Edit"
 "Show Clipboard" NonSelect, Gray
 END
 
-Menu def-View, Label "View"
+Menu Default-View, Label "View"
 "by Small Icon" NonSelect, Gray
 "by Icon" NonSelect, Gray
 "by Name" NonSelect, Gray
@@ -36,7 +36,7 @@ Menu def-View, Label "View"
 "by Version" NonSelect, Gray
 END
 
-Menu def-Label, Label "Label"
+Menu Default-Label, Label "Label"
 "None" NonSelect, Gray
 "" NonSelect
 "Essential" NonSelect, Gray
@@ -53,7 +53,7 @@ Menu restart-sub
 "Start fvwm" Action Restart fvwm
 END
 
-Menu def-Special, Label "Special"
+Menu Default-Special, Label "Special"
 "Clean Up Desktop" Action Refresh
 "Empty Trash" NonSelect, Gray
 "" NonSelect
@@ -65,7 +65,7 @@ Menu def-Special, Label "Special"
 "Shut down" Action Exit
 END
 
-Menu def-Window
+Menu Default-Window
 "Move" Action MoveWindow
 "Resize" Action ResizeWindow
 "Toggle Scroll" Action ToggleScroll
@@ -75,12 +75,12 @@ END
 
 # Definition MenuBar
 MenuBar default
-def-File
-def-Edit
-def-View
-def-Label
-def-Special
-def-Window
+Default-File
+Default-Edit
+Default-View
+Default-Label
+Default-Special
+Default-Window
 END
 
 # Menu Extras

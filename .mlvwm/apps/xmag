@@ -4,7 +4,7 @@ END
 
 MenuBar xmag
 xmag-file
-def-Edit
+Default-Edit
 END
 
 Style

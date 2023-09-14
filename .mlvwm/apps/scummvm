@@ -21,7 +21,7 @@ END
 
 MenuBar ScummVM
 ScummVM-File
-def-Edit
+Default-Edit
 ScummVM-View
 ScummVM-Audio
 END
