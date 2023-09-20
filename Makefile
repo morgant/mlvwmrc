@@ -1,5 +1,6 @@
 TEMP=tmp
 CONF=.mlvwm
+BIN=bin
 PIXMAP=$(CONF)/pixmap
 PATTERNS=$(CONF)/patterns
 
@@ -51,10 +52,14 @@ patterns:
 	curl -# -L https://imgur.com/a/9jYy0/zip -o "$(TEMP)/Mac OS Solid Color Backgrounds.zip"
 	unzip -d $(PATTERNS) "$(TEMP)/Mac OS Solid Color Backgrounds.zip"
 
-install:
+install: install-bin
 	cp -R $(CONF) $(HOME)/
 	ln -fs $(HOME)/$(CONF)/.mlvwmrc $(HOME)/.mlvwmrc
 	sed -i 's@/home2/tak/bin/pixmap@$(HOME)/$(PIXMAP)@g' $(HOME)/$(CONF)/.mlvwmrc
+
+install-bin:
+	mkdir -p $(HOME)/$(BIN)
+	install -b -B .`date +%Y%m%d-%H%M%S` -m 700 -o $(USER) $(BIN)/mlvwm-* $(HOME)/$(BIN)
 
 clean: clean-pixmap
 	rm -r $(TEMP)

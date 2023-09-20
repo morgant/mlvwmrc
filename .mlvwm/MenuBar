@@ -48,9 +48,10 @@ Menu Default-Label, Label "Label"
 "Project 2" NonSelect, Gray
 END
 
-Menu Default-Restart
+Menu Default-WindowManager
 "Start twm"  Action Restart twm
 "Start fvwm" Action Restart fvwm
+"Restart mlvwm" Action Restart mlvwm
 END
 
 Menu Default-Special, Label "Special"
@@ -60,10 +61,12 @@ Menu Default-Special, Label "Special"
 "Eject Disk" NonSelect, Gray
 "Erase Disk..." NonSelect, Gray
 "" NonSelect
-"Start" SubMenu Default-Restart
+"Window Manager" SubMenu Default-WindowManager
+"" NonSelect
 "Log Out" Action Exit
-"Restart" Action Restart mlvwm
-"Shut down" Action Exit
+"Sleep" Action Exec mlvwm-powerdown exec mlvwm-powerdown -s
+"Restart" Action Exec mlvwm-powerdown exec mlvwm-powerdown -r
+"Shut Down" Action Exec mlvwm-powerdown exec mlvwm-powerdown -p
 END
 
 Menu Default-Window

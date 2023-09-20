@@ -1,0 +1,70 @@
+#!/bin/sh
+
+# mlvwm-powerdown - Wrapper OS-specific implementations of sleep, reboot, and/or
+# power off of the system
+#
+# There may be OS-specific configuration required
+
+tool="$(basename "$0")"
+os="$(uname -s)"
+
+_usage() {
+  echo "Usage: ${tool} [-s | -r | -p]"
+  exit 1
+}
+
+_unsupported() {
+  echo "${tool}: ${1} is not supported under ${os}."
+  exit 1
+}
+
+_sleep_now() {
+  case "$os" in
+    "OpenBSD")
+      pgrep -q apmd && zzz
+      ;;
+    *)
+      _unsupported "sleep"
+      ;;
+  esac
+}
+
+_reboot_now() {
+  case "$os" in
+    "OpenBSD"|"FreeBSD"|"Linux")
+      shutdown -r now
+      ;;
+    *)
+      _unsupported "reboot"
+      ;;
+  esac
+}
+
+_poweroff_now() {
+  case "$os" in
+    "OpenBSD"|"FreeBSD")
+      shutdown -p now
+      ;;
+    "Linux")
+      shutdown -P now
+      ;;
+    *)
+      _unsupported "power off"
+      ;;
+  esac
+}
+
+case "$1" in
+  "-s")
+    _sleep_now
+    ;;
+  "-r")
+    _reboot_now
+    ;;
+  "-p")
+    _poweroff_now
+    ;;
+  *)
+    _usage
+    ;;
+esac
