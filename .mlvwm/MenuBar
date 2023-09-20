@@ -64,9 +64,9 @@ Menu Default-Special, Label "Special"
 "Window Manager" SubMenu Default-WindowManager
 "" NonSelect
 "Log Out" Action Exit
-"Sleep" Action Exec mlvwm-powerdown exec mlvwm-powerdown -s
-"Restart" Action Exec mlvwm-powerdown exec mlvwm-powerdown -r
-"Shut Down" Action Exec mlvwm-powerdown exec mlvwm-powerdown -p
+"Sleep" Action Exec "mlvwm-powerdown" exec ./bin/mlvwm-powerdown -s
+"Restart" Action Exec "mlvwm-powerdown" exec ./bin/mlvwm-powerdown -r
+"Shut Down" Action Exec "mlvwm-powerdown" exec ./bin/mlvwm-powerdown -p
 END
 
 Menu Default-Window
