@@ -38,6 +38,7 @@ pixmap:
 	#
 	# download & convert website favicons
 	#
+	convert https://play0ad.com/favicon.ico $(PIXMAP)/0ad.xpm
 	convert https://www.chromium.org/favicon.ico $(PIXMAP)/chromium.xpm
 	curl -# -L https://claws-mail.org/favicon.ico -o $(TEMP)/claws-mail-favicon.ico
 	convert $(TEMP)/claws-mail-favicon.ico $(PIXMAP)/claws-mail.xpm
@@ -67,6 +68,7 @@ clean: clean-pixmap
 
 clean-pixmap:
 	rm $(PIXMAP)/mini*.xpm
+	rm $(PIXMAP)/0ad.xpm
 	rm $(PIXMAP)/chromium.xpm
 	rm $(PIXMAP)/claws-mail.xpm
 	rm $(PIXMAP)/cool-retro-term.xpm
