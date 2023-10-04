@@ -1,6 +1,6 @@
 Menu Zutty-File-NewWindow
-"Light" Action Exec "zutty" exec zutty -rv
-"Dark" Action Exec "zutty" exec zutty
+"Light" Action Exec "zutty" exec zutty -login -rv
+"Dark" Action Exec "zutty" exec zutty -login
 END
 
 Menu Zutty-File, Label "File", Left
