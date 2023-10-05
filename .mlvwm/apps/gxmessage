@@ -1,0 +1,4 @@
+Style
+"gxmessage" NoSBarH, NoSBarV, NoCloseR, NoResizeR, NoMinMaxR, NoWinList, StayOnTop
+"gxmessage" MiniIcon mini-x.xpm
+END

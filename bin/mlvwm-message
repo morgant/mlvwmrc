@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# mlvwm-message - Wrapper for gxmessage & xmessage
+
+_xmessage="$(which gxmessage >/dev/null 2>&1 && echo gxmessage || echo xmessage)"
+$_xmessage "$@"

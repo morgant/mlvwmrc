@@ -21,11 +21,12 @@ MLVWM includes a very rudimentary set of rc ([run command](https://en.wikipedia.
 * `curl`
 * ImageMagick
 * `xdotool` (for `mlvwm-restart`)
+* `gxmessage`
 * [`maim`](https://github.com/naelstrof/maim) & [`slop`](https://github.com/naelstrof/slop) (for `mlvwm-screenshot`)
 
 ## USAGE
 
-Run `make && make install` to install `.mlvwmrc` and `.mlvwm/` in your home directory, including downloading and/or converting appropriate icons.
+Run `make && make install` to install `.mlvwm/`, `.mlvwmrc`, and `bin/mlvwm-*` in your home directory, including downloading and/or converting appropriate icons.
 
 ## TESTING
 
@@ -62,6 +63,7 @@ Configurations for the following X11 applications are included:
 * [Clementine](https://www.clementine-player.org/)
 * [cool-retro-term](https://github.com/Swordfish90/cool-retro-term)
 * [Firefox](https://www.getfirefox.com/)
+* [Gxmessage](https://trmusson.dreamhosters.com/programs.html#gxmessage)
 * [HandBrake](https://handbrake.fr/)
 * [Krita](https://krita.org/)
 * [Meld](http://meldmerge.org/)
@@ -100,6 +102,105 @@ Configurations for additional applications and utilities are also available from
 * [Xosview2 mini graphs](https://github.com/morgant/mlvwmrc-xosview2)
 * [x11vnc Menu Extra](https://github.com/morgant/mlvwmrc-x11vnc)
 
+
+## MLVWM-SPECIFIC SCRIPTS
+
+A few `mlvwm`-specific scripts are included and installed in `~/bin/`. You should ensure that this directory is in your user's `PATH` environment variable.
+
+### mlvwm-message
+
+`mlvwm-message` is a wrapper around `gxmessage` and `xmessage` (both of which accept the same options), so that other `mlvwm`-specific scripts can use the former, if available, or fall back to the latter.
+
+Usage:
+
+```
+mlvwm-message [ -buttons label1[:value1],label2[:value2], ... ] [ options ] message ...
+```
+
+Example:
+
+```
+mlvwm-message -title "Yo" -buttons "Goodbye:1,Hello:2" -default "Hello" "Hello, world!"
+```
+
+### mlvwm-alert
+
+`mlvwm-alert` is a wrapper around `mlvwm-message` which displays an alert-style dialog with the provided title, message, and with a single "OK" button to dismiss it.
+
+Usage:
+
+```
+mlvwm-alert title message
+```
+
+Example:
+
+```
+mlvwm-alert "WARNING!" "This message will self destruct..."
+```
+
+### mlvwm-confirm
+
+`mlvwm-confirm` is a wrapper around `mlvwm-message` which displays a confirmation-style dialog with the provided title, message, and with two buttons to dismiss it: "OK" to confirm (exit status `0`) and "Cancel" to deny (exit status `1`).
+
+Usage:
+
+```
+mlvwm-confirm title message
+```
+
+Example:
+
+```
+mlvwm-confirm "Shut Down" "Are you sure you want to shut down your computer now?"
+```
+
+### mlvwm-powerdown
+
+`mlvwm-powerdown` is a wrapper around OS-specific commands to suspend/sleep, reboot/restart, or shut/power down the computer. It accepts a single option, either `-s` for suspend/sleep, `-r` for reboot/restart, or `-p` for power/shut down. For the `-r` & `-p` options, it utilizes `mlvwm-confirm` to prompt for confirmation before restarting or shutting down the computer.
+
+This is primarily used to implement "Sleep", "Restart", and "Shutdown" menu items in the default "Special" menu.
+
+Usage:
+
+```
+mlvwm-powerdown [ -s | -r | -p ]
+```
+
+Example:
+
+```
+mlvwm-powerdown -p
+```
+
+### mlvwm-restart
+
+`mlvwm-restart`, unlike `mlvwm-powerdown`, is unrelated to the power state of the computer and is instead used to relaunch `mlvwm`, reloading configurations. It requires `xdotool` to trigger a special keyboard shortcut which is specified in the default configuration.
+
+Usage:
+
+```
+mlvwm-restart
+```
+
+### mlvwm-screenshot
+
+`mlvwm-screenshot` is a wrapper around `maim` which saves a date & time stamped PNG screenshot of the screen in the user's `~/Pictures/` directory. Optionally, by specifying the `-s` option, it will allow the user to select an area of the screen to be captured instead of the entire screen.
+
+This is primarily used to implement the screenshots via keyboard shortcuts in the default configuration.
+
+Usage:
+
+```
+mlvwm-screenshot [ -s ]
+```
+
+Example:
+
+```
+mlvwm-screenshot -s
+```
+
 ## DATA STRUCTURE
 
 MLVWM loads its configuration from `~/.mlvwmrc`, but to break configuration up into more logical and manageable chunks within a `~/.mlvwm/` directory. That directory contains its own `.mlvwmrc` file which `~/.mlvwmrc` gets symlinked to, and it takes advantage of the `Read` command (see [mlvwm/CONFIGURATION](https://github.com/morgant/mlvwm/blob/master/CONFIGURATION)) to import the remaining configuration files.
@@ -128,6 +229,13 @@ The current structure is:
           …
         pixmap/
           *.xpm
+      bin/
+        mlvwm-alert
+        mlvwm-confirm
+        mlvwm-message
+        mlvwm-powerdown
+        mlvwm-restart
+        mlvwm-screenshot
 
 ### .mlvwmrc
 

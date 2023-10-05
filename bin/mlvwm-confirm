@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# mlvwm-confirm Display a confirmation-style dialog with a message
+
+mlvwm-message \
+  -center \
+  -buttons "Cancel:1,OK:0" \
+  -default "OK" \
+  -title "$1" \
+  "$2"

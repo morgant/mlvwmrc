@@ -18,6 +18,10 @@ _unsupported() {
   exit 1
 }
 
+_confirm() {
+  mlvwm-confirm "${1}" "Are you sure you want to $(echo "${1}" | tr "[:upper:]" "[:lower:]") your computer?"
+}
+
 _sleep_now() {
   case "$os" in
     "OpenBSD")
@@ -32,7 +36,7 @@ _sleep_now() {
 _reboot_now() {
   case "$os" in
     "OpenBSD"|"FreeBSD"|"Linux")
-      shutdown -r now
+      _confirm "Restart" && shutdown -r now
       ;;
     *)
       _unsupported "reboot"
@@ -43,10 +47,10 @@ _reboot_now() {
 _poweroff_now() {
   case "$os" in
     "OpenBSD"|"FreeBSD")
-      shutdown -p now
+      _confirm "Shut Down" && shutdown -p now
       ;;
     "Linux")
-      shutdown -P now
+      _confirm "Shut Down" && shutdown -P now
       ;;
     *)
       _unsupported "power off"
