@@ -36,6 +36,12 @@ pixmap:
 	curl -# -L https://raw.githubusercontent.com/zealdocs/zeal/main/assets/freedesktop/16-apps-zeal.png -o $(TEMP)/zeal.png
 	convert $(TEMP)/zeal.png $(PIXMAP)/zeal.xpm
 	#
+	# download & convert icons from source code archives
+	#
+	curl -# -L http://links.twibright.com/download/links-2.29.tar.gz -o $(TEMP)/links-2.29.tar.gz
+	tar -xzf $(TEMP)/links-2.29.tar.gz -C $(TEMP) links-2.29/linkswin.ico
+	convert $(TEMP)/links-2.29/linkswin.ico[0] $(PIXMAP)/links.xpm
+	#
 	# download & convert website favicons
 	#
 	convert https://play0ad.com/favicon.ico $(PIXMAP)/0ad.xpm
@@ -74,6 +80,7 @@ clean-pixmap:
 	rm $(PIXMAP)/cool-retro-term.xpm
 	rm $(PIXMAP)/firefox.xpm
 	rm $(PIXMAP)/iridium.xpm
+	rm $(PIXMAP)/links.xpm
 	rm $(PIXMAP)/mpv.xpm
 	rm $(PIXMAP)/qemu.xpm
 	rm $(PIXMAP)/scummvm.xpm

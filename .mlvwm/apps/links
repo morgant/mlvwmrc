@@ -1,0 +1,97 @@
+Menu Links-File, Label "File", Left
+"Go to URL..." Action SendMessage N+g
+"Go Back" Action SendMessage N+z
+"Go Forward" Action SendMessage N+x
+"History" NonSelect, Gray
+"Reload" Action SendMessage C+R
+"Bookmarks" Action SendMessage N+s
+"New Window" Action Exec "links" exec links -g
+"" NonSelect
+"Save As..." NonSelect, Gray
+"Save URL As..." NonSelect, Gray
+"Copy Current URL Location" NonSelect, Gray
+"" NonSelect
+"Kill Background Connections" NonSelect, Gray
+"Kill All Connections" NonSelect, Gray
+"Flush All Caches" NonSelect, Gray
+"Resource Info..." NonSelect, Gray
+"" NonSelect
+"OS Shell" NonSelect, Gray
+"" NonSelect
+"Quit" Action SendMessage N+q
+END
+
+Menu Links-View, Label "View", Left
+"Search..." Action SendMessage N+slash
+"Search Backward" Action SendMessage N+question
+"Find Next" Action SendMessage N+n
+"Find Previous" Action SendMessage N+N
+"" NonSelect
+"Toggle HTML/Plain" Action SendMessage N+backslash
+"Document Info..." Action SendMessage N+equal
+"Header Info..." Action SendMessage N+pipe
+"Frame at Full-screen" Action SendMessage N+f
+"" NonSelect
+"Save Clipboard to File..." NonSelect, Gray
+"Load Clipboard from File..." NonSelect, Gray
+"" NonSelect
+"HTML Options..." NonSelect, Gray
+"Color..." NonSelect, Gray
+"Save HTML Options..." NonSelect, Gray
+END
+
+Menu Link-Link, Label "Link", Left
+END
+
+Menu Link-Downloads, Label "Downloads", Left
+END
+
+Menu Link-Setup-Network
+"Connections" NonSelect, Gray
+"IPv6 Optionss..." NonSelect, Gray
+"Proxies" NonSelect, Gray
+"SSL Options..." NonSelect, Gray
+"DNS Options..." NonSelect, Gray
+"HTTP Options..." NonSelect, Gray
+"FTP Options..." NonSelect, Gray
+"SMB Options..." NonSelect, Gray
+END
+
+Menu Link-Setup, Label "Setup", Left
+"Language" NonSelect, Gray
+"Video Options..." NonSelect, Gray
+"Network Options" SubMenu Link-Setup-Network
+"Cookies..." NonSelect, Gray
+"Miscellaneous Options..." NonSelect, Gray
+"Fonts..." NonSelect, Gray
+"Cache..." NonSelect, Gray
+"Mail and Telnet..." NonSelect, Gray
+"Associations..." NonSelect, Gray
+"File Extensions..." NonSelect, Gray
+"Blocked Images..." NonSelect, Gray
+"" NonSelect
+"Save Options" NonSelect, Gray
+END
+
+Menu Links-Help, Label "Help", Left
+"About" NonSelect, Gray
+"Keys" Action SendMessage N+F1
+"User Manual" NonSelect, Gray
+"Home page" NonSelect, Gray
+"Calibration" NonSelect, Gray
+"Copying" NonSelect, Gray
+END
+
+MenuBar Links
+Links-File
+Links-View
+Links-Link
+Links-Downloads
+Links-Setup
+Links-Help
+END
+
+Style
+"Links*" MaxmizeScale 80x80, NoSBarH, NoSBarV
+"Links*" MiniIcon links.xpm, MenuBar Links
+END
