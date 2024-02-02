@@ -1,0 +1,13 @@
+Menu Godot-File, Label "File", Left
+"Quit" Action SendMessage C+Q
+END
+
+MenuBar Godot
+Godot-File
+Default-Edit
+END
+
+Style
+"Godot" NoSBarH, NoSBarV
+"Godot" MiniIcon godot.xpm, MenuBar Godot
+END

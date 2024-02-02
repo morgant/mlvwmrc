@@ -29,6 +29,8 @@ pixmap:
 	convert $(TEMP)/firefox.png $(PIXMAP)/firefox.xpm
 	curl -# -L https://raw.githubusercontent.com/mpv-player/mpv.io/master/source/images/favicon.png -o $(TEMP)/mpv.png
 	convert $(TEMP)/mpv.png -resize 16x16\> $(PIXMAP)/mpv.xpm
+	curl -# -L https://raw.githubusercontent.com/godotengine/godot/master/icon.png -o $(TEMP)/godot.png
+	convert $(TEMP)/godot.png -resize 16x16\> $(PIXMAP)/godot.xpm
 	curl -# -L "https://gitlab.com/qemu-project/qemu/-/raw/master/ui/icons/qemu_16x16.png?ref_type=heads&inline=false" -o $(TEMP)/qemu.png
 	convert $(TEMP)/qemu.png $(PIXMAP)/qemu.xpm
 	curl -# -L https://raw.githubusercontent.com/scummvm/scummvm/master/icons/scummvm.ico -o $(TEMP)/scummvm.ico
