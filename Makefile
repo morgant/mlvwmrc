@@ -81,6 +81,7 @@ clean-pixmap:
 	rm $(PIXMAP)/claws-mail.xpm
 	rm $(PIXMAP)/cool-retro-term.xpm
 	rm $(PIXMAP)/firefox.xpm
+	rm $(PIXMAP)/godot.xpm
 	rm $(PIXMAP)/iridium.xpm
 	rm $(PIXMAP)/links.xpm
 	rm $(PIXMAP)/mpv.xpm
