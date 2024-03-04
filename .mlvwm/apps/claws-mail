@@ -1,0 +1,327 @@
+Menu ClawsMail-File-AddMailbox
+"MH..." NonSelect, Gray
+END
+
+Menu ClawsMail-File, Label "File", Left
+"Add mailbox" SubMenu ClawsMail-File-AddMailbox
+"" NonSelect
+"Change mailbox order..." NonSelect, Gray
+"" NonSelect
+"Import mbox file..." NonSelect, Gray
+"Export to mbox file..." NonSelect, Gray
+"Export selected to mbox file..." NonSelect, Gray
+"" NonSelect
+"Empty all Trash folders" Action SendMessage S+D
+"" NonSelect
+"Save email as..." Action SendMessage C+S
+"Save part as..." Action SendMessage N+Y
+"" NonSelect
+"Page setup..." NonSelect, Gray
+"Print..." Action SendMessage C+P
+"" NonSelect
+"Offline mode" Action SendMessage C+W
+"Synchronize folders" Action SendMessage SC+S
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu ClawsMail-Edit, Label "Edit", Left
+"Copy" Action SendMessage C+C
+"Select all" Action SendMessage C+A
+"Select thread" NonSelect, Gray
+"" NonSelect
+"Find in current message..." Action SendMessage C+F
+"Search folder..." Action SendMessage SC+F
+"Quick search" Action SendMessage N+Slash
+END
+Menu ClawsMail-View-ShowHide
+"Menubar" Action SendMessage C+F12
+"Toolbar" NonSelect, Gray
+"Message view" Action SendMessage N+V
+"Status bar" NonSelect, Gray
+"Column headers" NonSelect, Gray
+END
+
+Menu ClawsMail-View-SetDisplayedColumns
+"In folder list..." NonSelect, Gray
+"In message list..." NonSelect, Gray
+END
+
+Menu ClawsMail-View-Layout
+"Standard" NonSelect, Gray
+"Three columns" NonSelect, Gray
+"Wide message" NonSelect, Gray
+"Wide message list" NonSelect, Gray
+"Small screen" NonSelect, Gray
+END
+
+Menu ClawsMail-View-Sort
+"By number" NonSelect, Gray
+"By size" NonSelect, Gray
+"By date" NonSelect, Gray
+"By thread date" NonSelect, Gray
+"By from" NonSelect, Gray
+"By to" NonSelect, Gray
+"By subject" NonSelect, Gray
+"By color label" NonSelect, Gray
+"By tag" NonSelect, Gray
+"By mark" NonSelect, Gray
+"By status" NonSelect, Gray
+"By attachment" NonSelect, Gray
+"By score" NonSelect, Gray
+"By locked" NonSelect, Gray
+"Don't sort" NonSelect, Gray
+"" NonSelect
+"Ascending" NonSelect, Gray
+"Descending" NonSelect, Gray
+"" NonSelect
+"Attract by subject" NonSelect, Gray
+END
+
+Menu ClawsMail-View-GoTo
+"Previous message" Action SendMessage N+P
+"Next message" Action SendMessage N+N
+"" NonSelect
+"Previous unread message" Action SendMessage S+P
+"Next unread message" Action SendMessage S+N
+"" NonSelect
+"Previous new message" NonSelect, Gray
+"Next new message" NonSelect, Gray
+"" NonSelect
+"Previous labeled message" NonSelect, Gray
+"Next labeled message" NonSelect, Gray
+"" NonSelect
+"Previous opened message" Action SendMessage M+Left
+"Next opened message" Action SendMessage M+Right
+"" NonSelect
+"Parent message" Action SendMessage C+Up
+"" NonSelect
+"Next unread folder" Action SendMessage S+G
+"Folder..." Action SendMessage N+G
+"" NonSelect
+"Next part" Action SendMessage N+A
+"Previous part" Action SendMessage N+Z
+END
+
+Menu ClawsMail-View-MessageScroll
+"Previous line" NonSelect, Gray
+"Next line" NonSelect, Gray
+"Previous page" NonSelect, Gray
+"Next page" NonSelect, Gray
+END
+
+Menu ClawsMail-View-Decode
+"Auto detect" NonSelect, Gray
+"" NonSelect
+"8bit" NonSelect, Gray
+"Quoted printable" NonSelect, Gray
+"Base64" NonSelect, Gray
+"Uuencode" NonSelect, Gray
+END
+
+Menu ClawsMail-View-Quotes
+"Collapse all" Action SendMessage SC+Q"
+"Collapse from level 2" NonSelect, Gray
+"Collapse from level 3" NonSelect, Gray
+END
+
+Menu ClawsMail-View-MessagePart
+"View as text" Action SendMessage N+T
+"Open" Action SendMessage N+L
+"Open with..." Action SendMessage N+O
+END
+
+Menu ClawsMail-View, Label "View", Left
+"Show or hide" SubMenu ClawsMail-View-ShowHide
+"Set displayed columns" SubMenu ClawsMail-View-SetDisplayedColumns
+"" NonSelect
+"Fullscreen" Action SendMessage C+F11
+"Layout" SubMenu ClawsMail-View-Layout
+"" NonSelect
+"Sort" SubMenu ClawsMail-View-Sort
+"Thread view" Action SendMessage C+T
+"Expand all threads" NonSelect, Gray
+"Collapse all threads" NonSelect, Gray
+"Hide read threads" NonSelect, Gray
+"Hide read messages" NonSelect, Gray
+"Hide delted messages" NonSelect, Gray
+"" NonSelect
+"Go to" SubMenu ClawsMail-View-GoTo
+"Message scroll" SubMenu ClawsMail-View-MessageScroll
+"" NonSelect
+"Character encoding" NonSelect, Gray
+"Decode" SubMenu ClawsMail-View-Decode
+"" NonSelect
+"Open in new window" Action SendMessage CM+N
+"Message source" Action SendMessage C+U
+"Show all headers" Action SendMessage C+H
+"Quotes" SubMenu ClawsMail-View-Quotes
+"Message part" SubMenu ClawsMail-View-MessagePart
+"" NonSelect
+"Update summary" Action SendMessage CM+U
+END
+
+Menu ClawsMail-Message-Receive
+"Get from current account" Action SendMessage C+I
+"Get from all accounts" Action SendMesage SC+I
+"Cancel receiving" NonSelect, Gray
+"" NonSelect
+END
+
+Menu ClawsMail-Message-ReplyTo
+"All" Action SendMessage SC+R
+"Sender" NonSelect, Gray
+"Mailing list" Action SendMessage C+L
+END
+
+Menu ClawsMail-Message-Mark
+"Mark" Action SendMessage S+Asterisk
+"Unmark" Action SendMessage N+U
+"" NonSelect
+"Mark as read" NonSelect, Gray
+"Mark as unread" Action SendMessage S+!
+"" NonSelect
+"Mark all read in folder" NonSelect, Gray
+"Mark all unread in folder" NonSelect, Gray
+"" NonSelect
+"Ignore thread" NonSelect, Gray
+"Unignore thread" NonSelect, Gray
+"Watch thread" NonSelect, Gray
+"Unwatch thread" NonSelect, Gray
+"" NonSelect
+"Mark as spam" NonSelect, Gray
+"Mark as ham" NonSelect, Gray
+"" NonSelect
+"Lock" NonSelect, Gray
+"Unlock" NonSelect, Gray
+END
+
+Menu ClawsMail-Message, Label "Message", Left
+"Receive" SubMenu ClawsMail-Message-Receive
+"Send queued messages" NonSelect, Gray
+"Cancel sending" NonSelect, Gray
+"" NonSelect
+"Compose an email message" Action SendMessage C+M
+"Compose a news message" NonSelect, Gray
+"Reply" Action SendMessage C+R
+"Repy to" SubMenu ClawsMail-Message-ReplyTo
+"Follow-up and reply to" NonSelect, Gray
+"" NonSelect
+"Forward" Action SendMessage CM+F
+"Forward as attachment" NonSelect, Gray
+"Redirect" NonSelect, Gray
+"Mailing list" NonSelect, Gray
+"" NonSelect
+"Move..." Action SendMessage C+O
+"Copy..." Action SendMessage SC+O
+"Move to trash" Action SendMessage C+D
+"Delete..." NonSelect, Gray
+"Move thread to trash" NonSelect, Gray
+"Delete thread" NonSelect, Gray
+"Cancel a news thread" NonSelect, Gray
+"" NonSelect
+"Mark" SubMenu ClawsMail-Message-Mark
+"Color label" NonSelect, Gray
+"Tags" NonSelect, Gray
+"" NonSelect
+"Re-edit" NonSelect, Gray
+"" NonSelect
+"Check signature" Action SendMessage N+C
+END
+
+Menu ClawsMail-Tools-CollectAddresses
+"From current folder..." NonSelect, Gray
+"From selected messages..." NonSelect, Gray
+END
+
+Menu ClawsMail-Tools-CreateFilterRule
+"Automatically" NonSelect, Gray
+"By From" NonSelect, Gray
+"By To" NonSelect, Gray
+"By Subject" NonSelect, Gray
+"By Sender" NonSelect, Gray
+END
+
+Menu ClawsMail-Tools-CreateProcessingRule
+"Automatically" NonSelect, Gray
+"By From" NonSelect, Gray
+"By To" NonSelect, Gray
+"By Subject" NonSelect, Gray
+"By Sender" NonSelect, Gray
+END
+
+Menu ClawsMail-Tools-DeleteDuplicatedMessages
+"In selected folder" NonSelect, Gray
+"In all folders" NonSelect, Gray
+END
+
+Menu ClawsMail-Tools, Label "Tools", Left
+"Address book" Action SendMessage SC-A
+"Add sender to address book" NonSelect, Gray
+"Collect addresses" SubMenu ClawsMail-Tools-CollectAddresses
+"" NonSelect
+"Filter all messages in folder" NonSelect, Gray
+"Filter selected messages" NonSelect, Gray
+"Run folder processing rules" NonSelect, Gray
+"Create filter rule" SubMenu ClawsMail-Tools-CreateFilterRule
+"Create processing rule" SubMenu ClawsMail-Tools-CreateProcessingRule
+"" NonSelect
+"List URLs..." Action SendMessage SC+U
+"" NonSelect
+"Actions" NonSelect, Gray
+"" NonSelect
+"Check for new messages in all folders" NonSelect, Gray
+"Delete duplicated messages" SubMenu ClawsMail-Tools-DeleteDuplicatedMessages
+"" NonSelect
+"Execute" Action SendMessage N+X
+"Expunge" Action SendMessage C+E
+"" NonSelect
+"TLS Certificates" NonSelect, Gray
+"" NonSelect
+"Filtering log" NonSelect, Gray
+"Network log" Action SendMessage SC+L
+"" NonSelect
+"Forget all session passwords" NonSelect, Gray
+"Forget primary passphrase" NonSelect, Gray
+END
+
+Menu ClawsMail-Configuration, Label "Configuration", Left
+"Change current account" NonSelect, Gray
+"Preferences for current account..." NonSelect, Gray
+"Create new account..." NonSelect, Gray
+"Edit accounts..." NonSelect, Gray
+"" NonSelect
+"Preferences..." NonSelect, Gray
+"Pre-processing..." NonSelect, Gray
+"Post-processing..." NonSelect, Gray
+"Filtering..." NonSelect, Gray
+"Templates..." NonSelect, Gray
+"Actions..." NonSelect, Gray
+"Tags..." NonSelect, Gray
+"" NonSelect
+"Plugins..." NonSelect, Gray
+END
+
+Menu ClawsMail-Help, Label "Help", Left
+"Manual" NonSelect, Gray
+"Online user-contributed FAQ" NonSelect, Gray
+"Icon legend" NonSelect, Gray
+"" NonSelect
+"About" NonSelect, Gray
+END
+
+MenuBar ClawsMail
+ClawsMail-File
+ClawsMail-Edit
+ClawsMail-View
+ClawsMail-Message
+ClawsMail-Tools
+ClawsMail-Configuration
+ClawsMail-Help
+END
+
+Style
+"claws-mail" NoSBarH, NoSBarV
+"claws-mail" MiniIcon claws-mail.xpm, MenuBar ClawsMail
+END
+
