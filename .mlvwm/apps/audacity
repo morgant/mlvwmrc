@@ -1,0 +1,400 @@
+Menu Audacity-File-SaveProject
+"Save Project" Action SendMessage C+S
+"Save Project As..." NonSelect, Gray
+"Backup Project..." NonSelect, Gray
+END
+
+Menu Audacity-File-Export
+"Export as MP3" NonSelect, Gray
+"Export as WAV" NonSelect, Gray
+"Export as OGG" NonSelect, Gray
+"Export Audio..." Action SendMessage SC+E
+"Export Selected Audio..." NonSelect, Gray
+"Export Labels..." NonSelect, Gray
+"Export Multiple..." NonSelect, Gray
+"Export MIDI..." NonSelect, Gray
+END
+
+Menu Audacity-File-Import
+"Audio..." Action SendMessage SC+I
+"MIDI..." NonSelect, Gray
+"Labels..." NonSelect, Gray
+"Raw Data..." NonSelect, Gray
+END
+
+Menu Audacity-File, Label "File", Left
+"New" Action SendMessage C+N
+"Open..." Action SendMessage C+O
+"Recent Files" NonSelect, Gray
+"Close" Action SendMessage C+W
+"" NonSelect
+"Save Project" SubMenu Audacity-File-SaveProject
+"" NonSelect
+"Export" SubMenu Audacity-File-Export
+"Import" SubMenu Audacity-File-Import
+"" NonSelect
+"Page Setup..." NonSelect, Gray
+"Print..." NonSelect, Gray
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu Audacity-Edit-RemoveSpecial
+"Split Cut" Action SendMessage MC-X
+"Split Delete" Action SendMessage MC-K
+"" NonSelect
+"Silence Audio" Action SendMessage C+L
+"Trim Audio" Action SendMessage C+T
+END
+
+Menu Audacity-Edit-EditClips
+"Split" Action SendMessage C+I
+"Split New" NonSelect, Gray
+"" NonSelect
+"Join" NonSelect, Gray
+"Detach at Silences" NonSelect, Gray
+END
+
+Menu Audacity-Edit-Labels
+"Edit Labels..." NonSelect, Gray
+"" NonSelect
+"Add Label at Selection" Action SendMessage C+B
+"Add Label at Playback Position" Action SendMessage C+M
+"Paste Text to New Label" NonSelect, Gray
+"" NonSelect
+"Type to Create a Label (on/off)" NonSelect, Gray
+END
+
+Menu Audacity-Edit-LabeledAudio
+"Cut" NonSelect, Gray
+"Delete" NonSelect, Gray
+"" NonSelect
+"Split Cut" Action SendMessage SM+X
+"Split Delete" Action SendMessage SM+K
+"" NonSelect
+"Selence Audio" NonSelect, Gray
+"Copy" Action SendMessage SM+C
+"" NonSelect
+"Split" NonSelect, Gray
+"Join" NonSelect, Gray
+"Detach at Silences" Action SendMessage SM+J
+END
+
+Menu Audacity-Edit, Label "Edit", Left
+"Undo" Action SendMessage C+Z
+"Redo" Action SendMessage SC+Z
+"" NonSelect
+"Cut" Action SendMessage C+X
+"Delete" Action SendMessage C+K
+"Copy" Action SendMessage C+C
+"Paste" Action SendMessage C+V
+"Duplicate" Action SendMessage C+D
+"" NonSelect
+"Remove Special" SubMenu Audacity-Edit-RemoveSpecial
+"" NonSelect
+"Edit Clips" SubMenu Audacity-Edit-EditClips
+"Labels" SubMenu Audacity-Edit-Labels
+"Labeled Audio" SubMenu Audacity-Edit-LabeledAudio
+"Metadata" NonSelect, Gray
+"Rename Clip..." Action SendMessage C+F2
+"" NonSelect
+"Preferences..." Action SendMessage C+P
+END
+
+Menu Audacity-Select-Tracks
+"In All Tracks" Action SendMessage SC+K
+"In All Sync-Locked Tracks" Action SendMessage SC+Y
+END
+
+Menu Audacity-Select-Region
+"Left at Playback Position" Action SendMessage N+[
+"Right at Playback Position" Action SendMessage N+]
+"Track Start to Cursor" Action SendMessage S+J
+"Cursor to Track End" Action SendMessage S+K
+"Track Start to End" NonSelect, Gray
+"" NonSelect
+"Store Selection" NonSelect, Gray
+"Retrieve Selection" NonSelect, Gray
+END
+
+Menu Audacity-Select-Spectral
+"Toggle Spectral Selection" Action SendMessage N+Q
+"Next Higher Peak Frequency" NonSelect, Gray
+"Next Lower Peak Frequency" NonSelect, Gray
+END
+
+Menu Audacity-Select-AudioClips
+"Previous Clip Boundary to Cursor" NonSelect, Gray
+"Cursor to Next Clip Boundary" NonSelect, Gray
+"Previous Clip" Action SendMessage M+Comma
+"Next Clip Action" Action SendMessage M+Period
+END
+
+Menu Audacity-Select, Label "Select", Left
+"All" Action SendMessage C+A
+"None" NonSelect, Gray
+"Tracks" SubMenu Audacity-Select-Tracks
+"Region" SubMenu Audacity-Select-Region
+"Spectral" SubMenu Audacity-Select-Spectral
+"Audio Clips" SubMenu Audacity-Select-AudioClips
+"" NonSelect
+"Cursor to Stored Cursor Position" NonSelect, Gray
+"Store Cursor Position"  NonSelect, Gray
+"" NonSelect
+"At Zero Crossings" Action SendMessage N+Z
+END
+
+Menu Audacity-View-Zoom
+"Zoom In" Action SendMessage C+1
+"Zoom Normal" Action SendMessage C+2
+"Zoom Out" Action SendMessage C+3
+"Zoom to Selection" Action SendMessage C+E
+"Zoom Toggle" Action SendMessage S+Z
+"" NonSelect
+"Advanced Vertical Zooming" NonSelect, Gray
+END
+
+Menu Audacity-View-TrackSize
+"Fit to Width" Action SendMessage C+F
+"Fit to Height" Action SendMessage SC+F
+"Collapse All Tracks" Action SendMessage SC+C
+"Expand Collapsed Tracks" Action SendMessage SC+X
+END
+
+Menu Audacity-View-SkipTo
+"Selection Start" NonSelect, Gray
+"Selection End" NonSelect, Gray
+END
+
+Menu Audacity-View, Label "View", Left
+"Zoom" SubMenu Audacity-View-Zoom
+"Track Size" SubMenu Audacity-View-TrackSize
+"Skip To" SubMenu Audacity-View-SkipTo
+"" NonSelect
+"History" NonSelect, Gray
+"Karaoke" NonSelect, Gray
+"Mixer" NonSelect, Gray
+"" NonSelect
+"Toolbars" NonSelect, Gray
+"" NonSelect
+"Extra Menus (on/off)" NonSelect, Gray
+"Track Name (on/off)" NonSelect, Gray
+"Show Clipping (on/off)" NonSelect, Gray
+END
+
+Menu Audacity-Transport-Playing
+"Play/Stop" Action SendMessage N+Space
+"Play/Stop and Set Cursor" Action SendMessage N+X
+"Play Once/Stop" Action SendMessage S+Space
+"Pause" Action SendMessage N+P
+END
+
+Menu Audacity-Transport-Recording
+"Record" Action SendMessage N+R
+"Record New Track" Action SendMessage S+R
+"Timer Record..." Action SendMessage S+T
+"Punch and Roll Record" Action SendMessage S+D
+"Pause" Action SendMessage N+P
+END
+
+Menu Audacity-Transport-Scrubbing
+"Scrub" NonSelect, Gray
+"Seek" NonSelect, Gray
+"Scrub Ruler" NonSelect, Gray
+END
+
+Menu  Audacity-Transport-CursorTo
+"Selection Start" NonSelect, Gray
+"Selection End" NonSelect, Gray
+"Track Start" Action SendMessage N+J
+"Track End" Action SendMessage N+K
+"Previous Clip Boundary" NonSelect, Gray
+"Next Clip Boundary" NonSelect, Gray
+"Project Start" Action SendMessage N+Home
+"Project End" Action SendMessage N+End
+END
+
+Menu Audacity-Transport-Looping
+"Loop On/Off" Action SendMesage N+L
+"Clear Loop" Action SendMessage SM+L
+"Set Loop to Selection" Action SendMessage S+L
+"Set Loop In" NonSelect, Gray
+"Set Loop Out" NonSelect, Gray
+END
+
+Menu Audacity-Transport-TransportOptions
+"Sound Activation Level..." NonSelect, Gray
+"Sound Activated Recording (on/off)" NonSelect, Gray
+"" NonSelect
+"Pinned Play/Record Head (on/off)" NonSelect, Gray
+"Overdub (on/off)" NonSelect, Gray
+"Software Playthrough (on/off)" NonSelect, Gray
+END
+
+Menu Audacity-Transport, Label "Transport", Left
+"Playing" SubMenu Audacity-Transport-Playing
+"Recording" SubMenu Audacity-Transport-Recording
+"Scrubbing" SubMenu Audacity-Transport-Scrubbing
+"Cursor To" SubMenu Audacity-Transport-CursorTo
+"Looping" SubMenu Audacity-Transport-Looping
+"" NonSelect
+"Rescan Audio Devices" NonSelect, Gray
+"" NonSelect
+"Transport Options" SubMenu Audacity-Transport-TransportOptions
+END
+
+Menu Audacity-Tracks-AddNew
+"Mono Track" NonSelect, Gray
+"Stereo Track" NonSelect, Gray
+"Label Track" NonSelect, Gray
+"Time Track" NonSelect, Gray
+END
+
+Menu Audacity-Tracks-Mix
+"Mix Stereo Down to Mono" NonSelect, Gray
+"Mix and Render" NonSelect, Gray
+"Mix and Render to New Track" NonSelect, Gray
+END
+
+Menu Audacity-Tracks-MuteUnmute
+"Mute All Tracks" Action SendMessage C+U
+"Unmute All Tracks" Action SendMessage SC+U
+"Mute Tracks" Action SendMessage MC+U
+"Unmute Tracks" Action SendMessage SMC+U
+END
+
+Menu Audacity-Tracks-Pan
+"Left" NonSelect, Gray
+"Right" NonSelect, Gray
+"Center" NonSelect, Gray
+END
+
+Menu Audacity-Tracks-AlignTracks
+"Align End to End" NonSelect, Gray
+"Align Together" NonSelect, Gray
+"" NonSelect
+"Start to Zero" NonSelect, Gray
+"Start to Cursor/Selection Start" NonSelect, Gray
+"Start to Selection End" NonSelect, Gray
+"End to Cursor/Selection Start" NonSelect, Gray
+"End to Selection End" NonSelect, Gray
+"" NonSelect
+"Move Selection with Tracks (on/off)" NonSelect, Gray
+END
+
+Menu Audacity-Tracks-SortTracks
+"By Start Time" NonSelect, Gray
+"By Name" NonSelect, Gray
+END
+
+Menu Audacity-Tracks, Label "Tracks", Left
+"Add New" SubMenu Audacity-Tracks-AddNew
+"" NonSelect"
+"Mix" SubMenu Audacity-Tracks-Mix
+"Resample..." NonSelect, Gray
+"" NonSelect
+"Remove Tracks" NonSelect, Gray
+"" NonSelect
+"Mute/Unmute" SubMenu Audacity-Tracks-MuteUnmute
+"Pan" SubMenu Audacity-Tracks-Pan
+"" NonSelect
+"Align Tracks" SubMenu Audacity-Tracks-AlignTracks
+"Sort Tracks" SubMenu Audacity-Tracks-SortTracks
+"Sync-Lock Tracks (on/off)" NonSelect, Gray
+END
+
+Menu Audacity-Generate, Label "Generate", Left
+"Plugin Manager" NonSelect, Gray
+"" NonSelect
+"Chirp..." NonSelect, Gray
+"DTMF Tones..." NonSelect, Gray
+"Noise..." NonSelect, Gray
+"Silence..." NonSelect, Gray
+"Tone..." NonSelect, Gray
+"" NonSelect
+"Pluck..." NonSelect, Gray
+"Rythm Track..." NonSelect, Gray
+"Risset Drum..." NonSelect, Gray
+END
+
+Menu Audacity-Effect, Label "Effect", Left
+"Plugin Manager" NonSelect, Gray
+"" NonSelect
+"Add Realtime Effects" Action SendMessage N+E
+"" NonSelect
+"Repeat Last Effect" Action SendMessage C+R
+"" NonSelect
+"..." NonSelect, Gray
+END
+
+Menu Audacity-Analyze, Label "Analyze", Left
+"Plugin Manager" NonSelect, Gray
+END
+
+Menu Audacity-Tools-ApplyMacro
+"Palette..." NonSelect, Gray
+END
+
+Menu Audacity-Tools, Label "Tools", Left
+"Plugin Manager" NonSelect, Gray
+"" NonSelect
+"Macro Manager" NonSelect, Gray
+"Apply Macro" SubMenu Audacity-Tools-ApplyMacro
+"" NonSelect
+"Reset Configuration" NonSelect, Gray
+"Screenshot..." NonSelect, Gray
+"Run Benchmark..." NonSelect, Gray
+"" NonSelect
+"Nyquist Prompt..." NonSelect, Gray
+"" NonSelect
+"EQ XML to TXT Converter..." NonSelect, Gray
+"Nyquist Plugin Installer..." NonSelect, Gray
+"Regular Interval Labels..." NonSelect, Gray
+"Sample Data Export..." NonSelect, Gray
+"Sample Data Import..." NonSelect, Gray
+"" NonSelect
+"Simulate Recording Errors" NonSelect, Gray
+"Detect Upstream Dropouts" NonSelect, Gray
+"" NonSelect
+"Write Journal" NonSelect, Gray
+END
+
+Menu Audacity-Help-Diagnostics
+"Audio Device Info..." NonSelect, Gray
+"Midi Device Info..." NonSelect, Gray
+"Show Log..." NonSelect, Gray
+"Generate Support Data..." NonSelect, Gray
+"Test segfault report" NonSelect, Gray
+"Test exception report" NonSelect, Gray
+"Test assertion report" NonSelect, Gray
+"Menu Tree..." NonSelect, Gray
+"Frame Statistics..." NonSelect, Gray
+END
+
+Menu Audacity-Help, Label "Help", Left
+"Quick Help..." NonSelect, Gray
+"Manual..." NonSelect, Gray
+"" NonSelect
+"Diagnostics" SubMenu Audacity-Help-Diagnostics
+"" NonSelect
+"About Audacity" NonSelect, Gray
+END
+
+MenuBar Audacity
+Audacity-File
+Audacity-Edit
+Audacity-Select
+Audacity-View
+Audacity-Transport
+Audacity-Tracks
+Audacity-Generate
+Audacity-Effect
+Audacity-Analyze
+Audacity-Tools
+Audacity-Help
+END
+
+Style
+"Audacity" NoSBarH, NoSBarV
+"Audacity" MiniIcon audacity.xpm, MenuBar Audacity
+END

@@ -58,6 +58,7 @@ Configurations for the following X11 applications are included:
 
 * [0ad](https://play0ad.com/)
 * [ARandR](https://christian.amsuess.com/tools/arandr/)
+* [Audacity](https://www.audacityteam.org/)
 * [Basilisk II](http://basilisk.cebix.net/)
 * [Chromium](https://www.chromium.org/)
 * [Claws Mail](https://claws-mail.org/)

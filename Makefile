@@ -20,6 +20,7 @@ pixmap:
 	# download XPM icons from source code repositories
 	#
 	curl -# -L https://raw.githubusercontent.com/videolan/vlc/master/share/icons/16x16/vlc.xpm -o $(PIXMAP)/vlc.xpm
+	curl -# -L https://raw.githubusercontent.com/audacity/audacity/master/images/icons/16x16/audacity16.xpm -o $(PIXMAP)/audacity.xpm
 	#
 	# download & convert icons from source code repositories
 	#
@@ -77,6 +78,7 @@ clean: clean-pixmap
 clean-pixmap:
 	rm $(PIXMAP)/mini*.xpm
 	rm $(PIXMAP)/0ad.xpm
+	rm $(PIXMAP)/audacity.xpm
 	rm $(PIXMAP)/chromium.xpm
 	rm $(PIXMAP)/claws-mail.xpm
 	rm $(PIXMAP)/cool-retro-term.xpm
