@@ -1,0 +1,105 @@
+Menu NetSurf-File-Export
+"Complete Page..." Action SendMessage C+S
+"Plain Text..." NonSelect, Gray
+"PDF..." NonSelect, Gray
+END
+
+Menu NetSurf-File, Label "File", Left
+"New Window" Action SendMessage C+N
+"New Tab" Action SendMessage C+T
+"Open File" Action SendMessage C+O
+"Close Window" Action SendMessage SC+W
+"" NonSelect
+"Export" SubMenu NetSurf-File-Export
+"" NonSelect
+"Print Preview..." Action SendMessage SC+P
+"Print..." Action SendMessage C+P
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu NetSurf-Edit, Label "Edit", Left
+"Cut" Action SendMessage C+X
+"Copy" Action SendMessage C+C
+"Paste" Action SendMessage C+V
+"Delete" NonSelect, Gray
+"" NonSelect
+"Select All" Action SendMessage C+A
+"" NonSelect
+"Find..." Action SendMessage C+F
+"" NonSelect
+"Preferences..." NonSelect, Gray
+END
+
+Menu NetSurf-View-ScaleView
+"Zoom In" Action SendMessage C+Plus
+"Normal Size" Action SendMessage C+0
+"Zoom Out" Action SendMessage C+Minus
+END
+
+Menu NetSurf-View-Toolbars
+"Menu Bar" NonSelect, Gray
+"Button Bar" NonSelect, Gray
+"" NonSelect
+"Customize..." NonSelect, Gray
+END
+
+Menu NetSurf-View, Label "View", Left
+"Scale View" SubMenu NetSurf-View-ScaleView
+"Fullscreen" Action SendMessage N+F11
+"" NonSelect
+"Toolbars" SubMenu NetSurf-View-Toolbars
+"" NonSelect
+"Save Window Size" NonSelect, Gray
+END
+
+Menu NetSurf-Navigate, Label "Navigate", Left
+"Back" Action SendMessage M-Left
+"Forward" Action SendMessage M-Right
+"Stop" Action SendMessage N-Escape
+"Reload" Action SendMessage N-F5
+"Home" Action SendMessage M-Down
+"" NonSelect
+"Local History..." Action SendMessage C+H
+"Global History..." Action SendMessage SC+H
+"" NonSelect
+"Add to Bookmarks..." Action SendMessage C+D
+"Show Bookmarks..." Action SendMessage N+F6
+"" NonSelect
+"Open Location..." Action SendMessage C+L
+END
+
+Menu NetSurf-Developer
+"Page Source" Action SendMessage C+U
+"Toggle Debug Rendering" NonSelect, Gray
+"Debug Box Tree" NonSelect, Gray
+"Debug DOM Tree" NonSelect, Gray
+END
+
+Menu NetSurf-Tools, Label "Tools", Left
+"Downloads..." Action SendMessage C+J
+"Show Cookies..." Action SendMessage N+F9
+"Developer" SubMenu NetSurf-Developer
+END
+
+Menu NetSurf-Help, Label "Help", Left
+"Contents..." NonSelect, Gray
+"User Guide..." NonSelect, Gray
+"User Information..." NonSelect, Gray
+"" NonSelect
+"About..." NonSelect, Gray
+END
+
+MenuBar NetSurf
+NetSurf-File
+NetSurf-Edit
+NetSurf-View
+NetSurf-Navigate
+NetSurf-Tools
+NetSurf-Help
+END
+
+Style
+"netsurf-gtk*" NoSBarH, NoSBarV
+"netsurf-gtk*" MiniIcon netsurf.xpm, MenuBar NetSurf
+END

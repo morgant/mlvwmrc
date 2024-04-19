@@ -53,6 +53,8 @@ pixmap:
 	convert $(TEMP)/claws-mail-favicon.ico $(PIXMAP)/claws-mail.xpm
 	curl -# -L https://iridiumbrowser.de/favicon.ico -o $(TEMP)/iridium-favicon.ico
 	convert $(TEMP)/iridium-favicon.ico[2] $(PIXMAP)/iridium.xpm
+	curl -# -L https://www.netsurf-browser.org/webimages/favicon.png -o $(TEMP)/netsurf-favicon.png
+	convert $(TEMP)/netsurf-favicon.png $(PIXMAP)/netsurf.xpm
 
 patterns:
 	test ! -d $(PATTERNS) && mkdir $(PATTERNS)
@@ -87,6 +89,7 @@ clean-pixmap:
 	rm $(PIXMAP)/iridium.xpm
 	rm $(PIXMAP)/links.xpm
 	rm $(PIXMAP)/mpv.xpm
+	rm $(PIXMAP)/netsurf.xpm
 	rm $(PIXMAP)/qemu.xpm
 	rm $(PIXMAP)/scummvm.xpm
 	rm $(PIXMAP)/vlc.xpm

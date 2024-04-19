@@ -72,6 +72,7 @@ Configurations for the following X11 applications are included:
 * [Links](http://links.twibright.com/)
 * [Meld](http://meldmerge.org/)
 * [mpv](https://mpv.io/)
+* [NetSurf](https://www.netsurf-browser.org/)
 * [PCManFM](https://en.wikipedia.org/wiki/PCMan_File_Manager)
 * [QEMU](https://www.qemu.org/)
 * [RetroArch](https://www.retroarch.com/)
