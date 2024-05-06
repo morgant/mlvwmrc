@@ -63,7 +63,7 @@ Read .mlvwm/themes/System7
 # Load the Virtual Desktops settings
 Read .mlvwm/VirtualDesktops
 
-# Load the default menu bar
+# Load the default menu bar & Menu Extras
 # (IMPORTANT: The Apple menu is defined in the theme, so _must_ be loaded before
 # the default menu bar)
 Read .mlvwm/MenuBar

@@ -260,7 +260,9 @@ Contains configuration settings for virtual desktops, incl. the number of virtua
 
 ### MenuBar
 
-Contains the default menu bar configuration. Note: the Apple menu is actually defined in the theme files as some theme-specific settings need to be applied during creation, incl. icons. For this reason, the theme files _must_ be loaded prior to the default menu bar in `.mlvwmrc`.
+Contains the default menu bar configuration, including loading Menu Extras. If you want to enable/disable specific MenuExtras, this is currently the place to do it.
+
+*Important*: the Apple menu is actually defined in the theme files as some theme-specific settings need to be applied during creation, incl. icons. For this reason, the theme files _must_ be loaded _before_ the default menu bar in `.mlvwmrc`.
 
 ### .AppManifest
 
