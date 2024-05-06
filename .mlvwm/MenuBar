@@ -69,14 +69,6 @@ Menu Default-Special, Label "Special"
 "Shut Down" Action Exec "mlvwm-powerdown" exec ./bin/mlvwm-powerdown -p
 END
 
-Menu Default-Window
-"Move" Action MoveWindow
-"Resize" Action ResizeWindow
-"Toggle Scroll" Action ToggleScroll
-"" NonSelect
-"Quit" Action KillWindow
-END
-
 # Definition MenuBar
 MenuBar default
 Default-File
@@ -84,9 +76,9 @@ Default-Edit
 Default-View
 Default-Label
 Default-Special
-Default-Window
 END
 
 # Menu Extras
+Read .mlvwm/MenuExtras/X11
 #Read .mlvwm/MenuExtras/xmem
 #Read .mlvwm/MenuExtras/xload

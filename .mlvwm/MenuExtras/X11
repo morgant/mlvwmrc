@@ -1,0 +1,12 @@
+################################################################################
+# X11 Menu Extra
+################################################################################
+
+Menu MenuExtra-X11, Icon mini-x.xpm, Right, Stick
+"Move" Action MoveWindow
+"Resize" Action ResizeWindow
+"Toggle Scroll" Action ToggleScroll
+"" NonSelect
+"Kill" Action KillWindow
+END
+
