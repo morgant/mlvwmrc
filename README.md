@@ -96,6 +96,7 @@ Configurations for the following X11 applications are included:
 
 Configurations for the following X11 applications are included for use in the menu bar:
 
+* X11
 * [mlclock](https://github.com/morgant/mlclock)
 * Xclock
 * Xload
@@ -106,7 +107,6 @@ Configurations for additional applications and utilities are also available from
 * [OpenBSD APM (Advanced Power Management)](https://github.com/morgant/mlvwmrc-openbsd-apm)
 * [Xosview2 mini graphs](https://github.com/morgant/mlvwmrc-xosview2)
 * [x11vnc Menu Extra](https://github.com/morgant/mlvwmrc-x11vnc)
-
 
 ## MLVWM-SPECIFIC SCRIPTS
 
@@ -267,6 +267,10 @@ Contains the default menu bar configuration, including loading Menu Extras. If y
 ### .AppManifest
 
 Includes a `Read` command for each application-specific file in the `apps` directory. This is primarily to limit the complexity of the main `.mlvwmrc` file.
+
+### CONTRIBUTING
+
+I very much welcome requests, feedback, and improvements. Please see [CONTRIBUTING](CONTRIBUTING.md) for details as to how to contribute, as well as the style guide for mlvwmrc configuration files.
 
 ## SPECIAL THANKS
 
