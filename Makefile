@@ -65,13 +65,15 @@ patterns:
 	unzip -d $(PATTERNS) "$(TEMP)/Mac OS Solid Color Backgrounds.zip"
 
 install: install-bin
+	find $(HOME) -name ".mlvwm" -type d -exec mv {}{,.$(date +%Y%m%d-%H%M%S)} \;
 	cp -R $(CONF) $(HOME)/
 	ln -fs $(HOME)/$(CONF)/.mlvwmrc $(HOME)/.mlvwmrc
 	sed -i 's@/home2/tak/bin/pixmap@$(HOME)/$(PIXMAP)@g' $(HOME)/$(CONF)/.mlvwmrc
 
 install-bin:
 	mkdir -p $(HOME)/$(BIN)
-	install -b -B .`date +%Y%m%d-%H%M%S` -m 700 -o $(USER) $(BIN)/mlvwm-* $(HOME)/$(BIN)
+	find ${HOME}/$(BIN) -name "mlvwm-*" ! -name "*.*" -exec mv {}{,.$(date +%Y%m%d-%H%M%S)} \;
+	install -m 700 -o $(USER) $(BIN)/mlvwm-* $(HOME)/$(BIN)
 
 clean: clean-pixmap
 	rm -r $(TEMP)
