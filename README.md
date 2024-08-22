@@ -96,8 +96,9 @@ Configurations for the following X11 applications are included:
 
 Configurations for the following X11 applications are included for use in the menu bar:
 
-* X11
+* [Gromit-MPX](https://github.com/bk138/gromit-mpx)
 * [mlclock](https://github.com/morgant/mlclock)
+* X11
 * Xclock
 * Xload
 * [Xmem](https://git.sdf.org/bch/xmem)

@@ -1,0 +1,16 @@
+################################################################################
+# Gromit-MPX Menu Extra
+################################################################################
+
+Menu MenuExtra-Gromit-MPX, Icon pencil.xpm, Right, Stick
+"Activate" Action Exec "gromit-mpx" exec gromit-mpx -a
+"" NonSelect
+"Toggle Drawing" Action Exec "gromit-mpx" exec gromit-mpx -t
+"Toggle Visibilty" Action Exec "gromit-mpx" exec gromit-mpx -v
+"" NonSelect
+"Undo Stroke" Action Exec "gromit-mpx" exec gromit-mpx -z
+"Redo Stroke" Action Exec "gromit-mpx" exec gromit-mpx -y
+"Clear Drawing" Action Exec "gromit-mpx" exec gromit-mpx -c
+"" NonSelect
+"Quit" Action Exec "gromit-mpx" exec gromit-mpx -q
+END
