@@ -275,7 +275,7 @@ I very much welcome requests, feedback, and improvements. Please see [CONTRIBUTI
 
 ## SPECIAL THANKS
 
-Many thanks to Takashi Hasegawa for creating [MLVWM](http://www2u.biglobe.ne.jp/~y-miyata/mlvwm.html) and Steffen Beyer for providing [Apple/Mac icons in .xpm format](http://sb.fluomedia.org/macintosh/).
+Many thanks to Takashi Hasegawa for creating [MLVWM](http://www2u.biglobe.ne.jp/~y-miyata/mlvwm.html) and Steffen Beyer for providing [Apple/Mac icons in .xpm format](http://web.archive.org/web/20191118161417/http://sb.fluomedia.org/macintosh/).
 
 ## LICENSE
 
