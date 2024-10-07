@@ -105,6 +105,7 @@ Configurations for the following X11 applications are included for use in the me
 
 Configurations for additional applications and utilities are also available from the following separate projects:
 
+* [ffssb2mlvwmrc](https://github.com/morgant/ffssb2mlvwmrc)
 * [OpenBSD APM (Advanced Power Management)](https://github.com/morgant/mlvwmrc-openbsd-apm)
 * [Xosview2 mini graphs](https://github.com/morgant/mlvwmrc-xosview2)
 * [x11vnc Menu Extra](https://github.com/morgant/mlvwmrc-x11vnc)
