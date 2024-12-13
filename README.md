@@ -110,6 +110,15 @@ Configurations for additional applications and utilities are also available from
 * [Xosview2 mini graphs](https://github.com/morgant/mlvwmrc-xosview2)
 * [x11vnc Menu Extra](https://github.com/morgant/mlvwmrc-x11vnc)
 
+### SYSTEM TRAY
+
+MLVWM doesn't natively support the [System Tray Protocol](https://www.freedesktop.org/wiki/Specifications/systemtray-spec/), but standalone X11 system tray applications such as the following _can_ be swallowed into the menu bar. Unfortunately, we don't currently include configurations for these, so you'll have configure them yourself:
+
+**IMPORTANT:** MLVWM currently has some [overdraw rendering issues when X11 applications which resize themselves are swallowed into the menu bar](https://github.com/morgant/mlvwm/issues/36), so you'll want to configure a fixed-size system tray.
+
+* [stalonetray](https://kolbusa.github.io/stalonetray/)
+* [trayer](https://github.com/sargon/trayer-srg)
+
 ## MLVWM-SPECIFIC SCRIPTS
 
 A few `mlvwm`-specific scripts are included and installed in `~/bin/`. You should ensure that this directory is in your user's `PATH` environment variable.
