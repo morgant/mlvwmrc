@@ -109,6 +109,7 @@ Configurations for additional applications and utilities are also available from
 * [OpenBSD APM (Advanced Power Management)](https://github.com/morgant/mlvwmrc-openbsd-apm)
 * [Xosview2 mini graphs](https://github.com/morgant/mlvwmrc-xosview2)
 * [x11vnc Menu Extra](https://github.com/morgant/mlvwmrc-x11vnc)
+* [xpomodmenu](https://github.com/morgant/xpomodmenu) ([xpomod](https://github.com/phillbush/xpomod) Pomodoro Menu Extra)
 
 ### SYSTEM TRAY
 
