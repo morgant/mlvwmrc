@@ -230,6 +230,7 @@ The current structure is:
         .mlvwmrc
         .initrc
         .restartrc
+        .Xdefaults
         MenuBar
         VirtualDesktops
         theme/
@@ -246,6 +247,9 @@ The current structure is:
           …
         pixmap/
           *.xpm
+        Xresources/
+          xclock
+          …
       bin/
         mlvwm-alert
         mlvwm-confirm
@@ -265,6 +269,16 @@ Contains an `InitFunction` block which can be modified to run commands upon init
 ### .restartrc
 
 Contains a `RestartFunction` block which can be modified to run commands upon init or reload of MLVWM.
+
+### .Xdefaults
+
+Contains default X(7) resources, mostly `#include` lines which import individual application-specific X resources configurations found in `.mlvwm/Xresources/`. It simplifies the inclusion of all mlvwmrc X resources at once as the user can edit their own `~/.Xdefaults` to append the following line:
+
+`#import ".mlvwm/.Xdefaults"`
+
+Alternatively, once can manually merge them with their own configuration by running the following:
+
+`xrdb -merge "$HOME/.mlvwm/.Xdefaults"`
 
 ### VirtualDesktops
 

@@ -1,0 +1,11 @@
+! 1995 Apple watch analog styling
+XClock*render:          True
+XClock*buffer:          True
+XClock*analog:          True
+XClock*update:          1
+XClock*padding:         20
+XClock*majorColor:      silver
+XClock*minorColor:      snow
+XClock*hourColor:       forestgreen
+XClock*minuteColor:     crimson
+XClock*secondColor:     gold
