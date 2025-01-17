@@ -39,6 +39,29 @@ The above will run `mlvwm` in a window, so you can test within your existing env
 
 ## SUGGESTED ADDITIONAL CONFIGURATION
 
+### X Resources
+
+Some X resources are included for specific applications. For example, there are analog `xclock` resources inspired by the 1995 Apple wristwatch.
+
+You can test them until your next logout/login cycle by running:
+
+```
+xrdb -merge ~/.mlvwm/.Xdefaults
+```
+
+If you like what you see, they can be automatically included by adding the following to your own `~/.Xdefaults` file:
+
+```
+! MLVWM application styles
+#import ".mlvwm/.Xdefaults"
+```
+
+You will also want to confirm that your `~/.Xdefaults` is being loaded/merged in your `~/.xinit` (or `~/.xsession`, on some platforms) file. If it is not, add the following before `mlvwm` is launched:
+
+```
+xrdb -merge $HOME/.Xdefaults
+```
+
 ### GTK+ 3
 
 Some of the included configurations are for GTK+ 3 applications which use [client-side decorations (CSD)](https://en.wikipedia.org/wiki/Client-side_decoration), resulting in window controls being included in the "header bar". These window controls already exist in the `mlvwm` window title bars, so are redundant and look out of place. They can be disabled by editing `~/.config/gtk-3.0/settings.ini` to set `gtk-decoration-layout` to a blank string (or [customize](https://docs.gtk.org/gtk3/property.Settings.gtk-decoration-layout.html) as you see fit), for example:
@@ -274,11 +297,15 @@ Contains a `RestartFunction` block which can be modified to run commands upon in
 
 Contains default X(7) resources, mostly `#include` lines which import individual application-specific X resources configurations found in `.mlvwm/Xresources/`. It simplifies the inclusion of all mlvwmrc X resources at once as the user can edit their own `~/.Xdefaults` to append the following line:
 
-`#import ".mlvwm/.Xdefaults"`
+```
+#import ".mlvwm/.Xdefaults"
+```
 
 Alternatively, once can manually merge them with their own configuration by running the following:
 
-`xrdb -merge "$HOME/.mlvwm/.Xdefaults"`
+```
+xrdb -merge "$HOME/.mlvwm/.Xdefaults"
+```
 
 ### VirtualDesktops
 
