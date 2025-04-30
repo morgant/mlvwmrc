@@ -1,0 +1,6 @@
+! 1995 Apple watch analog styling
+Clock*Background:   white
+Clock*BorderColor:  black
+Clock*hour:         forestgreen
+Clock*minute:       crimson
+Clock*jewel:        gold

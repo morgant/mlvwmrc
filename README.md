@@ -41,7 +41,7 @@ The above will run `mlvwm` in a window, so you can test within your existing env
 
 ### X Resources
 
-Some X resources are included for specific applications. For example, there are analog `xclock` resources inspired by the 1995 Apple wristwatch.
+Some X resources are included for specific applications. For example, there are analog `oclock` & `xclock` resources inspired by the 1995 Apple wristwatch.
 
 You can test them until your next logout/login cycle by running:
 
@@ -96,6 +96,7 @@ Configurations for the following X11 applications are included:
 * [Meld](http://meldmerge.org/)
 * [mpv](https://mpv.io/)
 * [NetSurf](https://www.netsurf-browser.org/)
+* oclock
 * [PCManFM](https://en.wikipedia.org/wiki/PCMan_File_Manager)
 * [QEMU](https://www.qemu.org/)
 * [RetroArch](https://www.retroarch.com/)
@@ -121,6 +122,7 @@ Configurations for the following X11 applications are included for use in the me
 
 * [Gromit-MPX](https://github.com/bk138/gromit-mpx)
 * [mlclock](https://github.com/morgant/mlclock)
+* oclock
 * X11
 * Xclock
 * Xload

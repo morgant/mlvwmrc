@@ -80,5 +80,8 @@ END
 
 # Menu Extras
 Read .mlvwm/MenuExtras/X11
+#Read .mlvwm/MenuExtras/mlclock
+#Read .mlvwm/MenuExtras/oclock
+#Read .mlvwm/MenuExtras/xclock
 #Read .mlvwm/MenuExtras/xmem
 #Read .mlvwm/MenuExtras/xload
