@@ -5,23 +5,24 @@ by Morgan Aldridge <morgant@makkintosshu.com>
 
 This a set of configuration files for Takashi HASEGAWA's [Macintosh-like Virtual Window Manager (MLVWM)](https://github.com/morgant/mlvwm) with the following goals:
 
-- More accurate emulation of [System 7](https://en.wikipedia.org/wiki/System_7) and [MacOS 8](https://en.wikipedia.org/wiki/Mac_OS_8) User Interfaces
-- A complete configuration out-of-the-box
+- More accurate emulation of [System 7](https://en.wikipedia.org/wiki/System_7) and [MacOS 8](https://en.wikipedia.org/wiki/Mac_OS_8)/9/"Classic" user interfaces
+- More complete configuration out-of-the-box
 - Well structured configuration files
+- Minimal scripting & utilities toward the aforementioned goals
 
-MLVWM includes a very rudimentary set of rc ([run command](https://en.wikipedia.org/wiki/Run_commands)) files and requires a fair amount of customization to better emulate Macintosh operating systems' UI. Additionally, since it is generally no more than a hobbyist window manager, no appropriate structure for the rc files (esp. for individual applications), icons (i.e. pixmaps), etc. Last, but not least, I wanted to reduce the amount of configuration needed every time I configure MLVWM on a new workstation.
+Unfortunately, MLVWM only includes a couple very rudimentary example rc ([run command](https://en.wikipedia.org/wiki/Run_commands)) files and requires the user to create their own configurations. Worse, since it doesn't automatically generate per-application menu bar, menu, and menu item configurations, the user must take on this extremely tedious process themselves. As it is only a hobbyist research project window manager, no appropriate structure for the rc files (esp. for individual applications), icons (i.e. pixmaps), themes, etc., is provided, making it hard to share and integrate configurations amongst the user base. Last, but not least, I wanted to reduce the amount of configuration needed every time I personally configure MLVWM on my own workstations.
 
 ## PREREQUISITES
 
-* `mlvwm`
-* `xpm`
-* `locale`
-* `make`
-* `unzip`
+* `mlvwm`:
+    * `locale`
+    * `xpm`
+* `make`:
 * `curl`
+* `unzip`
 * ImageMagick
-* `xdotool` (for `mlvwm-restart`)
 * `gxmessage`
+* `xdotool` (for `mlvwm-restart`)
 * [`maim`](https://github.com/naelstrof/maim) & [`slop`](https://github.com/naelstrof/slop) (for `mlvwm-screenshot`)
 
 ## USAGE
@@ -64,7 +65,7 @@ xrdb -merge $HOME/.Xdefaults
 
 ### Disable High DPI
 
-Unfortunately, MLVWM does not support High DPI (a.k.a. HiDPI) resolution scaling, only a traditional 1:1 pixel scaling factor. It's suggested to add the following to your `~/.xinitrx` or `~/.xsession`:
+Unfortunately, MLVWM does not support High DPI (a.k.a. HiDPI) resolution scaling, only a traditional 1:1 pixel scaling factor. It's suggested to add the following to your `~/.xinitrx` or `~/.xsession` to disable High DPI in GTK & Qt X11 applications:
 
 ```
 # Disable HiDPI for GTK & Qt X11 applications
@@ -136,7 +137,11 @@ Configurations for the following X11 applications are included:
 
 ## MENU EXTRAS
 
-Configurations for the following X11 applications are included for use in the menu bar:
+MLVWM supports "swallowing" X11 application windows into the menu bar, much like "Menu Extras" in macOS (née OS X; née Mac OS X). It is suggested to keep these windows to a 16x16 icon size, but larger horizontal widths can work.
+
+### INCLUDED
+
+Configurations for the following X11 applications are included for use "swallowed" into the menu bar:
 
 * [Gromit-MPX](https://github.com/bk138/gromit-mpx)
 * [mlclock](https://github.com/morgant/mlclock)
@@ -146,7 +151,9 @@ Configurations for the following X11 applications are included for use in the me
 * Xload
 * [Xmem](https://git.sdf.org/bch/xmem)
 
-Configurations for additional applications and utilities are also available from the following separate projects:
+### THIRD PARTY
+
+Configurations for additional, optional, applications & utilities to be "swallowed" into the menu bar are available from the following separate projects:
 
 * [ffssb2mlvwmrc](https://github.com/morgant/ffssb2mlvwmrc)
 * [Xosview2 mini graphs](https://github.com/morgant/mlvwmrc-xosview2)
@@ -165,7 +172,7 @@ MLVWM doesn't natively support the [System Tray Protocol](https://www.freedeskto
 * [stalonetray](https://kolbusa.github.io/stalonetray/)
 * [trayer](https://github.com/sargon/trayer-srg)
 
-## MLVWM-SPECIFIC SCRIPTS
+## MLVWM-SPECIFIC UTILITY SCRIPTS
 
 A few `mlvwm`-specific scripts are included and installed in `~/bin/`. You should ensure that this directory is in your user's `PATH` environment variable.
 
@@ -355,4 +362,7 @@ Many thanks to Takashi Hasegawa for creating [MLVWM](http://www2u.biglobe.ne.jp/
 
 _TBD_
 
-[Xosview icon](https://www.iconfinder.com/icons/9548/xosview_icon) by Oxygen Team.
+Some icons included in this repository fall under the licenses and/or copyrights of their respective projects, companies, organizations, or individuals, including:
+
+* The Apple logo, Finder, Balloon Help, and pencil icons are copyright Apple, Inc. (née Apple Computer, Inc.) and are included for private, non-commercial use only
+* The [Xosview icon](https://www.iconfinder.com/icons/9548/xosview_icon) by Oxygen Team is licensed under [Creative Commons Attribution-NonCommercial-NoDerivs 2.5 Generic License](https://creativecommons.org/licenses/by-nc-nd/2.5/)
