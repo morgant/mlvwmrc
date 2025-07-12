@@ -62,6 +62,24 @@ You will also want to confirm that your `~/.Xdefaults` is being loaded/merged in
 xrdb -merge $HOME/.Xdefaults
 ```
 
+### Disable High DPI
+
+Unfortunately, MLVWM does not support High DPI (a.k.a. HiDPI) resolution scaling, only a traditional 1:1 pixel scaling factor. It's suggested to add the following to your `~/.xinitrx` or `~/.xsession`:
+
+```
+# Disable HiDPI for GTK & Qt X11 applications
+export QT_ENABLE_HIGHDPI_SCALING=0    # Qt >= 5.14
+export QT_AUTO_SCREEN_SCALE_FACTOR=0  # Qt < 5.14
+export QT_SCALE_FACTOR=1
+export GDK_SCALE=1
+```
+
+For further details on High DPI in X11 applications, see:
+
+* [GTK 4: Using GTK with X11 (X11-specific environment variables)](https://docs.gtk.org/gtk4/x11.html#x11-specific-environment-variables)
+* [Qt 6.9: Graphics > High DPI (Environment Variable Reference)](https://doc.qt.io/qt-6/highdpi.html#environment-variable-reference)
+* [Qt 5.15: High DPI Displays (High DPI Support in Qt)](https://qthub.com/static/doc/qt5/qtdoc/highdpi.html#high-dpi-support-in-qt)
+
 ### GTK+ 3
 
 Some of the included configurations are for GTK+ 3 applications which use [client-side decorations (CSD)](https://en.wikipedia.org/wiki/Client-side_decoration), resulting in window controls being included in the "header bar". These window controls already exist in the `mlvwm` window title bars, so are redundant and look out of place. They can be disabled by editing `~/.config/gtk-3.0/settings.ini` to set `gtk-decoration-layout` to a blank string (or [customize](https://docs.gtk.org/gtk3/property.Settings.gtk-decoration-layout.html) as you see fit), for example:
