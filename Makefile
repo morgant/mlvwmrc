@@ -26,7 +26,7 @@ pixmap:
 	#
 	curl -# -L https://raw.githubusercontent.com/Swordfish90/cool-retro-term/master/app/icons/32x32/cool-retro-term.png -o $(TEMP)/cool-retro-term.png
 	convert $(TEMP)/cool-retro-term.png -resize 16x16\> $(PIXMAP)/cool-retro-term.xpm
-	curl -# -L https://hg.mozilla.org/releases/mozilla-release/raw-file/tip/browser/branding/official/default16.png -o $(TEMP)/firefox.png
+	curl -# -L https://hg-edge.mozilla.org/releases/mozilla-esr140/raw-file/tip/browser/branding/official/default16.png -o $(TEMP)/firefox.png
 	convert $(TEMP)/firefox.png $(PIXMAP)/firefox.xpm
 	curl -# -L https://raw.githubusercontent.com/mpv-player/mpv.io/master/source/images/favicon.png -o $(TEMP)/mpv.png
 	convert $(TEMP)/mpv.png -resize 16x16\> $(PIXMAP)/mpv.xpm
