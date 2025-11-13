@@ -55,6 +55,8 @@ pixmap:
 	convert $(TEMP)/iridium-favicon.ico[2] $(PIXMAP)/iridium.xpm
 	curl -# -L https://www.netsurf-browser.org/webimages/favicon.png -o $(TEMP)/netsurf-favicon.png
 	convert $(TEMP)/netsurf-favicon.png $(PIXMAP)/netsurf.xpm
+	curl -# -L https://www.xpdfreader.com/img/favicon.ico -o $(TEMP)/xpdfreader-favicon.ico
+	convert $(TEMP)/xpdfreader-favicon.ico[0] $(PIXMAP)/xpdfreader.xpm
 
 patterns:
 	test ! -d $(PATTERNS) && mkdir $(PATTERNS)
@@ -95,5 +97,6 @@ clean-pixmap:
 	rm $(PIXMAP)/qemu.xpm
 	rm $(PIXMAP)/scummvm.xpm
 	rm $(PIXMAP)/vlc.xpm
+	rm $(PIXMAP)/xpdfreader.xpm
 	rm $(PIXMAP)/zeal.xpm
 

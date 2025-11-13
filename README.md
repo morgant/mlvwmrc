@@ -130,6 +130,7 @@ Configurations for the following X11 applications are included:
 * Xmag
 * Xmessage
 * [Xosview2](http://xosview.sourceforge.net/)
+* [XpdfReader](https://www.xpdfreader.com/)
 * Xterm
 * [Xwf](https://github.com/morgant/xwf)
 * [Zeal](https://zealdocs.org/)

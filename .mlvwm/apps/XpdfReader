@@ -1,0 +1,70 @@
+Menu XpdfReader-File, Label "File", Left
+"Open..." Action SendMessage C+O
+"Open in New Window..." NonSelect, Gray
+"" NonSelect
+"Reload" Action SendMessage C+R
+"Load Last Session" NonSelect, Gray
+"" NonSelect
+"Save As..." Action SendMessage C+S
+"Save Image..." NonSelect, Gray
+"" NonSelect
+"Print..." Action SendMessage C+P
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu XpdfReader-View-DisplayMode
+"Single Page" NonSelect, Gray
+"Continuous" NonSelect, Gray
+"Side-by-Side Single" NonSelect, Gray
+"Side-by-Side Continuous" NonSelect, Gray
+"Horizontal Continuous" NonSelect, Gray
+END
+
+Menu XpdfReader-View, Label "View", Left
+"Show/Hide Toolbar" NonSelect, Gray
+"Show/Hide Sidebar" NonSelect, Gray
+"Show/Hide Page Labels" NonSelect, Gray
+"" NonSelect
+"Display Mode" XpdfReader-View-DisplayMode
+"Full Screen" Action SendMessage C+L
+"" NonSelect
+"Rotate Clockwise" NonSelect, Gray
+"Rotate Counter-Clockwise" NonSelect, Gray
+"" NonSelect
+"Zoom to Selection" NonSelect, Gray
+END
+
+Menu XpdfReader-Tools
+"Document Info" NonSelect, Gray
+END
+
+Menu XpdfReader-Window
+"New Tab" Action SendMessage C+T
+"New Window" Action SendMessage C+N
+"" NonSelect
+"Close Tab" Action SendMessage C+W
+"Close Window" NonSelect, Gray
+"" NonSelect
+"Open Error Window..." NonSelect, Gray
+END
+
+Menu XpdfReader-Help
+"Help..." NonSelect, Gray
+"Key Bindings..." NonSelect, Gray
+"About XpdfReader..." NonSelect, Gray
+END
+
+MenuBar XpdfReader
+XpdfReader-File
+Default-Edit
+XpdfReader-View
+XpdfReader-Tools
+XpdfReader-Window
+XpdfReader-Help
+END
+
+Style
+"XpdfReader" NoSBarH, NoSBarV
+"XpdfReader" MiniIcon xpdfreader.xpm, MenuBar XpdfReader
+END
