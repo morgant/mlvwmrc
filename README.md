@@ -121,6 +121,7 @@ Configurations for the following X11 applications are included:
 * [RetroArch](https://www.retroarch.com/)
 * [Remmina](https://remmina.org/)
 * [ScummVM](https://www.scummvm.org/)
+* [SMPlayer](https://www.smplayer.info/)
 * [VLC](https://www.videolan.org/vlc/)
 * [Xarchiver](https://github.com/ib/xarchiver)
 * Xcalc

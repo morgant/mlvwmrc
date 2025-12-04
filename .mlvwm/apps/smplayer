@@ -1,0 +1,406 @@
+Menu SMPlayer-Open-RecentFiles
+"" NonSelect
+"Clear" NonSelect, Gray
+END
+
+Menu SMPlayer-Open-Favorites
+"Edit..." NonSelect, Gray
+"Add Current Media" NonSelect, Gray
+END
+
+Menu SMPlayer-Open-TV
+"Edit..." NonSelect, Gray
+"Add Current Media" NonSelect, Gray
+END
+
+Menu SMPlayer-Open-Radio
+"Edit..." NonSelect, Gray
+"Add Current Media" NonSelect, Gray
+END
+
+Menu SMPlayer-Open, Label "Open", Left
+"Open File..." Action SendMessage C+F
+"Recent Files" SubMenu SMPlayer-Open-RecentFiles
+"Favorites" SubMenu SMPlayer-Open-Favorites
+"Directory..." NonSelect, Gray
+"Playlist..." NonSelect, Gray
+"Disc" SubMenu SMPlayer-Open-Disc
+"URL..." Action SendMessage C+U
+"TV" SubMenu SMPlayer-Open-TV
+"Radio" SubMenu SMPlayer-Open-Radio
+"" NonSelect
+"Close" Action SendMessage C+X
+"Quit" Action SendMessage C+Q
+END
+
+Menu SMPlayer-Play-Speed
+"Normal Speed" Action SendMessage N+Backspace
+"0.25x" NonSelect, Gray
+"0.5x" NonSelect, Gray
+"0.75x" NonSelect, Gray
+"1.25x" NonSelect, Gray
+"1.5x" NonSelect, Gray
+"1.75x" NonSelect, Gray
+"" NonSelect
+"Half Speed" Action SendMessage N+{
+"Double Speed" Action SendMessage N+}
+"" NonSelect
+"Speed -10%" Action SendMessage N+[
+"Speed +10%" Action SendMessage N+]
+"" NonSelect
+"Speed -4%" NonSelect, Gray
+"Speed +4%" NonSelect, Gray
+"" NonSelect
+"Speed -1%" NonSelect, Gray
+"Speed +1%" NonSelect, Gray
+END
+
+Menu SMPlayer-Play-ABSection
+"Set A Marker" NonSelect, Gray
+"Set B Marker" NonSelect, Gray
+"Clear A-B Markers" NonSelect, Gray
+"" NonSelect
+"Repeat" NonSelect, Gray
+END
+
+Menu SMPlayer-Play-CastTo
+"Chromecast" NonSelect, Gray
+"Smartphone/Tablet" NonSelect, Gray
+END
+
+Menu SMPlayer-Play, Label "Play", Left
+"Play/Pause" Action SendMessage N+space
+"Stop" NonSelect, Gray
+"Frame Step" Action SendMessage N+.
+"Frame Back Step" Action SendMessage N+,
+"" NonSelect
+"-10 Seconds" Action SendMessage N+Left
+"+10 Seconds" Action SendMessage N+Right
+"-1 Minute" Action SendMessage N+Down
+"+1 Minute" Action SendMessage N+Up
+"-10 Minutes" Action SendMessage N+PageDown
+"+10 Minutes" Action SendMessage N+PageUp
+"" NonSelect
+"Speed" SubMenu SMPlayer-Play-Speed
+"" NonSelect
+"A-B Section" SubMenu SMPlayer-Play-ABSection
+"" NonSelect
+"Jump to..." Action SendMessage C+J
+"" NonSelect
+"Previous" Action SendMessage N+<
+"Next" Action SendMessage N+>
+"" NonSelect
+"Cast To" SubMenu SMPlayer-Play-CastTo
+END
+
+Menu SMPlayer-Video-Size
+"50%" NonSelect, Gray
+"75%" NonSelect, Gray
+"100%" Action SendMessage C+1
+"125%" NonSelect, Gray
+"150%" NonSelect, Gray
+"175%" NonSelect, Gray
+"200%" Action SendMessage C+2
+"300%" NonSelect, Gray
+"400%" NonSelect, Gray
+"" NonSelect
+"Toggle Double Size" Action SendMessage C+D
+END
+
+Menu SMPlayer-Video-Zoom
+"Reset" Action SendMessage S+E
+"" NonSelect
+"Auto Zoom" Action SendMessage S+W
+"Zoom for 16:9" Action SendMessage S+A
+"Zoom for 2.35:1" Action SendMessage S+S
+"" NonSelect
+"Zoom -" Action SendMessage N+W
+"Zoom +" Action SendMessage N+E
+"" NonSelect
+"Move Left" Action SendMessage M+Left
+"Move Right" Action SendMessage M+Right
+"Move Up" Action SendMessage M+Up
+"Move Down" Action SendMessage M+Down
+END
+
+Menu SMPlayer-Video-AspectRatio
+"Auto" NonSelect, Gray
+"1:1" NonSelect, Gray
+"5:4" NonSelect, Gray
+"4:3" NonSelect, Gray
+"11:8" NonSelect, Gray
+"14:10" NonSelect, Gray
+"3:2" NonSelect, Gray
+"14:9" NonSelect, Gray
+"16:10" NonSelect, Gray
+"16:9" NonSelect, Gray
+"2.35:1" NonSelect, Gray
+"" NonSelect
+"Disabled" NonSelect, Gray
+END
+
+Menu SMPlayer-Video-Deinterlace
+"None" NonSelect, Gray
+"Lowpass5" NonSelect, Gray
+"Yadif (Normal)" NonSelect, Gray
+"Yadif (Double Framerate)" NonSelect, Gray
+"Linear Blend" NonSelect, Gray
+"Kerndeint" NonSelect, Gray
+END
+
+Menu SMPlayer-Video-Filters-Denoise
+"Off" NonSelect, Gray
+"Normal" NonSelect, Gray
+"Soft" NonSelect, Gray
+END
+
+Menu SMPlayer-Video-Filters-BlurSharp
+"None" NonSelect, Gray
+"Blur" NonSelect, Gray
+"Sharpen" NonSelect, Gray
+END
+
+Menu SMPlayer-Video-Filters
+"Postprocessing" NonSelect, Gray
+"Deblock" NonSelecy, Gray
+"Dering" NonSelect, Gray
+"Debanding (gradfun)" NonSelect, Gray
+"Add Noise" NonSelect, Gray
+"Add Black Borders" NonSelect, Gray
+"Software Scaling" NonSelect, Gray
+"Autodetect Phase" NonSelect, Gray
+"Denoise" SubMenu SMPlayer-Video-Filters-Denoise
+"Blur/Sharp" SubMenu SMPlayer-Video-Filters-BlurSharp
+END
+
+Menu SMPlayer-Video-Rotate
+"Off" NonSelect, Gray
+"Rotate by 90 Degrees Clockwise and Flip" NonSelect, Gray
+"Rotate by 90 Degrees Clockwise" NonSelect, Gray
+"Rotate by 90 Degrees Counterclockwise" NonSelect, Gray
+"Rotate by 90 Degrees Counterclockwise and Flip" NonSelect, Gray
+"Rotate by 180 Degrees" NonSelect, Gray
+END
+
+Menu SMPlayer-Video-StayOnTop
+"Always" NonSelect, Gray
+"Never" NonSelect, Gray
+"While Playing" NonSelect, Gray
+END
+
+Menu SMPlayer-Video, Label "Video", Left
+"Track" NonSelect, Gray
+"Fullscreen" Action SendMessage N+F
+"Compact Mode" Action SendMessage C+C
+"Send Video to Screen" NonSelect, Gray
+"Size" SubMenu SMPlayer-Video-Size
+"Zoom" SubMenu SMPlayer-Video-Zoom
+"Aspect Ratio" SubMenu SMPlayer-Video-AspectRatio
+"Deinterlace" SubMenu SMPlayer-Video-Deinterlace
+"Filters" SubMenu SMPlayer-Video-Filters
+"Rotate" SubMenu SMPlayer-Video-Rotate
+"Flip Image" NonSelect, Gray
+"Mirror Image" NonSelect, Gray
+"Stereo 3D Filter" NonSelect, Gray
+"" NonSelect
+"Equalizer" Action SendMessage C+E
+"Screenshot" Action SendMessage N+S
+"Start/Stop Taking Screenshots" Action SendMessage S+D
+"Stay on Top" SubMenu SMPlayer-Video-StayOnTop
+"" NonSelect
+"Thumbnail Generator..." NonSelect, Gray
+END
+
+Menu SMPlayer-Audio-SendAudioTo
+"Default Audio Device" NonSelect, Gray
+END
+
+Menu SMPlayer-Audio-Filters
+"Extrastereo" NonSelect, Gray
+"Karaoke" NonSelect, Gray
+"Headphone Optimization (earwax)" NonSelect, Gray
+"Volume Normalization" NonSelect, Gray
+END
+
+Menu SMPlayer-Audio-Channels
+"Default" NonSelect, Gray
+"Stereo" NonSelect, Gray
+"4.0 Surround" NonSelect, Gray
+"5.1 Surround" NonSelect, Gray
+"6.1 Surround" NonSelect, Gray
+"7.1 Surround" NonSelect, Gray
+END
+
+Menu SMPlayer-Audio-StereoMode
+"Stereo" NonSelect, Gray
+"Left Channel" NonSelect, Gray
+"Right Channel" NonSelect, Gray
+"Mono" NonSelect, Gray
+"Reverse" NonSelect, Gray
+END
+
+Menu SMPlayer-Audio, Label "Audio", Left
+"Track" NonSelect, Gray
+"Load External File..." NonSelect, Gray
+"Unload" NonSelect, Gray
+"Send Audio To" SubMenu SMPlayer-Audio-SendAudioToSMPlayer-Audio-SendAudioTo
+"Filters" SubMenu SMPlayer-Audio-Filters
+"Channels" SubMenu SMPlayer-Audio-Channels
+"Stereo Mode" SubMenu SMPlayer-Audio-StereoMode
+"Equalizer" NonSelect, Gray
+"" NonSelect
+"Mute" Action SendMessage N+M
+"" NonSelect
+"Volume -" Action SendMessage N+9
+"Volume +" Action SendMessage N+0
+"" NonSelect
+"Delay -" Action SendMessage N+Minus
+"Delay +" Action SendMessage N+Plus
+"Set Delay..." NonSelect, Gray
+END
+
+Menu SMPlayer-Subtitles-FramesPerSecond
+"Default" NonSelect, Gray
+"23.976" NonSelect, Gray
+"24" NonSelect, Gray
+"25" NonSelect, Gray
+"29.970" NonSelect, Gray
+"30" NonSelect, Gray
+END
+
+Menu SMPlayer-Subtitles-ClosedCaptions
+"Off" NonSelect, Gray
+"1" NonSelect, Gray
+"2" NonSelect, Gray
+"3" NonSelect, Gray
+"4" NonSelect, Gray
+END
+
+Menu SMPlayer-Subtitles, Label "Subtitles", Left
+"Primary Track" NonSelect, Gray
+"Secondary Track" NonSelect, Gray
+"" NonSelect
+"Load..." NonSelect, Gray
+"Unload" NonSelect, Gray
+"Frames per Second" SubMenu SMPlayer-Subtitles-FramesPerSecond
+"" NonSelect
+"Closed Captions" SubMenu SMPlayer-Subtitles-ClosedCaptions
+"" NonSelect
+"Delay -" Action SendMessage N+Z
+"Delay +" Action SendMessage N+X
+"Set Delay..." NonSelect, Gray
+"" NonSelect
+"Up" Action SendMessage N+R
+"Down" Action SendMessage N+T
+"" NonSelect
+"Size -" Action SendMessage S+R
+"Size +" Action SendMessage S+T
+"" NonSelect
+"Previous Line in Subtitles" Action SendMessage N+G
+"Next Line in Subtitles" Action SendMessage N+Y
+"" NonSelect
+"Seek to Previous Subtitle" Action SendMessage C+Left
+"Seek to Next Subtitle" Action SendMessage C+Right
+"" NonSelect
+"Forced Subtitles Only" NonSelect, Gray
+"" NonSelect
+"Subtitle Visibility" NonSelect, Gray
+"" NonSelect
+"Use Custom Style" NonSelect, Gray
+"" NonSelect
+"Find Subtitles at OpenSubtitles.org..." NonSelect, Gray
+"Upload Subtitles to OpenSubtitles.org..." NonSelect, Gray
+END
+
+Menu SMPlayer-Browse-Bookmarks
+"Add New Bookmark" Action SendMessage C+A
+"Edit Bookmarks" NonSelect, Gray
+"" NonSelect
+END
+
+Menu SMPlayer-Browse, Label "Browse", Left
+"Title" NonSelect, Gray
+"Chapter" NonSelect, Gray
+"Angle" NonSelect, Gray
+"Bookmarks" SubMenu SMPlayer-Browse-Bookmarks
+END
+
+Menu SMPlayer-View-OSD
+"Subtitles Only" NonSelect, Gray
+"Volume + Seek" NonSelect, Gray
+"Volume + Seek + Timer" NonSelect, Gray
+"Volume + Seek + Timer + Total Time" NonSelect, Gray
+"" NonSelect
+"Show Info on OSD" Action SendMessage S+I
+"" NonSelect
+"Size -" Action SendMessage S+Y
+"Size +" Action SendMessage S+U
+"" NonSelect
+"Show Times with Milliseconds" NonSelect, Gray
+END
+
+Menu SMPlayer-View, Label "View", Left
+"Information & Properties" Action SendMessage C+I
+"Playlist" Action SendMessage C+L
+"YouTube Browser" Action SendMessage N+F11
+"OSD" SubMenu SMPlayer-View-OSD
+"" NonSelect
+"MPlayer/MPV Log" Action SendMessage C+M
+"SMPlayer Log" Action SendMessage C+S
+"" NonSelect
+"Information About Connected Screens" NonSelect, Gray
+END
+
+Menu SMPlayer-Options-Toolbars
+"Main Toolbar" Action SendMessage N+F5
+"" NonSelect
+"Edit Main Toolbar" NonSelect, Gray
+END
+
+Menu SMPlayer-Options-Statusbar
+"Video Info" NonSelect, Gray
+"Scroll Title" NonSelect, Gray
+END
+
+Menu SMPlayer-Options, Label "Options", Left
+"Preferences..." Action SendMessage C+P
+"Tablet Mode" NonSelect, Gray
+"Show Icon in System Tray" NonSelect, Gray
+"" NonSelect
+"Toolbars" SubMenu SMPlayer-Options-Toolbars
+"Statusbar" SubMenu SMPlayer-Options-Statusbar
+END
+
+Menu SMPlayer-Help, Label "Help", Left
+"First Steps Guide" NonSelect, Gray
+"FAQ" NonSelect, Gray
+"Command Line Options" NonSelect, Gray
+"" NonSelect
+"Check for Updates" NonSelect, Gray
+"Install/Update YouTube Support" NonSelect, Gray
+"" NonSelect
+"Open Configuration Folder" NonSelect, Gray
+"" NonSelect
+"Donate" NonSelect, Gray
+"" NonSelect
+""Open Configuration Folder" NonSelect, Gray
+"" NonSelect
+"About SMPlayer" NonSelect, Gray
+END
+
+MenuBar SMPlayer
+SMPlayer-Open
+SMPlayer-Play
+SMPlayer-Video
+SMPlayer-Audio
+SMPlayer-Subtitles
+SMPlayer-Browse
+SMPlayer-View
+SMPlayer-Options
+SMPlayer-Help
+END
+
+Style
+"*SMPlayer*" NoSBarH, NoSBarV
+"*SMPlayer*" MiniIcon smplayer.xpm, MenuBar SMPlayer
+END
