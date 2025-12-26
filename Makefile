@@ -28,6 +28,8 @@ pixmap:
 	convert $(TEMP)/cool-retro-term.png -resize 16x16\> $(PIXMAP)/cool-retro-term.xpm
 	curl -# -L https://hg-edge.mozilla.org/mozilla-central/raw-file/tip/browser/branding/official/default16.png -o $(TEMP)/firefox.png
 	convert $(TEMP)/firefox.png $(PIXMAP)/firefox.xpm
+	curl -# -L https://raw.githubusercontent.com/tarot231/leafpad/main/data/icons/16x16/leafpad.png -o $(TEMP)/leafpad.png
+	convert $(TEMP)/leafpad.png $(PIXMAP)/leafpad.xpm
 	curl -# -L https://raw.githubusercontent.com/mpv-player/mpv.io/master/source/images/favicon.png -o $(TEMP)/mpv.png
 	convert $(TEMP)/mpv.png -resize 16x16\> $(PIXMAP)/mpv.xpm
 	curl -# -L https://raw.githubusercontent.com/godotengine/godot/master/icon.png -o $(TEMP)/godot.png
@@ -93,6 +95,7 @@ clean-pixmap:
 	rm $(PIXMAP)/firefox.xpm
 	rm $(PIXMAP)/godot.xpm
 	rm $(PIXMAP)/iridium.xpm
+	rm $(PIXMAP)/leafpad.xpm
 	rm $(PIXMAP)/links.xpm
 	rm $(PIXMAP)/mpv.xpm
 	rm $(PIXMAP)/netsurf.xpm

@@ -111,6 +111,7 @@ Configurations for the following X11 applications are included:
 * [Gxmessage](https://trmusson.dreamhosters.com/programs.html#gxmessage)
 * [HandBrake](https://handbrake.fr/)
 * [Krita](https://krita.org/)
+* [Leafpad](https://github.com/tarot231/leafpad)
 * [Links](http://links.twibright.com/)
 * [Meld](http://meldmerge.org/)
 * [mpv](https://mpv.io/)

@@ -1,0 +1,57 @@
+Menu Leafpad-File, Label "File", Left
+"New" Action SendMessage C+N
+"Open..." Action SendMessage C+O
+"Save" Action SendMessage C+S
+"Save As..." Action SendMessage SC+S
+"" NonSelect
+"Print Preview" Action SendMessage SC+P
+"Print..." Action SendMessage C+P
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu Leafpad-Edit, Label "Edit", Left
+"Undo" Action SendMessage C+Z
+"Redo" Action SendMessage SC+Z
+"" NonSelect
+"Cut" Action SendMessage C+X
+"Copy" Action SendMessage C+C
+"Paste" Action SendMessage C+V
+"Delete" NonSelect, Gray
+"" NonSelect
+"Select All" Action SendMessage C+A
+END
+
+Menu Leafpad-Search, Label "Search", Left
+"Find..." Action SendMessage C+F
+"Find Next" Action SendMessage C+G
+"Find Previous" Action SendMessage SC+G
+"Replace..." Action SendMessage C+H
+"" NonSelect
+"Jump To..." Action SendMessage C+J
+END
+
+Menu Leafpad-Options, Label "Options", Left
+"Font..." NonSelect, Gray
+"Word Wrap" NonSelect, Gray
+"Line Numbers" NonSelect, Gray
+"" NonSelect
+"Auto Indent" NonSelect, Gray
+END
+
+Menu Leafpad-Help, Label "Help", Left
+"About" NonSelect, Gray
+END
+
+MenuBar Leafpad
+Leafpad-File
+Leafpad-Edit
+Leafpad-Search
+Leafpad-Options
+Leafpad-Help
+END
+
+Style
+"leafpad" NoSBarH, NoSBarV
+"leafpad" MiniIcon leafpad.xpm, MenuBar Leafpad
+END
