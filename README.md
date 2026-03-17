@@ -83,11 +83,37 @@ For further details on High DPI in X11 applications, see:
 
 ### GTK+ 3
 
-Some of the included configurations are for GTK+ 3 applications which use [client-side decorations (CSD)](https://en.wikipedia.org/wiki/Client-side_decoration), resulting in window controls being included in the "header bar". These window controls already exist in the `mlvwm` window title bars, so are redundant and look out of place. They can be disabled by editing `~/.config/gtk-3.0/settings.ini` to set `gtk-decoration-layout` to a blank string (or [customize](https://docs.gtk.org/gtk3/property.Settings.gtk-decoration-layout.html) as you see fit), for example:
+There are several default settings which can be changed to make GTK applications function more like they did under Mac OS. They can be applied to your `~/.config/gtk-3.0/settings.ini`, but please back it up first!
+
+Additional settings can be found in the [Gtk.Settings](https://docs.gtk.org/gtk3/class.Settings.html) documentation. **NOTE:** _Unfortunately, many settings have been depricated in GTK 3.x and are listed as "This setting is ignored."_
+
+#### Disable Client-Side Decorations (CSD)
+
+Some of the included configurations are for GTK+ 3 applications which use [client-side decorations (CSD)](https://en.wikipedia.org/wiki/Client-side_decoration), resulting in window controls being included in the "header bar". These window controls already exist in the `mlvwm` window title bars, so are redundant, look out of place, and take up valuable screen real estate.
+
+To disable client-side decorations, set `gtk-decoration-layout` to a blank string (or [customize](https://docs.gtk.org/gtk3/property.Settings.gtk-decoration-layout.html) as you see fit), for example:
 
 ```
 \[Settings\]
-gtk-decoration-layout=""
+gtk-decoration-layout = ""
+```
+
+#### Always Show Scroll Bars
+
+By default, GTK 3 applications hide the scroll bars in windows with scroll bars unless there is mouse activity in the window. You can force all GTK applications to always show their scroll bars by setting [`gtk-overlay-scrolling`](https://docs.gtk.org/gtk3/property.Settings.gtk-overlay-scrolling.html) to `false`, for example:
+
+```
+\[Settings\]
+gtk-overlay-scrolling = false
+```
+
+#### Change Scroll Bar & Slider Behavior
+
+By default, scroll bars and sliders in GTK 3 applications will, when clicked on, move the scroll/slider handle _to the point clicked_ instead of moving the handle by an amount _toward the point clicked_ (equivalent to clicking on the arrow buttons in the scroll bar). You can reverse this behavior by setting [`gtk-primary-button-warps-slider`](https://docs.gtk.org/gtk3/property.Settings.gtk-primary-button-warps-slider.html) to `false`, for example:
+
+```
+\[Settings\]
+gtk-primary-button-warps-slider = false
 ```
 
 ### iDesk
