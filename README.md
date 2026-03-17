@@ -149,6 +149,7 @@ Configurations for the following X11 applications are included:
 * [Remmina](https://remmina.org/)
 * [ScummVM](https://www.scummvm.org/)
 * [SMPlayer](https://www.smplayer.info/)
+* [Vimb](https://fanglingsu.github.io/vimb/)
 * [VLC](https://www.videolan.org/vlc/)
 * [Xarchiver](https://github.com/ib/xarchiver)
 * Xcalc
