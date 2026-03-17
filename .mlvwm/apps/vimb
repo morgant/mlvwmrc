@@ -1,0 +1,19 @@
+Menu Vimb-File, Label "File", Left
+"New Window" Action Exec "vimb" exec vimb
+"New Private Window" Action Exec "vimb" exec vimb -i
+"New Tab" Action SendMessage ":t" N+Return
+"Open Location..." Action SendMessage ":o "
+"Close Tab" Action SendMessage ":q" N+Return
+"" NonSelect
+"Quit" ActionSendMessage C-Q
+END
+
+MenuBar Vimb
+Vimb-File
+Default-Edit
+END
+
+Style
+"vimb" NoSBarH, NoSBarV
+"vimb" MiniIcon vimb.xpm, MenuBar Vimb
+END
