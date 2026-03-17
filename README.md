@@ -85,7 +85,9 @@ For further details on High DPI in X11 applications, see:
 
 There are several default settings which can be changed to make GTK applications function more like they did under Mac OS. They can be applied to your `~/.config/gtk-3.0/settings.ini`, but please back it up first!
 
-Additional settings can be found in the [Gtk.Settings](https://docs.gtk.org/gtk3/class.Settings.html) documentation. **NOTE:** _Unfortunately, many settings have been depricated in GTK 3.x and are listed as "This setting is ignored."_
+Additional settings can be found in the [Gtk.Settings](https://docs.gtk.org/gtk3/class.Settings.html) documentation. Unfortunately, many depricated settings no longer have any effect in GTK 3.x and are listed as "This setting is ignored."
+
+**NOTE:** _Changes to `settings.ini` are only loaded into individual applications when they are launched, so you should quit and restart any GTK applications running when updates were saved._
 
 #### Disable Client-Side Decorations (CSD)
 
