@@ -65,14 +65,16 @@ xrdb -merge $HOME/.Xdefaults
 
 ### Disable High DPI
 
-Unfortunately, MLVWM does not support High DPI (a.k.a. HiDPI) resolution scaling, only a traditional 1:1 pixel scaling factor. It's suggested to add the following to your `~/.xinitrx` or `~/.xsession` to disable High DPI in GTK & Qt X11 applications:
+Unfortunately, MLVWM does not support High DPI (a.k.a. HiDPI) resolution scaling, only a traditional 1:1 pixel scaling factor. It's suggested to add the following to your `~/.xinitrx` or `~/.xsession` to disable High DPI in GTK, Qt, and SDL X11 applications:
 
 ```
-# Disable HiDPI for GTK & Qt X11 applications
-export QT_ENABLE_HIGHDPI_SCALING=0    # Qt >= 5.14
-export QT_AUTO_SCREEN_SCALE_FACTOR=0  # Qt < 5.14
+# Disable High DPI for GTK/Qt/SDL X11 applications
+export GDK_SCALE=1                      # GTK
+export QT_AUTO_SCREEN_SCALE_FACTOR=0    # Qt < 5.14
 export QT_SCALE_FACTOR=1
-export GDK_SCALE=1
+export QT_ENABLE_HIGHDPI_SCALING=0      # Qt >= 5.14
+export SDL_VIDEO_HIGHDPI_DISABLED=1     # SDL2
+export SDL_VIDEO_X11_SCALING_FACTOR=1.0 # SDL3 >= 3.2.0 
 ```
 
 For further details on High DPI in X11 applications, see:
@@ -80,6 +82,12 @@ For further details on High DPI in X11 applications, see:
 * [GTK 4: Using GTK with X11 (X11-specific environment variables)](https://docs.gtk.org/gtk4/x11.html#x11-specific-environment-variables)
 * [Qt 6.9: Graphics > High DPI (Environment Variable Reference)](https://doc.qt.io/qt-6/highdpi.html#environment-variable-reference)
 * [Qt 5.15: High DPI Displays (High DPI Support in Qt)](https://qthub.com/static/doc/qt5/qtdoc/highdpi.html#high-dpi-support-in-qt)
+* [SDL2: FAQ - Using SDL (What environment variables are used by SDL?)](https://wiki.libsdl.org/SDL2/FAQUsingSDL#what_environment_variables_are_used_by_sdl)
+* [SDL2 `SDL_hints.h`)(https://github.com/libsdl-org/SDL/blob/SDL2/include/SDL_hints.h) (see `SDL_HINT_VIDEO_HIGHDPI_DISABLED`)
+* [SDL3: FAQ - Using SDL3 (What environment variables are used by SDL?)](https://wiki.libsdl.org/SDL3/FAQUsingSDL)
+* [SDL3: Environment Variables](https://wiki.libsdl.org/SDL3/EnvironmentVariables)
+    * [`SDL_HINT_VIDEO_X11_SCALING_FACTOR`](https://wiki.libsdl.org/SDL3/SDL_HINT_VIDEO_X11_SCALING_FACTOR)
+* [SDL3 `SDL_hints.h`)(https://github.com/libsdl-org/SDL/blob/main/include/SDL3/SDL_hints.h) (see `SDL_HINT_VIDEO_X11_SCALING_FACTOR`)
 
 ### GTK+ 3
 
