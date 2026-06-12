@@ -126,6 +126,58 @@ By default, scroll bars and sliders in GTK 3 applications will, when clicked on,
 gtk-primary-button-warps-slider = false
 ```
 
+### SDL
+
+#### Don't Use Full Screen Mode in SDL Applications
+
+Fullscreen windows, especially those for SDL applications (especially games) are not currently supported by MLVWM. So, you should configure your applications not to use them.
+
+#### Work Around 'BadMatch' Errors for 'X_SetInputFocus' Requests
+
+Are you experiencing intermittend and/or frequent X `BadMatch (invalid parameter attributes)` errors for requests with `X_SetInputFocus` when running SDL applications (especially games), such as the following?
+
+```
+X Error of failed request:  BadMatch (invalid parameter attributes)
+  Major opcode of failed request:  42 (X_SetInputFocus)
+  Serial number of failed request:  2374
+  Current serial number in output stream:  2375
+```
+
+If so, this can be worked around by setting the `SDL_X11_FORCE_OVERRIDE_REDIRECT` environment variable. This environment variable is described in [`include/SDL_hints.h`](https://github.com/libsdl-org/SDL/blob/SDL2/include/SDL_hints.h) thusly:
+
+```
+/**
+ * Mark X11 windows as override-redirect.
+ *
+ * If set, this _might_ increase framerate at the expense of the desktop not
+ * working as expected. Override-redirect windows aren't noticed by the window
+ * manager at all.
+ *
+ * You should probably only use this for fullscreen windows, and you probably
+ * shouldn't even use it for that. But it's here if you want to try!
+ */
+#define SDL_HINT_X11_FORCE_OVERRIDE_REDIRECT "SDL_X11_FORCE_OVERRIDE_REDIRECT"
+```
+
+As described, this will cause the SDL application's window(s) to not be handled by `mlvwm` at all!
+
+With that in mind, the suggested use with `mlvwm` and/or `mlvwmrc` is as follows, highest priority to lowest:
+
+1. Avoid using this workaround if at all possible!
+2. Try launching the application from a terminal, first executing `export SDL_X11_FORCE_OVERRIDE_REDIRECT=1` and then the application itself
+3. Write a wrapper script for the application which automatically sets the `SDL_X11_FORCE_OVERRIDE_REDIRECT=1` environment variable (see Step 2)
+4. If the problem occurs frequently for _all SDL-based applications`_, set the `SDL_X11_FORCE_OVERRIDE_REDIRECT=1` environment variable in your `~/.xinit` (or `~/.xsession`, if appropriate)
+
+If you find you need to globally set `SDL_X11_FORCE_OVERRIDE_REDIRECT`, you may want to also set `SDL_GRAB_KEYBOARD`. In that case, you'd want to add the following to your `~/.xinit` or `~/.xsession`:
+
+```
+# Workaround for SDL2 X11 BadMatch/X_SetInputFocus errors
+export SDL_X11_FORCE_OVERRIDE_REDIRECT=1
+export SDL_GRAB_KEYBOARD=1
+```
+
+**NOTE**: _The above will prevent MLVWM global keyboard shortcuts from functioning, so you'll be unlikely to switch applications._
+
 ### iDesk
 
 Companion [iDesk](https://idesk.sourceforge.net/) configuration files are available via the [mlvwmrc-ideskrc](https://github.com/morgant/mlvwmrc-ideskrc) project.
