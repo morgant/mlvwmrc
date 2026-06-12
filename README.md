@@ -178,6 +178,13 @@ export SDL_GRAB_KEYBOARD=1
 
 **NOTE**: _The above will prevent MLVWM global keyboard shortcuts from functioning, so you'll be unlikely to switch applications._
 
+##### Further Reading
+
+* [SDL2 FAQ: Using SDL](https://wiki.libsdl.org/SDL2/FAQUsingSDL), especially:
+    * [What environment variables are used by SDL?](https://wiki.libsdl.org/SDL2/FAQUsingSDL#what_environment_variables_are_used_by_sdl)
+* [SDL3 FAQ: Using SDL3](https://wiki.libsdl.org/SDL3/FAQUsingSDL), especially:
+    * [SDL3 Environment Variables](https://wiki.libsdl.org/SDL3/EnvironmentVariables)
+
 ### iDesk
 
 Companion [iDesk](https://idesk.sourceforge.net/) configuration files are available via the [mlvwmrc-ideskrc](https://github.com/morgant/mlvwmrc-ideskrc) project.
