@@ -83,11 +83,11 @@ For further details on High DPI in X11 applications, see:
 * [Qt 6.9: Graphics > High DPI (Environment Variable Reference)](https://doc.qt.io/qt-6/highdpi.html#environment-variable-reference)
 * [Qt 5.15: High DPI Displays (High DPI Support in Qt)](https://qthub.com/static/doc/qt5/qtdoc/highdpi.html#high-dpi-support-in-qt)
 * [SDL2: FAQ - Using SDL (What environment variables are used by SDL?)](https://wiki.libsdl.org/SDL2/FAQUsingSDL#what_environment_variables_are_used_by_sdl)
-* [SDL2 `SDL_hints.h`)(https://github.com/libsdl-org/SDL/blob/SDL2/include/SDL_hints.h) (see `SDL_HINT_VIDEO_HIGHDPI_DISABLED`)
+* [SDL2 `SDL_hints.h`](https://github.com/libsdl-org/SDL/blob/SDL2/include/SDL_hints.h) (see `SDL_HINT_VIDEO_HIGHDPI_DISABLED`)
 * [SDL3: FAQ - Using SDL3 (What environment variables are used by SDL?)](https://wiki.libsdl.org/SDL3/FAQUsingSDL)
 * [SDL3: Environment Variables](https://wiki.libsdl.org/SDL3/EnvironmentVariables)
     * [`SDL_HINT_VIDEO_X11_SCALING_FACTOR`](https://wiki.libsdl.org/SDL3/SDL_HINT_VIDEO_X11_SCALING_FACTOR)
-* [SDL3 `SDL_hints.h`)(https://github.com/libsdl-org/SDL/blob/main/include/SDL3/SDL_hints.h) (see `SDL_HINT_VIDEO_X11_SCALING_FACTOR`)
+* [SDL3 `SDL_hints.h`](https://github.com/libsdl-org/SDL/blob/main/include/SDL3/SDL_hints.h) (see `SDL_HINT_VIDEO_X11_SCALING_FACTOR`)
 
 ### GTK+ 3
 
