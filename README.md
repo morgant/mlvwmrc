@@ -132,9 +132,11 @@ gtk-primary-button-warps-slider = false
 
 Fullscreen windows, especially those for SDL applications (especially games) are not currently supported by MLVWM. So, you should configure your applications not to use them.
 
+Unfortunately, a many (most?) games launch in full screen mode, so check for command line options which launch in windowed mode. Implementation varies from game to game.
+
 #### Work Around 'BadMatch' Errors for 'X_SetInputFocus' Requests
 
-Are you experiencing intermittend and/or frequent X `BadMatch (invalid parameter attributes)` errors for requests with `X_SetInputFocus` when running SDL applications (especially games), such as the following?
+Are you experiencing intermittent and/or frequent X `BadMatch (invalid parameter attributes)` errors for requests with `X_SetInputFocus` when running SDL applications (especially games), such as the following?
 
 ```
 X Error of failed request:  BadMatch (invalid parameter attributes)
@@ -166,7 +168,7 @@ With that in mind, the suggested use with `mlvwm` and/or `mlvwmrc` is as follows
 1. Avoid using this workaround if at all possible!
 2. Try launching the application from a terminal, first executing `export SDL_X11_FORCE_OVERRIDE_REDIRECT=1` and then the application itself
 3. Write a wrapper script for the application which automatically sets the `SDL_X11_FORCE_OVERRIDE_REDIRECT=1` environment variable (see Step 2)
-4. If the problem occurs frequently for _all SDL-based applications`_, set the `SDL_X11_FORCE_OVERRIDE_REDIRECT=1` environment variable in your `~/.xinit` (or `~/.xsession`, if appropriate)
+4. If the problem occurs frequently for _all SDL-based applications_, set the `SDL_X11_FORCE_OVERRIDE_REDIRECT=1` environment variable in your `~/.xinit` (or `~/.xsession`, if appropriate)
 
 If you find you need to globally set `SDL_X11_FORCE_OVERRIDE_REDIRECT`, you may want to also set `SDL_GRAB_KEYBOARD`. In that case, you'd want to add the following to your `~/.xinit` or `~/.xsession`:
 
