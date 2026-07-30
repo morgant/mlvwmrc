@@ -204,6 +204,7 @@ Configurations for the following X11 applications are included:
 * [Clementine](https://www.clementine-player.org/)
 * [cool-retro-term](https://github.com/Swordfish90/cool-retro-term)
 * [Firefox](https://www.getfirefox.com/)
+* [GKrellM](https://gkrellm.srcbox.net/)
 * [Godot](https://godotengine.org/)
 * [Gxmessage](https://trmusson.dreamhosters.com/programs.html#gxmessage)
 * [HandBrake](https://handbrake.fr/)

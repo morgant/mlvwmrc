@@ -1,0 +1,31 @@
+Menu GKrellM-File, Label "File", Left
+"Quit" NonSelect, Gray
+END
+
+Menu GKrellM-Edit-Theme
+"Next" Action SendMessage S+Prior
+"Previous" Action SendMessage S+Next
+END
+
+Menu GKrellM-Edit, Label "Edit"
+"Undo" NonSelect, Gray
+"" NonSelect
+"Cut" NonSelect, Gray
+"Copy" NonSelect, Gray
+"Paste" NonSelect, Gray
+"" NonSelect
+"Theme" SubMenu GKrellM-Edit-Theme
+"" NonSelect
+"Preferences..." Action SendMessage N+F1
+END
+
+MenuBar GKrellM
+GKrellM-File
+GKrellM-Edit
+END
+
+Style
+"Gkrellm_conf" NoSBarH, NoSBarV, NoResizeR, NoMinMaxR
+"Gkrellm" NoSBarH, NoSBarV, NoResizeR
+"Gkrellm" MiniIcon gkrellm.xpm, MenuBar GKrellM
+END

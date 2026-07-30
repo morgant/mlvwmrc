@@ -26,13 +26,15 @@ pixmap:
 	#
 	curl -# -L https://raw.githubusercontent.com/Swordfish90/cool-retro-term/master/app/icons/32x32/cool-retro-term.png -o $(TEMP)/cool-retro-term.png
 	convert $(TEMP)/cool-retro-term.png -resize 16x16\> $(PIXMAP)/cool-retro-term.xpm
-	curl -# -L https://hg-edge.mozilla.org/mozilla-central/raw-file/tip/browser/branding/official/default16.png -o $(TEMP)/firefox.png
+	curl -# -L https://hg-edge.mozilla.org/mozilla-central/raw-file/default/browser/branding/official/default16.png -o $(TEMP)/firefox.png
 	convert $(TEMP)/firefox.png $(PIXMAP)/firefox.xpm
+	curl -# -L https://git.srcbox.net/gkrellm/gkrellm/raw/branch/master/data/icons/16/gkrellm.png -o $(TEMP)/gkrellm.png
+	convert $(TEMP)/gkrellm.png $(PIXMAP)/gkrellm.xpm
 	curl -# -L https://raw.githubusercontent.com/tarot231/leafpad/main/data/icons/16x16/leafpad.png -o $(TEMP)/leafpad.png
 	convert $(TEMP)/leafpad.png $(PIXMAP)/leafpad.xpm
 	curl -# -L https://raw.githubusercontent.com/mpv-player/mpv.io/master/source/images/favicon.png -o $(TEMP)/mpv.png
 	convert $(TEMP)/mpv.png -resize 16x16\> $(PIXMAP)/mpv.xpm
-	curl -# -L https://raw.githubusercontent.com/godotengine/godot/master/icon.png -o $(TEMP)/godot.png
+	curl -# -L https://raw.githubusercontent.com/godotengine/godot/master/main/app_icon.png -o $(TEMP)/godot.png
 	convert $(TEMP)/godot.png -resize 16x16\> $(PIXMAP)/godot.xpm
 	curl -# -L "https://gitlab.com/qemu-project/qemu/-/raw/master/ui/icons/qemu_16x16.png?ref_type=heads&inline=false" -o $(TEMP)/qemu.png
 	convert $(TEMP)/qemu.png $(PIXMAP)/qemu.xpm
@@ -95,6 +97,7 @@ clean-pixmap:
 	rm $(PIXMAP)/claws-mail.xpm
 	rm $(PIXMAP)/cool-retro-term.xpm
 	rm $(PIXMAP)/firefox.xpm
+	rm $(PIXMAP)/gkrellm.xpm
 	rm $(PIXMAP)/godot.xpm
 	rm $(PIXMAP)/iridium.xpm
 	rm $(PIXMAP)/leafpad.xpm
