@@ -25,7 +25,7 @@ GKrellM-Edit
 END
 
 Style
-"Gkrellm_conf" NoSBarH, NoSBarV, NoResizeR, NoMinMaxR
 "Gkrellm" NoSBarH, NoSBarV, NoResizeR
 "Gkrellm" MiniIcon gkrellm.xpm, MenuBar GKrellM
+"Gkrellm_conf" NoSBarH, NoSBarV, NoResizeR, NoMinMaxR
 END
