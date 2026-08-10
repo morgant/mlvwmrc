@@ -8,9 +8,19 @@ Menu Vimb-File, Label "File", Left
 "Quit" ActionSendMessage C-Q
 END
 
+Menu Vimb-Navigate, Label "Navigate", Left
+"Back" Action SendMessage C-O
+"Forward" Action SendMessage C-I
+"Stop" Action SendMessage C-C
+"Reload" Action SendMessage N+R
+"Super Reload" Action SendMessage S+R
+"Home" Action SendMessage M-Down
+END
+
 MenuBar Vimb
 Vimb-File
 Default-Edit
+Vimb-Navigate
 END
 
 Style
