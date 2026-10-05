@@ -42,6 +42,8 @@ pixmap:
 	convert $(TEMP)/scummvm.ico[8] -resize 16x16\> $(PIXMAP)/scummvm.xpm
 	curl -# -L https://raw.githubusercontent.com/smplayer-dev/smplayer/master/icons/smplayer_icon16.png -o $(TEMP)/smplayer.png
 	convert $(TEMP)/smplayer.png $(PIXMAP)/smplayer.xpm
+	curl -# -L https://raw.githubusercontent.com/solvespace/solvespace/master/res/freedesktop/solvespace-16x16.png -o $(TEMP)/solvespace.png
+	convert $(TEMP)/solvespace.png $(PIXMAP)/solvespace.xpm
 	curl -# -L https://raw.githubusercontent.com/morgant/vimb-icon/master/.github/images/vimb-transparent-512x512.png -o $(TEMP)/vimb.png
 	convert $(TEMP)/vimb.png -resize 16x16\> $(PIXMAP)/vimb.xpm
 	curl -# -L https://raw.githubusercontent.com/zealdocs/zeal/main/assets/freedesktop/16-apps-zeal.png -o $(TEMP)/zeal.png
@@ -107,6 +109,7 @@ clean-pixmap:
 	rm $(PIXMAP)/qemu.xpm
 	rm $(PIXMAP)/scummvm.xpm
 	rm $(PIXMAP)/smplayer.xpm
+	rm $(PIXMAP)/solvespace.xpm
 	rm $(PIXMAP)/vimb.xpm
 	rm $(PIXMAP)/vlc.xpm
 	rm $(PIXMAP)/xpdfreader.xpm

@@ -1,0 +1,167 @@
+Menu SolveSpace-File, Label "File", Left
+"New" Action SendMessage C+N
+"Open..." Action SendMessage C+O
+"Save" Action SendMessage C+S
+"Save As..." NonSelect, Gray
+"" NonSelect
+"Export Image..." NonSelect, Gray
+"Export 2d View..." NonSelect, Gray
+"Export 2d Section..." NonSelect, Gray
+"Export 3d Wireframe..." NonSelect, Gray
+"Export Triangle Mesh..." NonSelect, Gray
+"Export Surfaces..." NonSelect, Gray
+"Import..." NonSelect, Gray
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu SolveSpace-Edit, Label "Edit"
+"Undo" Action SendMessage C+Z
+"Redo" Action SendMessage C+Y
+"Regenerate All" Action SendMessage N+Space
+"" NonSelect
+"Snap Selection to Grid" Action SendMessage N+Period
+"Rotate Imported 90deg" Action SendMessage N+9
+"" NonSelect
+"Cut" Action SendMessage C+X
+"Copy" Action SendMessage C+C
+"Paste" Action SendMessage C+V
+"Paste Transformed..." Action SendMessage C+T
+"Delete" Action SendMessage N+D
+"" NonSelect
+"Select Edge Chain" Action SendMessage C+E
+"Select All" Action SendMessage C+A
+"Unselect All" Action SendMessage N+Esc
+"" NonSelect
+"Line Styles..." NonSelect, Gray
+"View Projection..." NonSelect, Gray
+"Configuration..." NonSelect, Gray
+END
+
+Menu SolveSpace-View-DimensionUnits
+"Dimensions in Millimeters" NonSelect, Gray
+"Dimensions in Meters" NonSelect, Gray
+"Dimensions in Inches" NonSelect, Gray
+"Dimensions in Feet and Inches" NonSelect, Gray
+END
+
+Menu SolveSpace-View, Label "View"
+"Zoom In" Action SendMessage N+Plus
+"Zoom Out" Action SendMessage N+Minus
+"Zoom to Fit" Action SendMessage N+F
+"" NonSelect
+"Align View to Workplane" Action SendMessage N+W
+"Nearest Ortho View" Action SendMessage N+F2
+"Nearest Isometric View" Action SendMessage N+F3
+"Center View at Point" Action SendMessage N+F4
+"" NonSelect
+"Show/Hide Snap Grid" Action SendMessage N+>
+"Darken Inactive Solids" NonSelect, Gray
+"Toggle Use Perspective Projection" Action SendMessage N+Backtick
+"Show/Hide Exploded View" Action SendMessage N+Backslash
+"Dimension Units" SubMenu SolveSpace-View-DimensionUnits
+"" NonSelect
+"Show/Hide Toolbar" NonSelect, Gray
+"Show/Hide Property Browser" Action SendMessage N+Tab
+"" NonSelect
+"Full Screen" Action SendMessage C+F11
+END
+
+Menu SolveSpace-NewGroup, Label "New Group"
+"Sketch in 3d" Action SendMessage S+3
+"Sketch in New Workplane" Action SendMessage S+W
+"" NonSelect
+"Step Translating" Action SendMessage S+T
+"Step Rotating" Action SendMessage S+R
+"" NonSelect
+"Extrude" Action SendMessage S+X
+"Helix" Action SendMessage S+H
+"Lathe" Action SendMessage S+L
+"Revolve" Action SendMessage S+V
+"" NonSelect
+"Link / Assemble" Action SendMessage S+I
+END
+
+Menu SolveSpace-Sketch, Label "Sketch"
+"In Workplane" Action SendMessage N+2
+"Anywhere in 3d" Action SendMessage N+3
+"" NonSelect
+"Datum Point" Action SendMessage N+P
+"Workplane" NonSelect, Gray
+"" NonSelect
+"Line Segment" Action SendMessage N+S
+"Construction Line Segment" Action SendMessage S+S
+"Rectangle" Action SendMessage N+R
+"Circle" Action SendMessage N+C
+"Arc of a Circle" Action SendMessage N+A
+"Bezier Cubic Spline" Action SendMessage N+B
+"" NonSelect
+"Text in TrueType Font" Action SendMessage N+T
+"Image" NonSelect, Gray
+"" NonSelect
+"Toggle Construction" Action SendMessage N+G
+"Tangent Arc at Point" Action SendMessage S+A
+"Split Curves at Intersection" Action SendMessage S+I
+END
+
+Menu SolveSpace-Constrain, Label "Constrain"
+"Distance / Diameter" Action SendMessage N+D
+"Reference Dimension" Action SendMessage S+D
+"Angle" Action SendMessage N+N
+"Reference Angle" Action SendMessage S+N
+"Other Supplementary Angle" Action SendMessage N+U
+"Toggle Reference Dim" Action SendMessage N+E
+"" NonSelect
+"Horizontal" Action SendMessage N+H
+"Vertical" Action SendMessage N+V
+"" NonSelect
+"On Point / Curve / Plain" Action SendMessage N+O
+"Equal Length / Radius / Angle" Action SendMessage N+Q
+"Length / Arc Ratio" Action SendMessage N+Z
+"Length / Arc Difference" Action SendMessage N+J
+"At Midpoint" Action SendMessage N+M
+"Symmetric" Action SendMessage N+Y
+"Parallel / Tangent" Action SendMessage N+L
+"Perpendicular" Action SendMessage N+[
+"Same Orientation" Action SendMessage N+X
+"Lock Point Where Dragged" Action SendMessage N+]
+"" NonSelect
+"Comment" Action SendMessage N+Semicolon
+END
+
+Menu SolveSpace-Analyze, Label "Analyze"
+"Measure Volume" Action SendMessage SC+V
+"Measure Area" Action SendMessage SC+A
+"Measure Perimeter" Action SendMessage SC+P
+"Show Interfering Parts" Action SendMessage SC+I
+"Show Naked Edges" Action SendMessage SC+N
+"Show Center of Mass" Action SendMessage SC+C
+"" NonSelect
+"Show Unconstrained Points" Action SendMessage SC+F
+"Trace Point" Action SendMessage SC+T
+"Stop Tracing..." Action SendMessage SC+S
+"Step Dimensions..." Action SendMessage SC+D
+END
+
+Menu SolveSpace-Help, Label "Help"
+"Language" NonSelect, Gray
+"Website / Manual" NonSelect, Gray
+"Go to GitHub commit" NonSelect, Gray
+"About" NonSelect, Gray
+END
+
+MenuBar SolveSpace
+SolveSpace-File
+SolveSpace-Edit
+SolveSpace-View
+SolveSpace-NewGroup
+SolveSpace-Sketch
+SolveSpace-Constrain
+SolveSpace-Analyze
+SolveSpace-Help
+END
+
+Style
+"solvespace" NoSBarH, NoSBarV
+"solvespace" MiniIcon solvespace.xpm, MenuBar SolveSpace
+END
