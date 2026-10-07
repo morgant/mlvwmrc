@@ -14,13 +14,19 @@ Unfortunately, MLVWM only includes a couple very rudimentary example rc ([run co
 
 ## PREREQUISITES
 
-* `mlvwm`:
-    * `locale`
-    * `xpm`
+To build and install the **mlvwmrc** configuration files and related helper utilities, you will need the following:
+
 * `make`:
+* `rsync`:
 * `curl`
 * `unzip`
 * ImageMagick
+
+Post-installation, you will need the following to fully utilize the configuration files and utilities:
+
+* `mlvwm` (obviously), which requires:
+    * `locale`
+    * `xpm`
 * `gxmessage`
 * `xdotool` (for `mlvwm-restart`)
 * [`maim`](https://github.com/naelstrof/maim) & [`slop`](https://github.com/naelstrof/slop) (for `mlvwm-screenshot`)
