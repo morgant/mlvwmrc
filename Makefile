@@ -1,46 +1,75 @@
-TEMP=tmp
-CONF=.mlvwm
-BIN=bin
-PIXMAP=$(CONF)/pixmap
-PATTERNS=$(CONF)/patterns
+TEMP_DIR =	tmp
+BUILD_DIR =	build
+CONF_DIR =	.mlvwm
+BIN_DIR =	bin
+PIXMAP_DIR =	$(CONF_DIR)/pixmap
+PATTERNS_DIR =	$(CONF_DIR)/patterns
 
-all: pixmap patterns
+build: build-init build-pixmaps build-patterns
+	rsync -va \
+		--exclude=".git/" \
+		--exclude="Makefile" \
+		--exclude=".gitignore" \
+		$(CONF_DIR)/ \
+		$(BUILD_DIR)/$(CONF_DIR)/
+	rsync -va \
+		--exclude=".git/" \
+		--exclude=".gitignore" \
+		$(BIN_DIR)/ \
+		$(BUILD_DIR)/$(BIN_DIR)/
+	find $(BUILD_DIR)/$(BIN_DIR) -type f -iname "mlvwm-*" \
+		-exec chmod +x {} \;
+	sed -i \
+		's@/home2/tak/bin/pixmap@$(HOME)/$(PIXMAP_DIR)@g' \
+		$(BUILD_DIR)/$(CONF_DIR)/.mlvwmrc
 
-patterns:
-	test ! -d $(PATTERNS) && mkdir $(PATTERNS)
-	curl -# -L https://forums.macrumors.com/attachments/mac-os-background-jpg.61609 -o $(PATTERNS)/mac-os-background.jpg
-	curl -# -L https://wallpaperbat.com/img/250263-classic-mac-os-wallpaper.png -o $(PATTERNS)/mac-os-background-hi-res.png
-	curl -# -L https://forums.macrumors.com/attachments/mac-os-default-png.61610 -o $(PATTERNS)/mac-os-default.png
-	curl -# -L https://imgur.com/a/9jYy0/zip -o "$(TEMP)/Mac OS Solid Color Backgrounds.zip"
-	unzip -d $(PATTERNS) "$(TEMP)/Mac OS Solid Color Backgrounds.zip"
+build-init:
+	-test ! -d $(TEMP_DIR) && mkdir -p $(TEMP_DIR)
+	-test ! -d $(BUILD_DIR) && mkdir -p $(BUILD_DIR)
 
-install: install-bin
-	find $(HOME) -name ".mlvwm" -type d -exec mv {}{,.$(date +%Y%m%d-%H%M%S)} \;
-	cp -R $(CONF) $(HOME)/
-	ln -fs $(HOME)/$(CONF)/.mlvwmrc $(HOME)/.mlvwmrc
-	sed -i 's@/home2/tak/bin/pixmap@$(HOME)/$(PIXMAP)@g' $(HOME)/$(CONF)/.mlvwmrc
+install: install-archive install-bin
+	install -o $(USER) -g $(USER) {$(BUILD_DIR),$(HOME)}/$(CONF_DIR)
+	ln -fs $(HOME)/$(CONF_DIR)/.mlvwmrc $(HOME)/.mlvwmrc
 
 install-bin:
-	mkdir -p $(HOME)/$(BIN)
-	find ${HOME}/$(BIN) -name "mlvwm-*" ! -name "*.*" -exec mv {}{,.$(date +%Y%m%d-%H%M%S)} \;
-	install -m 700 -o $(USER) $(BIN)/mlvwm-* $(HOME)/$(BIN)
+	-test ! -d $(HOME)/$(BIN_DIR) && mkdir -p $(HOME)/$(BIN_DIR)
+	install -m 700 -o $(USER) -g $(USER) \
+		$(BUILD_DIR)/$(BIN_DIR)/mlvwm-* \
+		$(HOME)/$(BIN_DIR)/
 
-clean: clean-pixmap
-	rm -r $(TEMP)
-	rm -rf $(PATTERNS)
+install-archive:
+	-test -d $(HOME)/$(CONF_DIR) \
+		&& mv $(HOME)/$(CONF_DIR){,.$(date +%Y%m%d-%H%M%S)}
+	-test -d $(HOME)/$(BIN_DIR) \
+		&& find $(HOME)/$(BIN_DIR) -type f -name "mlvwm-*" ! -name "*.*" \
+			-exec mv {}{,.$(date +%Y%m%d-%H%M%S)} \;
+
+clean: clean-pixmaps clean-patterns
+	rm -r $(TEMP_DIR)
+	rm -r $(BUILD_DIR)
 
 # For copyright and distribution reasons, it is preferred that application
 # icons (i.e. pixmaps) are fetched and copied into `.mlvwm/pixmap/` instead of
 # being committed to this repository. This is handled by the `Makefile` and
 # `.gitignore` files in the `.mlvwm/pixmap/` directory.
-#
-# NOTE: This Makefile's `install` target still needs to be updated to **not**
-# install the aforementioned `Makefile` & `.gitignore` when installing the
-# contents of `.mlvwm/pixmap/`!
-pixmap:
-	cd $(PIXMAP) && make
+build-pixmaps:
+	-test ! -d $(BUILD_DIR)/$(PIXMAP_DIR) \
+		&& mkdir -p $(BUILD_DIR)/$(PIXMAP_DIR)
+	cd $(PIXMAP_DIR) && make
 	cd -
 
-clean-pixmap:
-	cd $(PIXMAP) && make clean
+clean-pixmaps:
+	cd $(PIXMAP_DIR) && make clean
+	cd -
+
+# For copyright and distribution reasons, it is preferred that desktop
+# patterns are fetched and copied into `.mlvwm/patterns/` instead of being
+# committed to this repository. This is handled by the `Makefile` and
+# `.gitignore` files in the `.mlvwm/patterns/` directory.
+build-patterns:
+	cd $(PATTERNS_DIR) && make
+	cd -
+
+clean-patterns:
+	cd $(PATTERNS_DIR) && make clean
 	cd -
