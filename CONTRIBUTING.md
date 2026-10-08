@@ -9,7 +9,7 @@ submit any suggestions.
 Please submit bugs and feature requests for the mlvwmrc configuration files
 via the project’s [issue tracker](https://github.com/morgant/mlvwm/issues).
 
-**Note:**: _If the bug or feature request is actually related to the
+**Note**: _If the bug or feature request is actually related to the
 [MLVWM](https://github.com/morgant/mlvwm) window manager, please report in
 [that project's issue tracker](https://github.com/morgant/mlvwm/issues)._
 
