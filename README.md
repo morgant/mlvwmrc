@@ -297,6 +297,7 @@ Configurations for the following X11 applications are included:
 * [Godot](https://godotengine.org/)
 * [Gxmessage](https://trmusson.dreamhosters.com/programs.html#gxmessage)
 * [HandBrake](https://handbrake.fr/)
+* [Kid3](https://kid3.kde.org/)
 * [Krita](https://krita.org/)
 * [Leafpad](https://github.com/tarot231/leafpad)
 * [Links](http://links.twibright.com/)

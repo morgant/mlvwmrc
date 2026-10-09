@@ -1,0 +1,82 @@
+Menu Kid3-File, Label "File", Left
+"Open..." Action SendMessage C+O
+"Open Folder..." Action SendMessage C+D
+"Reload" Action SendMessage N+F5
+"" NonSelect
+"Save" Action SendMessage C+S
+"Revert" Action SendMessage C+Z
+"" NonSelect
+"Import..." NonSelect, Gray
+"Import from Amazon..." NonSelect, Gray
+"Import from Discogs..." NonSelect, Gray
+"Import from MusicBrainz Release..." NonSelect, Gray
+"Import from MusicBrainz Release..." NonSelect, Gray
+"Import from Tags..." NonSelect, Gray
+"Automatic Import..." NonSelect, Gray
+"Browse Cover Art..." NonSelect, Gray
+"" NonSelect
+"Export..." NonSelect, Gray
+"Create Playlist..." NonSelect, Gray
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu Kid3-Edit, Label "Edit"
+"Select All" Action SendMessage C+A
+"Deselect" Action SendMessage SC+A
+"Select All in Folder" NonSelect, Gray
+"Invert Selection" NonSelect, Gray
+"Previous File" Action SendMessage N+PgUp
+"Next File" Action SendMessage N+PgDown
+"" NonSelect
+"Find..." Action SendMessage C+F
+"Replace..." Action SendMessage C+R
+END
+
+Menu Kid3-Tools, Label "Tools"
+"Apply Filename Format" NonSelect, Gray
+"Apply Tag Format" NonSelect, Gray
+"Apply Text Encoding" NonSelect, Gray
+"" NonSelect
+"Rename Folder..." NonSelect, Gray
+"Number Tracks..." NonSelect, Gray
+"Filter..." NonSelect, Gray
+"" NonSelect
+"Convert ID3v2.3 to ID3v2.4" NonSelect, Gray
+"Convert ID3v2.4 to ID3v2.3" NonSelect, Gray
+"" NonSelect
+"Play" NonSelect, Gray
+END
+
+Menu Kid3-Settings, Label "Settings"
+"Show/Hide Toolbar" NonSelect, Gray
+"Show/Hide Statusbar" NonSelect, Gray
+"Show/Hide Picture" NonSelect, Gray
+"Enable/Disable Auto Hide Tags" NonSelect, Gray
+"" NonSelect
+"Configure Keyboard Shortcuts..." Action SendMessage MC+,
+"Configure Toolbars..." NonSelect, Gray
+"Configure Kid3..." Action SendMessage SC+,
+END
+
+Menu Kid3-Help, Label "Help"
+"Kid3 Handbook" Action SendMessage N+F1
+"" NonSelect
+"Report Bug..." NonSelect, Gray
+"" NonSelect
+"About Kid3" NonSelect, Gray
+"About KDE" NonSelect, Gray
+END
+
+MenuBar Kid3
+Kid3-File
+Kid3-Edit
+Kid3-Tools
+Kid3-Settings
+Kid3-Help
+END
+
+Style
+"kid3" NoSBarH, NoSBarV
+"kid3" MiniIcon kid3.xpm, MenuBar Kid3
+END

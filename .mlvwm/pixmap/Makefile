@@ -41,6 +41,7 @@ build: build-init \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/gkrellm.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/iridium.xpm \
+	$(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/leafpad.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/links.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/mpv.xpm \
@@ -64,6 +65,7 @@ clean-pixmap: clean-mini-icons
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/gkrellm.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/iridium.xpm
+	rm $(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/leafpad.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/links.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/mpv.xpm
@@ -186,6 +188,17 @@ $(TEMP_PIXMAP)/iridium-favicon.ico:
 $(BUILD_DIR)/$(PIXMAP_DIR)/iridium.xpm: $(TEMP_PIXMAP)/iridium-favicon.ico
 	convert $(TEMP_PIXMAP)/iridium-favicon.ico[2] \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/iridium.xpm
+
+#
+# Kid3 (Multimedia Tagger)
+#
+$(TEMP_PIXMAP)/kid3.png:
+	curl -# -L "https://invent.kde.org/multimedia/kid3/-/raw/master/src/app/16-apps-kid3.png?ref_type=heads&inline=false" \
+		-o $(TEMP_PIXMAP)/kid3.png
+
+$(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm: $(TEMP_PIXMAP)/kid3.png
+	convert $(TEMP_PIXMAP)/kid3.png \
+		$(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm
 
 #
 # Leafpad (Text Editor)
