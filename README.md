@@ -310,6 +310,7 @@ Configurations for the following X11 applications are included:
 * [RetroArch](https://www.retroarch.com/)
 * [Remmina](https://remmina.org/)
 * [ScummVM](https://www.scummvm.org/)
+* [Simsu](https://gottcode.org/simsu/)
 * [SMPlayer](https://www.smplayer.info/)
 * [SolveSpace](https://solvespace.com/)
 * [Vimb](https://fanglingsu.github.io/vimb/)

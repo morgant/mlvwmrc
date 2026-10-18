@@ -48,6 +48,7 @@ build: build-init \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/netsurf.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/qemu.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/scummvm.xpm \
+	$(BUILD_DIR)/$(PIXMAP_DIR)/simsu.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/smplayer.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/solvespace.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/vimb.xpm \
@@ -267,6 +268,18 @@ $(TEMP_PIXMAP)/scummvm.ico:
 $(BUILD_DIR)/$(PIXMAP_DIR)/scummvm.xpm: $(TEMP_PIXMAP)/scummvm.ico
 	convert $(TEMP_PIXMAP)/scummvm.ico[8] -resize 16x16\> \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/scummvm.xpm
+#
+# Simsu (Game)
+#
+$(TEMP_PIXMAP)/simsu-1.4.8.tar.bz2:
+	curl -# -L https://gottcode.org/simsu/download/?os=source \
+		-o $(TEMP_PIXMAP)/simsu-1.4.8.tar.bz2
+
+$(BUILD_DIR)/$(PIXMAP_DIR)/simsu.xpm: $(TEMP_PIXMAP)/simsu-1.4.8.tar.bz2
+	tar -xjf $(TEMP_PIXMAP)/simsu-1.4.8.tar.bz2 -C $(TEMP_PIXMAP) \
+		simsu-1.4.8/icons/hicolor/16x16/apps/simsu.png
+	convert $(TEMP_PIXMAP)/simsu-1.4.8/icons/hicolor/16x16/apps/simsu.png \
+		$(BUILD_DIR)/$(PIXMAP_DIR)/simsu.xpm
 
 #
 # SMPlayer (Media Player)

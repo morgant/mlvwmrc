@@ -1,0 +1,47 @@
+Menu Simsu-Game, Label "Game", Left
+"New" Action SendMessage C+N
+"Restart" Action SendMessage N+F5
+"" NonSelect
+"Print..." Action SendMessage C+P
+"" NonSelect
+"Details" NonSelect, Gray
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu Simsu-Move, Label "Move"
+"Undo" Action SendMessage C+Z
+"Redo" Action SendMessage CS+Z
+"" NonSelect
+"Check" Action SendMessage N+C
+"Hint" Action SendMessage N+F2
+END
+
+Menu Simsu-Settings, Label "Settings"
+"Auto Switch Modes" NonSelect, Gray
+"Widescreen Layout" NonSelect, Gray
+"" NonSelect
+"Manual Notes" NonSelect, Gray
+"Auto Clear Notes" NonSelect, Gray
+"Auto Fill Notes" NonSelect, Gray
+"" NonSelect
+"Application Language..." NonSelect, Gray
+END
+
+Menu Simsu-Help, Label "Help"
+"Controls" Action SendMessage N+F1
+"" NonSelect
+"About" NonSelect, Gray
+END
+
+MenuBar Simsu
+Simsu-Game
+Simsu-Move
+Simsu-Settings
+Simsu-Help
+END
+
+Style
+"simsu" NoSBarH, NoSBarV
+"simsu" MiniIcon simsu.xpm, MenuBar Simsu
+END
