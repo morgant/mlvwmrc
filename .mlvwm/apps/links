@@ -40,13 +40,15 @@ Menu Links-View, Label "View", Left
 "Save HTML Options..." NonSelect, Gray
 END
 
-Menu Link-Link, Label "Link", Left
+Menu Links-Link, Label "Link", Left
+"" NonSelect
 END
 
-Menu Link-Downloads, Label "Downloads", Left
+Menu Links-Downloads, Label "Downloads", Left
+"" NonSelect
 END
 
-Menu Link-Setup-Network
+Menu Links-Setup-Network
 "Connections" NonSelect, Gray
 "IPv6 Optionss..." NonSelect, Gray
 "Proxies" NonSelect, Gray
@@ -57,10 +59,10 @@ Menu Link-Setup-Network
 "SMB Options..." NonSelect, Gray
 END
 
-Menu Link-Setup, Label "Setup", Left
+Menu Links-Setup, Label "Setup", Left
 "Language" NonSelect, Gray
 "Video Options..." NonSelect, Gray
-"Network Options" SubMenu Link-Setup-Network
+"Network Options" SubMenu Links-Setup-Network
 "Cookies..." NonSelect, Gray
 "Miscellaneous Options..." NonSelect, Gray
 "Fonts..." NonSelect, Gray
