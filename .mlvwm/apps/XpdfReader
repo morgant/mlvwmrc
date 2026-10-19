@@ -26,7 +26,7 @@ Menu XpdfReader-View, Label "View", Left
 "Show/Hide Sidebar" NonSelect, Gray
 "Show/Hide Page Labels" NonSelect, Gray
 "" NonSelect
-"Display Mode" XpdfReader-View-DisplayMode
+"Display Mode" SubMenu XpdfReader-View-DisplayMode
 "Full Screen" Action SendMessage C+L
 "" NonSelect
 "Rotate Clockwise" NonSelect, Gray
