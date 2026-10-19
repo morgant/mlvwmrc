@@ -8,6 +8,13 @@ Menu SMPlayer-Open-Favorites
 "Add Current Media" NonSelect, Gray
 END
 
+Menu SMPlayer-Open-Disc
+"DVD from Drive" NonSelect, Gray
+"Blu-ray from Drive" NonSelect, Gray
+"VCD" NonSelect, Gray
+"Audio CD" NonSelect, Gray
+END
+
 Menu SMPlayer-Open-TV
 "Edit..." NonSelect, Gray
 "Add Current Media" NonSelect, Gray
@@ -162,7 +169,7 @@ END
 
 Menu SMPlayer-Video-Filters
 "Postprocessing" NonSelect, Gray
-"Deblock" NonSelecy, Gray
+"Deblock" NonSelect, Gray
 "Dering" NonSelect, Gray
 "Debanding (gradfun)" NonSelect, Gray
 "Add Noise" NonSelect, Gray
@@ -243,7 +250,7 @@ Menu SMPlayer-Audio, Label "Audio", Left
 "Track" NonSelect, Gray
 "Load External File..." NonSelect, Gray
 "Unload" NonSelect, Gray
-"Send Audio To" SubMenu SMPlayer-Audio-SendAudioToSMPlayer-Audio-SendAudioTo
+"Send Audio To" SubMenu SMPlayer-Audio-SendAudioTo
 "Filters" SubMenu SMPlayer-Audio-Filters
 "Channels" SubMenu SMPlayer-Audio-Channels
 "Stereo Mode" SubMenu SMPlayer-Audio-StereoMode
@@ -382,8 +389,6 @@ Menu SMPlayer-Help, Label "Help", Left
 "Open Configuration Folder" NonSelect, Gray
 "" NonSelect
 "Donate" NonSelect, Gray
-"" NonSelect
-""Open Configuration Folder" NonSelect, Gray
 "" NonSelect
 "About SMPlayer" NonSelect, Gray
 END
