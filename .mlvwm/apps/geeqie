@@ -1,0 +1,424 @@
+Menu Geeqie-File, Label "File", Left
+"Open File..." NonSelect, Gray
+"Open Recent File..." NonSelect, Gray
+"" NonSelect
+"New Collection" Action SendMessage N+C
+"Open Collection..." Action SendMessace N+O
+"" NonSelect
+"Search..." Action SendMessage N+F3
+"Find Duplicates..." Action SendMessage N+D
+"" NonSelect
+"Print..." Action SendMessage S+P
+"" NonSelect
+"New Folder..." Action SendMessage C+F
+"Copy..." Action SendMessage C+C
+"Move..." Action SendMessage C+M
+"Rename..." Action SendMessage C+R
+"Open With..." NonSelect, Gray
+"" NonSelect
+"Move Selection to Trash..." Action SendMessage C+D
+"Delete Selection..." Action SendMesage S+Delete
+"" NonSelect
+"Symlink" NonSelect, Gray
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu Geeqie-Go, Label "Go"
+"First Image" Action SendMessage N+Home
+"Previous Image" Action SendMessage N+BackSpace
+"Next Image" Action SendMessage N+Space
+"Last Image" Action SendMessage N+End
+"Image Back" NonSelect, Gray
+"Image Forward" NonSelect, Gray
+"" NonSelect
+"Back" NonSelect, Gray
+"Forward" NonSelect, Gray
+"Up" NonSelect, Gray
+"Home" NonSelect, Gray
+"" NonSelect
+"First Page" Action SendMessage C+Home
+"Last Page" Action SendMessage C+End
+"Next Page" Action SendMessage C+PageUp
+"Previous Page" Action SendMessage C+PageDown
+END
+
+Menu Geeqie-Select-Mark1
+"Toggle Mark 1" Action SendMessage N+1
+"Set Mark 1" NonSelect, Gray
+"Reset Mark 1" NonSelect, Gray
+"" NonSelect
+"Select Mark 1" Action SendMessage C+1
+"Add Mark 1" NonSelect, Gray
+"Intersection with Mark 1" NonSelect, Gray
+"Unselect Mark 1" NonSelect, Gray
+"" NonSelect
+"Filter Mark 1" NonSelect, Gray
+END
+
+Menu Geeqie-Select-Mark2
+"Toggle Mark 2" Action SendMessage N+2
+"Set Mark 2" NonSelect, Gray
+"Reset Mark 2" NonSelect, Gray
+"" NonSelect
+"Select Mark 2" Action SendMessage C+2
+"Add Mark 2" NonSelect, Gray
+"Intersection with Mark 2" NonSelect, Gray
+"Unselect Mark 2" NonSelect, Gray
+"" NonSelect
+"Filter Mark 2" NonSelect, Gray
+END
+
+Menu Geeqie-Select-Mark3
+"Toggle Mark 3" Action SendMessage N+3
+"Set Mark 3" NonSelect, Gray
+"Reset Mark 3" NonSelect, Gray
+"" NonSelect
+"Select Mark 3" Action SendMessage C+3
+"Add Mark 3" NonSelect, Gray
+"Intersection with Mark 3" NonSelect, Gray
+"Unselect Mark 3" NonSelect, Gray
+"" NonSelect
+"Filter Mark 3" NonSelect, Gray
+END
+
+Menu Geeqie-Select-Mark4
+"Toggle Mark 4" Action SendMessage N+4
+"Set Mark 4" NonSelect, Gray
+"Reset Mark 4" NonSelect, Gray
+"" NonSelect
+"Select Mark 4" Action SendMessage C+4
+"Add Mark 4" NonSelect, Gray
+"Intersection with Mark 4" NonSelect, Gray
+"Unselect Mark 4" NonSelect, Gray
+"" NonSelect
+"Filter Mark 4" NonSelect, Gray
+END
+
+Menu Geeqie-Select-Mark5
+"Toggle Mark 5" Action SendMessage N+5
+"Set Mark 5" NonSelect, Gray
+"Reset Mark 5" NonSelect, Gray
+"" NonSelect
+"Select Mark 5" Action SendMessage C+5
+"Add Mark 5" NonSelect, Gray
+"Intersection with Mark 5" NonSelect, Gray
+"Unselect Mark 5" NonSelect, Gray
+"" NonSelect
+"Filter Mark 5" NonSelect, Gray
+END
+
+Menu Geeqie-Select-Mark6
+"Toggle Mark 6" Action SendMessage N+6
+"Set Mark 6" NonSelect, Gray
+"Reset Mark 6" NonSelect, Gray
+"" NonSelect
+"Select Mark 6" Action SendMessage C+6
+"Add Mark 6" NonSelect, Gray
+"Intersection with Mark 6" NonSelect, Gray
+"Unselect Mark 6" NonSelect, Gray
+"" NonSelect
+"Filter Mark 6" NonSelect, Gray
+END
+
+Menu Geeqie-Select-Mark7
+"Toggle Mark 7" Action SendMessage N+7
+"Set Mark 7" NonSelect, Gray
+"Reset Mark 7" NonSelect, Gray
+"" NonSelect
+"Select Mark 7" Action SendMessage C+7
+"Add Mark 7" NonSelect, Gray
+"Intersection with Mark 7" NonSelect, Gray
+"Unselect Mark 7" NonSelect, Gray
+"" NonSelect
+"Filter Mark 7" NonSelect, Gray
+END
+
+Menu Geeqie-Select-Mark8
+"Toggle Mark 8" Action SendMessage N+8
+"Set Mark 8" NonSelect, Gray
+"Reset Mark 8" NonSelect, Gray
+"" NonSelect
+"Select Mark 8" Action SendMessage C+8
+"Add Mark 8" NonSelect, Gray
+"Intersection with Mark 8" NonSelect, Gray
+"Unselect Mark 8" NonSelect, Gray
+"" NonSelect
+"Filter Mark 8" NonSelect, Gray
+END
+
+Menu Geeqie-Select-Mark9
+"Toggle Mark 9" Action SendMessage N+9
+"Set Mark 9" NonSelect, Gray
+"Reset Mark 9" NonSelect, Gray
+"" NonSelect
+"Select Mark 9" Action SendMessage C+9
+"Add Mark 9" NonSelect, Gray
+"Intersection with Mark 9" NonSelect, Gray
+"Unselect Mark 9" NonSelect, Gray
+"" NonSelect
+"Filter Mark 9" NonSelect, Gray
+END
+
+Menu Geeqie-Select-Mark0
+"Toggle Mark 0" Action SendMessage N+0
+"Set Mark 0" NonSelect, Gray
+"Reset Mark 0" NonSelect, Gray
+"" NonSelect
+"Select Mark 0" Action SendMessage C+0
+"Add Mark 0" NonSelect, Gray
+"Intersection with Mark 0" NonSelect, Gray
+"Unselect Mark 0" NonSelect, Gray
+"" NonSelect
+"Filter Mark 0" NonSelect, Gray
+END
+
+Menu Geeqie-Select, Label "Select"
+"Select All" Action SendMessage C+A
+"Select None" Action SendMessage CS+A
+"Invert Selection" Action SendMessage CS+I
+"Toggle Rectangular Selection" Action SendMessage M+R
+"Show/Hide File Filter" NonSelect, Gray
+"" NonSelect
+"Copy to Clipboard" NonSelect, Gray
+"Copy to Clipboard (Unquoted)" NonSelect, Gray
+"Copy Image to Clipboard" NonSelect, Gray
+"Cut to Clipboard" Action SendMessage C+X
+"" NonSelect
+"Show/Hide Marks" Action SendMessage N+M
+"Clear Marks..." NonSelect, Gray
+"" NonSelect
+"Mark 1" SubMenu Geeqie-Select-Mark1
+"Mark 2" SubMenu Geeqie-Select-Mark2
+"Mark 3" SubMenu Geeqie-Select-Mark3
+"Mark 4" SubMenu Geeqie-Select-Mark4
+"Mark 5" SubMenu Geeqie-Select-Mark5
+"Mark 6" SubMenu Geeqie-Select-Mark6
+"Mark 7" SubMenu Geeqie-Select-Mark7
+"Mark 8" SubMenu Geeqie-Select-Mark8
+"Mark 9" SubMenu Geeqie-Select-Mark9
+"Mark 0" SubMenu Geeqie-Select-Mark0
+END
+
+Menu Geeqie-Edit-Orientation
+"Rotate Clockwise 90deg" Action SendMessage N+]
+"Rotate Counterclockwise 90deg" Action SendMessage N+[
+"Rotate 180deg" Action SendMessage S+R
+"Mirror" Action SendMessage S+M
+"Flip" Action SendMessage S+F
+"Original State" Action SendMessage S+O
+"" NonSelect
+"Toggle EXIF Rotate" Action SendMessage M+X
+"" NonSelect
+"Write Orientation to File" NonSelect, Gray
+"Write Orientation to File (Preserve Timestamp)" NonSelect, Gray
+"" NonSelect
+"Apply Orientation to Image Content" NonSelect, Gray
+END
+
+Menu Geeqie-Edit-Rating
+"Rating 0" Action SendMessage M+KeyPad0
+"Rating 1" Action SendMessage M+KeyPad1
+"Rating 2" Action SendMessage M+KeyPad2
+"Rating 3" Action SendMessage M+KeyPad3
+"Rating 4" Action SendMessage M+KeyPad4
+"Rating 5" Action SendMessage M+KeyPad5
+"Rating -1" Action SendMessage M+KeyPadMinus
+END
+
+Menu Geeqie-Edit-AspectRatio
+"Crop None" NonSelect, Gray
+"Crop 1:1" NonSelect, Gray
+"Crop 4:3" NonSelect, Gray
+"Crop 3:2" NonSelect, Gray
+"Crop 16:9" NonSelect, Gray
+END
+
+Menu Geeqie-Edit, Label "Edit"
+"Orientation" SubMenu Geeqie-Edit-Orientation
+"Rating" SubMenu Geeqie-Edit-Rating
+"Save Metadata" Action SendMessage C+S
+"Keyword Autocomplete" Action SendMessage M+K
+"" NonSelect
+"Draw Rectangle" NonSelect, Gray
+"Aspect Ratio" SubMenu Geeqie-Edit-AspectRatio
+"Crop Rectangle" NonSelect, Gray
+"" NonSelect
+"Preferences..." Action SendMessage C+O
+"Configure Plugins..." NonSelect, Gray
+"Configure This Window..." NonSelect, Gray
+"Cache Maintenance..." NonSelect, Gray
+END
+
+Menu Geeqie-Plugins, Label "Plugins"
+"Camera Import" NonSelect, Gray
+"EXIF Datetime to File" NonSelect, Gray
+"Export JPEG" NonSelect, Gray
+"Image Crop" NonSelect, Gray
+"Open With" NonSelect, Gray
+"Random Image" NonSelect, Gray
+"Resize Image" NonSelect, Gray
+"Tethered Photography" NonSelect, Gray
+"Video Player" NonSelect, Gray
+END
+
+Menu Geeqie-View-FilesAndFolders
+"Toggle Folder View" Action SendMessage C+T
+"" NonSelect
+"Images as List" Action SendMessage C+L
+"Images as Icons" Action SendMessage C+I
+"Show/Hide Thumbnails" Action SendMessage N+T
+"" NonSelect
+"Float/Attach File List" Action SendMessage N+L
+"Hide File List" Action SendMessage C+H
+END
+
+Menu Geeqie-View-Zoom
+"Connected Zoom" NonSelect, Gray
+"Zoom In" Action SendMesage N+=
+"Zoom Out" Action SendMessage N+-
+"Zoom to Fit" Action SendMessage N+X
+"Fit Horizontally" Action SendMessage N+H
+"Fit Vertically" Action SendMessage N+W
+"Zoom 1:1" Action SendMessage N+Z
+"Zoom 2:1" NonSelect, Gray
+"Zoom 3:1" NonSelect, Gray
+"Zoom 4:1" NonSelect, Gray
+"Zoom 1:2" NonSelect, Gray
+"Zoom 1:3" NonSelect, Gray
+"Zoom 1:4" NonSelect, Gray
+"Zoom to Rectangle" NonSelect, Gray
+END
+
+Menu Geeqie-View-Split
+"Horizontal" Action SendMessage N+E
+"Vertical" Action SendMessage N+U
+"Triple" NonSelect, Gray
+"Quad" NonSelect, Gray
+"Single" Action SendMessage N+Y
+"" NonSelect
+"Next Pane" Action SendMessage M+Up
+"Previous Pane" Action SendMessage M+Left
+"Up Pane" Action SendMessage M+Up
+"Down Pane" Action SendMessage M+Down
+"" NonSelect
+"Split Pane Sync" NonSelect, Gray
+END
+
+Menu Geeqie-View-Stereo
+"Auto" NonSelect, Gray
+"Side by Side" NonSelect, Gray
+"Cross" NonSelect, Gray
+"Off" NonSelect, Gray
+"" NonSelect
+"Cycle Through Stereo Modes" NonSelect, Gray
+END
+
+Menu Geeqie-View-ColorManagement
+"Toggle Use Color Profiles" NonSelect, Gray
+"Toggle Use Profile From Image" NonSelect, Gray
+"Input 0: sRGB" NonSelect, Gray
+"Input 1: AdobeRGB-compatible" NonSelect, Gray
+"" NonSelect
+"Toggle Grayscale" Action SendMessage S+G
+END
+
+Menu Geeqie-View-ImageOverlay-SelectOverlayScreenDisplay
+"OSD 1" NonSelect, Gray
+"OSD 2" NonSelect, Gray
+"OSD 3" NonSelect, Gray
+"OSD 4" NonSelect, Gray
+END
+
+Menu Geeqie-View-ImageOverlay
+"Select Overlay Screen Display" SubMenu Geeqie-View-ImageOverlay-SelectOverlayScreenDisplay
+"Show/Hide Image Overlay" NonSelect, Gray
+"Show/Hide Histogram" NonSelect, Gray
+"Cycle Through Overlay Modes" Action SendMessage N+I
+"" NonSelect
+"Histogram on Red" NonSelect, Gray
+"Histogram on Green" NonSelect, Gray
+"Histogram on Blue" NonSelect, Gray
+"Histogram on RGB" NonSelect, Gray
+"Histogram on Value" NonSelect, Gray
+"Cycle Through Histogram Channels" Action SendMessage N+K
+"" NonSelect
+"Linear Histogram" NonSelect, Gray
+"Log Histogram" NonSelect, Gray
+"Cycle Through Histrogram Modes" Action SendMessage N+J
+END
+
+Menu Geeqie-View, Label "View"
+"View in New Window" Action SendMessage C+V
+"Pan View" Action SendMessage C+J
+"EXIF Window" Action SendMessage C+E
+"Open Archive" NonSelect, Gray
+"" NonSelect
+"Files and Folders" SubMenu Geeqie-View-FilesAndFolders
+"" NonSelect
+"Zoom" SubMenu Geeqie-View-Zoom
+"Split" SubMenu Geeqie-View-Split
+"Stereo" SubMenu Geeqie-View-Stereo
+"Color Management" SubMenu Geeqie-View-ColorManagement
+"Image Overlay" SubMenu Geeqie-View-ImageOverlay
+"Over/Under Exposed" Action SendMessage S+E
+"Full Screen" Action SendMessage N+F
+"" NonSelect
+"Show/Hide Info Sidebar" Action SendMessage C+K
+"Show/Hide Sort Manager" Action SendMessage S+S
+"Hide/Show Bars and Files" Action SendMessage N+`
+"Hide/Show Selectable Bars" Action SendMessage C+`
+"Show/Hide Pixel Info" NonSelect, Gray
+"Hide/Show Alpha" Action SendMesage S+A
+"" NonSelect
+"Enable/Disable Animation" Action SendMessage N+A
+"Toggle Slideshow" Action SendMessage N+S
+"Pause Slideshow" Action SendMessage N+P
+"Faster" Action SendMessage C+=
+"Slower" Action SendMessage C+-
+"" NonSelect
+"Refresh" Action SendMessage N+R
+END
+
+Menu Geeqie-Windows-NewWindow
+"Default" Action SendMessage C+N
+"From Current" NonSelect, Gray
+END
+
+Menu Geeqie-Windows, Label "Windows"
+"New Window" SubMenu Geeqie-Windows-NewWindow
+"Rename Window" NonSelect, Gray
+"Delete Window" NonSelect, Gray
+"Close Window" Action SendMessage C+W
+END
+
+Menu Geeqie-Help, Label "Help"
+"Help Manual" Action SendMessage N+F1
+"Help in PDF Format" NonSelect, Gray
+"Search and Run Command..." Action SendMessage N+/
+"Online Help Search" NonSelect, Gray
+"Keyboard Shortcuts" NonSelect, Gray
+"Keyboard Map" NonSelect, Gray
+"README" NonSelect, Gray
+"ChangeLog" NonSelect, Gray
+"" NonSelect
+"About" NonSelect, Gray
+"" NonSelect
+"Log Window" NonSelect, Gray
+END
+
+MenuBar Geeqie
+Geeqie-File
+Geeqie-Go
+Geeqie-Select
+Geeqie-Edit
+Geeqie-Plugins
+Geeqie-View
+Geeqie-Windows
+Geeqie-Help
+END
+
+Style
+"geeqie" NoSBarH, NoSBarV
+"geeqie" MiniIcon geeqie.xpm, MenuBar Geeqie
+END

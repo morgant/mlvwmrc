@@ -38,6 +38,7 @@ build: build-init \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/claws-mail.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/cool-retro-term.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/firefox.xpm \
+	$(BUILD_DIR)/$(PIXMAP_DIR)/geeqie.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/gkrellm.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/iridium.xpm \
@@ -64,6 +65,7 @@ clean-pixmap: clean-mini-icons
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/claws-mail.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/cool-retro-term.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/firefox.xpm
+	rm $(BUILD_DIR)/$(PIXMAP_DIR)/geeqie.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/gkrellm.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/iridium.xpm
@@ -166,6 +168,19 @@ $(TEMP_PIXMAP)/firefox.png:
 $(BUILD_DIR)/$(PIXMAP_DIR)/firefox.xpm: $(TEMP_PIXMAP)/firefox.png
 	convert $(TEMP_PIXMAP)/firefox.png \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/firefox.xpm
+
+#
+# Geeqie (Image Browser)
+#
+$(TEMP_PIXMAP)/geeqie.svg:
+	curl -# -L https://raw.githubusercontent.com/BestImageViewer/geeqie/master/data/icons/geeqie.svg \
+		-o $(TEMP_PIXMAP)/geeqie.svg
+
+$(BUILD_DIR)/$(PIXMAP_DIR)/geeqie.xpm: $(TEMP_PIXMAP)/geeqie.svg
+	convert -background transparent \
+		$(TEMP_PIXMAP)/geeqie.svg \
+		-resize 16x16\> \
+		$(BUILD_DIR)/$(PIXMAP_DIR)/geeqie.xpm
 
 #
 # GKrellM (Utility)
