@@ -33,7 +33,7 @@ Menu LMMS-Edit, Label "Edit", Left
 "Undo" Action SendMessage C+Z
 "Redo" Action SendMessage CS+Z
 "" NonSelect
-"Settings
+"Settings" NonSelect, Gray
 END
 
 Menu LMMS-View, Label "View", Left
