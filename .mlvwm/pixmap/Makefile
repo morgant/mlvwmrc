@@ -73,6 +73,7 @@ clean-pixmap: clean-mini-icons
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/netsurf.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/qemu.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/scummvm.xpm
+	rm $(BUILD_DIR)/$(PIXMAP_DIR)/simsu.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/smplayer.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/solvespace.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/vimb.xpm
