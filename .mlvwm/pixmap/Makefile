@@ -114,9 +114,15 @@ $(BUILD_DIR)/$(PIXMAP_DIR)/0ad.xpm:
 #
 # Audacity (Audio)
 #
-$(BUILD_DIR)/$(PIXMAP_DIR)/audacity.xpm:
-	curl -# -L https://raw.githubusercontent.com/audacity/audacity/master/images/icons/16x16/audacity16.xpm \
-		-o $(BUILD_DIR)/$(PIXMAP_DIR)/audacity.xpm
+$(TEMP_PIXMAP)/audacity.svg:
+	curl -# -L https://raw.githubusercontent.com/audacity/audacity/master/images/audacity.svg \
+		-o $(TEMP_PIXMAP)/audacity.svg
+
+$(BUILD_DIR)/$(PIXMAP_DIR)/audacity.xpm: $(TEMP_PIXMAP)/audacity.svg
+	convert -background transparent \
+		$(TEMP_PIXMAP)/audacity.svg \
+		-resize 16x16\> \
+		$(BUILD_DIR)/$(PIXMAP_DIR)/audacity.xpm
 
 #
 # Chrome/Chromium (Browser)
@@ -144,7 +150,8 @@ $(TEMP_PIXMAP)/cool-retro-term.png:
 		-o $(TEMP_PIXMAP)/cool-retro-term.png
 
 $(BUILD_DIR)/$(PIXMAP_DIR)/cool-retro-term.xpm: $(TEMP_PIXMAP)/cool-retro-term.png
-	convert $(TEMP_PIXMAP)/cool-retro-term.png -resize 16x16\> \
+	convert $(TEMP_PIXMAP)/cool-retro-term.png \
+		-resize 16x16\> \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/cool-retro-term.xpm
 
 #
@@ -177,7 +184,8 @@ $(TEMP_PIXMAP)/godot.png:
 		-o $(TEMP_PIXMAP)/godot.png
 
 $(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm: $(TEMP_PIXMAP)/godot.png
-	convert $(TEMP_PIXMAP)/godot.png -resize 16x16\> \
+	convert $(TEMP_PIXMAP)/godot.png \
+		-resize 16x16\> \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm
 
 #
@@ -234,7 +242,8 @@ $(TEMP_PIXMAP)/mpv.png:
 		-o $(TEMP_PIXMAP)/mpv.png
 
 $(BUILD_DIR)/$(PIXMAP_DIR)/mpv.xpm: $(TEMP_PIXMAP)/mpv.png
-	convert $(TEMP_PIXMAP)/mpv.png -resize 16x16\> \
+	convert $(TEMP_PIXMAP)/mpv.png \
+		-resize 16x16\> \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/mpv.xpm
 
 #
@@ -267,7 +276,8 @@ $(TEMP_PIXMAP)/scummvm.ico:
 		-o $(TEMP_PIXMAP)/scummvm.ico
 
 $(BUILD_DIR)/$(PIXMAP_DIR)/scummvm.xpm: $(TEMP_PIXMAP)/scummvm.ico
-	convert $(TEMP_PIXMAP)/scummvm.ico[8] -resize 16x16\> \
+	convert $(TEMP_PIXMAP)/scummvm.ico[8] \
+		-resize 16x16\> \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/scummvm.xpm
 #
 # Simsu (Game)
@@ -312,7 +322,8 @@ $(TEMP_PIXMAP)/vimb.png:
 		-o $(TEMP_PIXMAP)/vimb.png
 
 $(BUILD_DIR)/$(PIXMAP_DIR)/vimb.xpm: $(TEMP_PIXMAP)/vimb.png
-	convert $(TEMP_PIXMAP)/vimb.png -resize 16x16\> \
+	convert $(TEMP_PIXMAP)/vimb.png \
+		-resize 16x16\> \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/vimb.xpm
 
 #
