@@ -301,6 +301,7 @@ Configurations for the following X11 applications are included:
 * [Krita](https://krita.org/)
 * [Leafpad](https://github.com/tarot231/leafpad)
 * [Links](http://links.twibright.com/)
+* [LMMS](https://lmms.io/)
 * [Meld](http://meldmerge.org/)
 * [mpv](https://mpv.io/)
 * [NetSurf](https://www.netsurf-browser.org/)

@@ -1,0 +1,75 @@
+Menu LMMS-File-NewFromTemplate
+"AcousticDrumset" NonSelect, Gray
+"ClubMix" NonSelect, Gray
+"CR8000" NonSelect, Gray
+"default" NonSelect, Gray
+"Empty" NonSelect, Gray
+"TR808" NonSelect, Gray
+END
+
+Menu LMMS-File-RecentlyOpenedProjects
+"" NonSelect
+END
+
+Menu LMMS-File, Label "File", Left
+"New" Action SendMessage C+N
+"New From Template" SubMenu LMMS-File-NewFromTemplate
+"Open..." Action SendMessage C+O
+"Recently Opened Projects" SubMenu LMMS-File-RecentlyOpenedProjects
+"Save" Action SendMessage C+S
+"Save As..." Action SendMessage CS+S
+"Save as New Version" Action SendMessage CM+S
+"Save as Default Template" NonSelect, Gray
+"" NonSelect
+"Import..." NonSelect, Gray
+"Export..." Action SendMessage C+E
+"Export Tracks..." Action SendMessage CS+E
+"Export MIDI..." Action SendMessage C+M
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu LMMS-Edit, Label "Edit", Left
+"Undo" Action SendMessage C+Z
+"Redo" Action SendMessage CS+Z
+"" NonSelect
+"Settings
+END
+
+Menu LMMS-View, Label "View", Left
+"Song Editor" Action SendMessage N+F5
+"Beat+Bassline Editor" Action SendMessage N+F6
+"Piano Roll" Action SendMessage N+F7
+"Automation Editor" Action SendMesage N+F8
+"FX Mixer" Action SendMessage N+F9
+"Project Notes" Action SendMessage N+F10
+"Controller Rack" Action SendMessage N+F11
+"" NonSelect
+"Volume as dBFS" NonSelect, Gray
+"Smooth Scroll" NonSelect, Gray
+"Enable Note Labels in Piano Roll" NonSelect, Gray
+END
+
+Menu LMMS-Tools, Label "Tools", Left
+"LADSPA Plugin Browser" NonSelect, Gray
+END
+
+Menu LMMS-Help, Label "Help", Left
+"Online Help" NonSelect, Gray
+"What's This?" NonSelect, Gray
+"" NonSelect
+"About" NonSelect, Gray
+END
+
+MenuBar LMMS
+LMMS-File
+LMMS-Edit
+LMMS-View
+LMMS-Tools
+LMMS-Help
+END
+
+Style
+"lmms" NoSBarH, NoSBarV
+"lmms" MiniIcon lmms.xpm, MenuBar LMMS
+END

@@ -44,6 +44,7 @@ build: build-init \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/leafpad.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/links.xpm \
+	$(BUILD_DIR)/$(PIXMAP_DIR)/lmms.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/mpv.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/netsurf.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/qemu.xpm \
@@ -69,6 +70,7 @@ clean-pixmap: clean-mini-icons
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/leafpad.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/links.xpm
+	rm $(BUILD_DIR)/$(PIXMAP_DIR)/lmms.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/mpv.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/netsurf.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/qemu.xpm
@@ -233,6 +235,18 @@ $(BUILD_DIR)/$(PIXMAP_DIR)/links.xpm: $(TEMP_PIXMAP)/links-2.29.tar.gz
 		links-2.29/linkswin.ico
 	convert $(TEMP_PIXMAP)/links-2.29/linkswin.ico[0] \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/links.xpm
+
+
+#
+# LMMS (Audio)
+#
+$(TEMP_PIXMAP)/lmms.ico:
+	curl -# -L https://lmms.io/favicon.ico \
+		-o $(TEMP_PIXMAP)/lmms.ico
+
+$(BUILD_DIR)/$(PIXMAP_DIR)/lmms.xpm: $(TEMP_PIXMAP)/lmms.ico
+	convert $(TEMP_PIXMAP)/lmms.ico[1] \
+		$(BUILD_DIR)/$(PIXMAP_DIR)/lmms.xpm
 
 #
 # MPV (Media Player)
