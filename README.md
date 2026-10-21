@@ -317,6 +317,7 @@ Configurations for the following X11 applications are included:
 * [SolveSpace](https://solvespace.com/)
 * [Vimb](https://fanglingsu.github.io/vimb/)
 * [VLC](https://www.videolan.org/vlc/)
+* [VYM (View Your Mind)](https://www.insilmaril.de/vym/)
 * [Xarchiver](https://github.com/ib/xarchiver)
 * Xcalc
 * Xclock

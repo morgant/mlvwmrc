@@ -1,0 +1,221 @@
+Menu VYM-Map-OpenRecent
+"" NonSelect
+END
+
+Menu VYM-Map-Import
+"Firefox Bookmarks... (Experimental)" NonSelect, Gray
+"Freemind..." NonSelect, Gray
+"Mind Manager..." NonSelect, Gray
+"Import Directory... (Experimental)" NonSelect, Gray
+END
+
+Menu VYM-Map-Export
+"Export in Last Used Format..." Action SendMessage C+E
+"Webpage (HTML)..." NonSelect, Gray
+"Confluence (HTML)... (Experimental)" NonSelect, Gray
+"Firefox Bookmarks... (Experimental)" NonSelect, Gray
+"Text (ASCII)..." NonSelect, Gray
+"Text (Markdown)... (Experimental)" NonSelect, Gray
+"Text with Tasks... (Experimental)" NonSelect, Gray
+"Text (AO Report)..." NonSelect, Gray
+"Image..." NonSelect, Gray
+"PDF..." NonSelect, Gray
+"SVG..." NonSelect, Gray
+"LibreOffice..." NonSelect, Gray
+"XML..." NonSelect, Gray
+"CSV... (Experimental)" NonSelect, Gray
+"Taskjuggler... (Experimental)" NonSelect, Gray
+"OrgMode... (Experimental)" NonSelect, Gray
+"LaTeX... (Experimental)" NonSelect, Gray
+END
+
+Menu VYM-Map, Label "Map", Left
+"New Map" Action SendMessage C+N
+"Copy to New Map" Action SendMessage CS+N
+"Open..." Action SendMessage C+L
+"Restore Last Session" Action SendMessage C+R
+"Open Recent" SubMenu VYM-Map-OpenRecent
+"" NonSelect
+"Save..." Action SendMessage C+S
+"Save As..." NonSelect, Gray
+"Save as Default Map" NonSelect, Gray
+"" NonSelect
+"Import" SubMenu VYM-Map-Import
+"Export" SubMenu VYM-Map-Export
+"" NonSelect
+"Properties" NonSelect, Gray
+"" NonSelect
+"Print..." Action SendMessage C+P
+"Close Map" Action SendMessage C+W
+"Quit" Action SendMessage C+Q
+END
+
+Menu VYM-Edit, Label "Edit"
+"Undo" Action SendMessage C+Z
+"Redo" Action SendMessage C+Y
+"" NonSelect
+"Copy" Action SendMessage C+C
+"Cut" Action SendMessage C+X
+"Paste" Action SendMessage C+V
+"Delete Selection" Action SendMessage N+D
+"Add Map Center" Action SendMessage N+C
+"Add Branch (Insert)" NonSelect, Gray
+"Add Branch Above" Action SendMessage S+A
+"Move Branch Up" Action SendMessage N+PgUp
+"Move Branch Down" Action SendMessage N+PgDown
+"Move Branch Diagonally Up" Action SendMessage C+PgUp
+"Move Branch Diagonally Down" Action SendMessage C+PgDown
+"Detach" Action SendMessage S+D
+"Sort Children" Action SendMessage N+O
+"Reverse Sort Children" Action SendMessage S+O
+"Scroll Branch" Action SendMessage N+S
+"Unscroll Children" NonSelect, Gray
+"Grow Selection" Action SendMessage C+Plus
+"Shrink Selection" Action SendMessage C+Minus
+"Reset Selection Size" Action SendMessage C+0
+"" NonSelect
+"TE: Collapse One Level" Action SendMessage C+<
+"TE: Collapse Unselected Levels" Action SendMessage N+<
+END
+
+Menu VYM-Select, Label "Select"
+"Toggle Target..." Action SendMessage S+T
+"Go to Target..." Action SendMessage N+G
+"Move to Target..." Action SendMessage N+M
+"Go to Linked Map..." Action SendMessage S+G
+"Select Previous" Action SendMessage C+O
+"Select Next" Action SendMessage C+I
+"Unselect All" NonSelect, Gray
+"Find..." Action SendMessage C+F
+END
+
+Menu VYM-Format, Label "Format"
+"Pick Color" NonSelect, Gray
+"Color Branch" NonSelect, Gray
+"Color Subtree" NonSelect, Gray
+"" NonSelect
+"Select Default Font..." NonSelect, Gray
+"" NonSelect
+"Linkstyle Line" NonSelect, Gray
+"Linkstyle Curve" NonSelect, Gray
+"Linkstyle Thick Line" NonSelect, Gray
+"Linkstyle Thick Curve" NonSelect, Gray
+"" NonSelect
+"Use Color of Heading for Link" NonSelect, Gray
+"Set Link Color..." NonSelect, Gray
+"Set Selection Color..." NonSelect, Gray
+"Set Background Color..." NonSelect, Gray
+"Set Background Image..." NonSelect, Gray
+END
+
+Menu VYM-View-Toolbars
+"File Actions Toolbar" NonSelect, Gray
+"Undo and Clipboard Toolbar" NonSelect, Gray
+"Edit Actions Toolbar" NonSelect, Gray
+"Selection Toolbar" NonSelect, Gray
+"Colors Toolbar" NonSelect, Gray
+"View Toolbar" NonSelect, Gray
+"Modifier Modes Toolbar" NonSelect, Gray
+"URLs and vymLinks Toolbar" NonSelect, Gray
+"Editors Toolbar" NonSelect, Gray
+"User Flags Toolbar" NonSelect, Gray
+"Standard Flags Toolbar" NonSelect, Gray
+END
+
+Menu VYM-View, Label "View"
+"Toolbars" SubMenu VYM-View-Toolbars
+"" NonSelect
+"Toggle Presentation Mode (Experimental)" NonSelect, Gray
+"Zoom In" Action SendMessage N+Plus
+"Zoom Out" Action SendMessage N+Minus
+"Rotate Clockwise" Action SendMessage N+R
+"Rotate Counterclockwise" Action SendMessage S+R
+"Reset Zoom" Action SendMessage N+,
+"Center on Selection" Action SendMessage N+.
+"Fit View to Selection" Action SendMessage S+.
+"" NonSelect
+"Note Editor" Action SendMessage N+N
+"Heading Editor" Action SendMessage N+E
+"Tree Editor" Action SendMessage C+T
+"Task Editor" Action SendMessage N+Q
+"Slide Editor" NonSelect, Gray
+"Script Editor" Action SendMessage S+S
+"Script Output Window" Action SendMessage CS+S
+"History Window" Action SendMessage C+H
+"Property Window..." Action SendMessage N+P
+"" NonSelect
+"Enable/Disable Antialiasing" NonSelect, Gray
+"Enable/Disable Smooth Pixmap Transformations" NonSelect, Gray
+"Next Map" Action SendMessage S+Right
+"Previous Map" Action SendMessage S+Left
+"Next Slide" Action SendMessage N+Space
+"Previous Slide" Action SendMessage N+Backspace
+END
+
+Menu VYM-Settings, Label "Settings"
+"Check for Release Notes and Updates" NonSelect, Gray
+"Set Author for New Maps..." NonSelect, Gray
+"" NonSelect
+"Set Application to Open PDF Files..." NonSelect, Gray
+"Set Application to Open External Links..." NonSelect, Gray
+"Confluence Credentials..." NonSelect, Gray
+"JIRA Credentials..." NonSelect, Gray
+"Set Path for New Maps..." NonSelect, Gray
+"Set Path for Macros..." NonSelect, Gray
+"Set Number of Undo Levels..." NonSelect, Gray
+"" NonSelect
+"Enable/Disable Autosave" NonSelect, Gray
+"Autosave Time..." NonSelect, Gray
+"Enable/Disable Write Backup File on Save" NonSelect, Gray
+"" NonSelect
+"Enable/Disable Select Branch After Adding It" NonSelect, Gray
+"Enable/Disable Select Existing Heading" NonSelect, Gray
+"Enable/Disable Exclusive Flags" NonSelect, Gray
+"Toggle Use Hide Flags" NonSelect, Gray
+"" NonSelect
+"Dark Theme..." NonSelect, Gray
+"Number of Visible Parents in Task Editor..." NonSelect, Gray
+"Number of Visible Parents in Find Results Window..." NonSelect, Gray
+"Enable/Disable Animation" NonSelect, Gray
+"Enable/Disable Automatic Layout" NonSelect, Gray
+END
+
+Menu VYM-Connect, Label "Connect"
+"Get Confluence User Data" Action SendMessage S+C
+"Get Page Name From Confluence" NonSelect, Gray
+"Get Data from JIRA for Subtree" Action SendMessage S+J
+"" NonSelect
+"JIRA Credentials..." NonSelect, Gray
+"Confluence Credentials..." NonSelect, Gray
+END
+
+Menu VYM-Help, Label "Help"
+"Open VYM Documentation (PDF)" NonSelect, Gray
+"Open VYM Example Maps" NonSelect, Gray
+"" NonSelect
+"Download and Show Release Notes" NonSelect, Gray
+"Check For Available Updates" NonSelect, Gray
+"" NonSelect
+"Show Keyboard Shortcuts" NonSelect, Gray
+"Show Keyboard Macros" NonSelect, Gray
+"Show Scripting Commands" NonSelect, Gray
+"Debug Info" NonSelect, Gray
+"About QT" NonSelect, Gray
+"About VYM" NonSelect, Gray
+END
+
+MenuBar VYM
+VYM-Map
+VYM-Edit
+VYM-Select
+VYM-Format
+VYM-View
+VYM-Settings
+VYM-Connect
+VYM-Help
+END
+
+Style
+"vym" NoSBarH, NoSBarV
+"vym" MiniIcon vym.xpm, MenuBar VYM
+END

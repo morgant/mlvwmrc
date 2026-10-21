@@ -55,6 +55,7 @@ build: build-init \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/solvespace.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/vimb.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/vlc.xpm \
+	$(BUILD_DIR)/$(PIXMAP_DIR)/vym.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/xpdfreader.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/zeal.xpm
 
@@ -82,6 +83,7 @@ clean-pixmap: clean-mini-icons
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/solvespace.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/vimb.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/vlc.xpm
+	rm $(BUILD_DIR)/$(PIXMAP_DIR)/vym.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/xpdfreader.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/zeal.xpm
 
@@ -361,6 +363,13 @@ $(BUILD_DIR)/$(PIXMAP_DIR)/vimb.xpm: $(TEMP_PIXMAP)/vimb.png
 $(BUILD_DIR)/$(PIXMAP_DIR)/vlc.xpm:
 	curl -# -L https://raw.githubusercontent.com/videolan/vlc/master/share/icons/16x16/vlc.xpm \
 		-o $(BUILD_DIR)/$(PIXMAP_DIR)/vlc.xpm
+
+#
+# VYM (Editor)
+#
+$(BUILD_DIR)/$(PIXMAP_DIR)/vym.xpm:
+	curl -# -L https://raw.githubusercontent.com/insilmaril/vym/develop/icons/vym.xpm \
+		-o $(BUILD_DIR)/$(PIXMAP_DIR)/vym.xpm
 
 #
 # XPDFReader (Editor)
