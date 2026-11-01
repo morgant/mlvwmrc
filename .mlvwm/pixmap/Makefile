@@ -43,6 +43,7 @@ build: build-init \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/iridium.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm \
+	$(BUILD_DIR)/$(PIXMAP_DIR)/lagrange.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/leafpad.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/links.xpm \
 	$(BUILD_DIR)/$(PIXMAP_DIR)/lmms.xpm \
@@ -71,6 +72,7 @@ clean-pixmap: clean-mini-icons
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/godot.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/iridium.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm
+	rm $(BUILD_DIR)/$(PIXMAP_DIR)/lagrange.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/leafpad.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/links.xpm
 	rm $(BUILD_DIR)/$(PIXMAP_DIR)/lmms.xpm
@@ -228,6 +230,22 @@ $(TEMP_PIXMAP)/kid3.png:
 $(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm: $(TEMP_PIXMAP)/kid3.png
 	convert $(TEMP_PIXMAP)/kid3.png \
 		$(BUILD_DIR)/$(PIXMAP_DIR)/kid3.xpm
+
+#
+# Lagrange (Gopher/Gemini Browser)
+#
+$(TEMP_PIXMAP)/lagrange-1.21.2.tar.gz:
+	curl -# -L https://git.skyjake.fi/gemini/lagrange/releases/download/v1.21.2/lagrange-1.21.2.tar.gz \
+		-o $(TEMP_PIXMAP)/lagrange-1.21.2.tar.gz
+
+$(TEMP_PIXMAP)/lagrange.ico: $(TEMP_PIXMAP)/lagrange-1.21.2.tar.gz
+	tar -C $(TEMP_PIXMAP) \
+		-xzf $(TEMP_PIXMAP)/lagrange-1.21.2.tar.gz \
+		lagrange-1.21.2/res/lagrange.ico
+
+$(BUILD_DIR)/$(PIXMAP_DIR)/lagrange.xpm: $(TEMP_PIXMAP)/lagrange-1.21.2/res/lagrange.ico
+	convert $(TEMP_PIXMAP)/lagrange-1.21.2/res/lagrange.ico[0] \
+		$(BUILD_DIR)/$(PIXMAP_DIR)/lagrange.xpm
 
 #
 # Leafpad (Text Editor)

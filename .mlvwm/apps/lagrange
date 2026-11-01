@@ -1,0 +1,135 @@
+Menu Lagrange-File-UserData
+"Export" NonSelect, Gray
+"" NonSelect
+"List All Bookmarks" NonSelect, Gray
+"List Bookmarks by Tag" NonSelect, Gray
+"List Bookmarks by Creation Time" NonSelect, Gray
+"" NonSelect
+"List Feed Entries" NonSelect, Gray
+"" NonSelect
+"Show Downloads" NonSelect, Gray
+END
+
+Menu Lagrange-File, Label "File", Left
+"New Window" Action SendMessage C+N
+"New Tab" Action SendMessage C+T
+"Open Location..." Action SendMessage C+L
+"Reopen Last Closed Tab" Action SendMessage SC+T
+"" NonSelect
+"Close Tab" Action SendMessage C+W
+"Close Other Tabs" Action SendMessage SC+W
+"" NonSelect
+"Save to Downloads" Action SendMessage C+S
+"" NonSelect
+"User Data" SubMenu Lagrange-File-UserData
+"" NonSelect
+"Preferences..." Action SendMessage C+,
+"Manage Fonts..." NonSelect, Gray
+"" NonSelect
+"Quit" Action SendMessage C+Q
+END
+
+Menu Lagrange-Edit, Label "Edit"
+"Cut" Action SendMessage C+X
+"Copy" Action SendMessage C+C
+"Paste" Action SendMessage C+V
+"" NonSelect
+"Copy Link to Page" Action SendMessage SC+C
+"" NonSelect
+"Find" Action SendMessage C+F
+END
+
+Menu Lagrange-View-SplitView
+"Unsplit" Action SendMessage N+1
+"Swap Sides" Action SendMessage N+X
+"" NonSelect
+"Horizontal" Action SendMessage N+3
+"Horizontal 1:2" Action SendMessage N+D
+"Horizontal 2:1" Action SendMessage N+E
+"" NonSelect
+"Vertical" Action SendMessage N+2
+"Vertical 1:2" Action SendMessage N+F
+"Vertical 2:1" Action SendMessage N+R
+END
+
+Menu Lagrange-View, Label "View"
+"Show Bookmarks" Action SendMessage C+1
+"Show Feed Entries" Action SendMessage C+2
+"Show Subscriptions" Action SendMessage C+3
+"Show Identities" Action SendMessage C+4
+"Show Page Outline" Action SendMessage C+5
+"Show Site Structure" Action SendMessage C+6
+"Show Tabs" Action SendMessage C+7
+"Show History" Action SendMessage C+8
+"" NonSelect
+"Toggle Left Sidebar" Action SendMessage SC+L
+"Toggle Right Sidebar" Action SendMessage SC+P
+"" NonSelect
+"Go Back" Action SendMessage M+Left
+"Go Forward" Action SendMessage M+Right
+"Go to Parent" Action SendMessage M+Up
+"Go to Root" Action SendMessage SM+Up
+"Reload Page" Action SendMessage C+R
+"" NonSelect
+"Zoom In" Action SendMesage C+=
+"Zoom Out" Action SendMessage C+-
+"Reset Zoom" Action SendMessage C+0
+"" NonSelect
+"Split View" SubMenu Lagrange-View-SplitView
+END
+
+Menu Lagrange-Bookmarks, Label "Bookmarks"
+"Bookmark Page..." Action SendMessage C+D
+"Subscribe to Page..." Action SendMessage SC+D
+"Import All Links on Page..." NonSelect, Gray
+"" NonSelect
+"New Folder..." Action SendMessage S+N
+"Sort Alphabetically" NonSelect, Gray
+"" NonSelect
+"Refresh Remote Bookmarks" NonSelect, Gray
+"Refresh Feeds" Action SendMessage SC+R
+END
+
+Menu Lagrange-Identity, Label "Identity"
+"New Identity..." Action SendMessage SC+N
+"New Identity for Domain..." NonSelect, Gray
+"" NonSelect
+"Import..." Action SendMessage SC+M
+END
+
+Menu Lagrange-Window, Label "Window"
+"Show Next Tab" Action SendMessage C+PgDn
+"Show Previous Tab" Action SendMessage C+PgUp
+"Duplicate Tab" NonSelect, Gray
+"Move Tab to New Window" Action SendMessage MC+T
+"" NonSelect
+"Minimize" NonSelect, Gray
+"Maximize" NonSelect, Gray
+"Toggle Full Screen" Action SendMessage N+F11
+END
+
+Menu Lagrange-Help, Label "Help"
+"Help" Action SendMessage N+F1
+"Release Notes" NonSelect, Gray
+"" NonSelect
+"" NonSelect
+"About Pages" NonSelect, Gray
+"Debug Information" NonSelect, Gray
+"" NonSelect
+"About" NonSelect, Gray
+END
+
+MenuBar Lagrange
+Lagrange-File
+Lagrange-Edit
+Lagrange-View
+Lagrange-Bookmarks
+Lagrange-Identity
+Lagrange-Window
+Lagrange-Help
+END
+
+Style
+"*Lagrange" NoSBarH, NoSBarV
+"*Lagrange" MiniIcon lagrange.xpm, MenuBar Lagrange
+END

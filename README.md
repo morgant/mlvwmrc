@@ -300,6 +300,7 @@ Configurations for the following X11 applications are included:
 * [HandBrake](https://handbrake.fr/)
 * [Kid3](https://kid3.kde.org/)
 * [Krita](https://krita.org/)
+* [Lagrange](https://gmi.skyjake.fi/lagrange/)
 * [Leafpad](https://github.com/tarot231/leafpad)
 * [Links](http://links.twibright.com/)
 * [LMMS](https://lmms.io/)
